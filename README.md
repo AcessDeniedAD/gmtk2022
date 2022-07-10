@@ -13,4 +13,4 @@ Project for the GMTK2022
 | Strik | Empty | Empty |
 | JP | Empty | Empty |
 | Titi | Empty | Empty |
-| Benyock | Empty | Empty |
+| Benyock | Empty | [ArtStation](https://www.artstation.com/thomasnaim) |
