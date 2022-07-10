@@ -8,5 +8,9 @@ Project for the GMTK2022
 
 | Name           | Github    | Website    |
 | :-------------:|:--------------:|:--------------:|
-| Touba John| Empty | Empty |
-| Maxime Gammaitoni | Empty | Empty |
+| Jo541 | Empty | Empty |
+| Time2shine | Empty | Empty |
+| Strik | Empty | Empty |
+| JP | Empty | Empty |
+| Titi | Empty | Empty |
+| Benyock | Empty | Empty |
