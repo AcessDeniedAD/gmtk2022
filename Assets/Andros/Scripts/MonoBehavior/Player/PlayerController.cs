@@ -5,53 +5,42 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : BaseLivingObject
 {
-    [HideInInspector]
-    public Vector2 CursorMovement = Vector2.zero;
+    
+    public Vector2 PlayerDirection = Vector2.zero;
 
-    private int CurrentWeaponId = 0;
-    private WeaponsIntoPlayer weaponsIntoPlayer;
-    private PlayerMovements playerMovements;
+    [SerializeField]
+    private PlayerMovement _playerMovement;
 
-    private void Start()
+    private MainPlayerInput _mainPlayerInput;
+
+    private void Awake()
     {
-        weaponsIntoPlayer = gameObject.GetComponent<WeaponsIntoPlayer>();
-        playerMovements = gameObject.GetComponent<PlayerMovements>();
-    }
-    public void OnMoveCursor(InputAction.CallbackContext context)
-    {
-        CursorMovement = context.ReadValue<Vector2>();
-    }
-    public void OnChangeWeaponLeft(InputAction.CallbackContext context)
-    {
-        if (context.started)
+        if(_playerMovement == null)
         {
-            CurrentWeaponId--;
-            if (CurrentWeaponId < 0)
-            {
-                CurrentWeaponId = weaponsIntoPlayer.EquipedWeapons.Count - 1;
-            }
-            weaponsIntoPlayer.ChangeWeapon(CurrentWeaponId);
-        }
-    }
-    public void OnChangeWeaponRight(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            CurrentWeaponId++;
-            if (CurrentWeaponId > weaponsIntoPlayer.EquipedWeapons.Count - 1)
-            {
-                CurrentWeaponId = 0;
-            }
-            weaponsIntoPlayer.ChangeWeapon(CurrentWeaponId);
+            _playerMovement = gameObject.GetComponent<PlayerMovement>();
         }
     }
 
-    public void OnShoot(InputAction.CallbackContext context)
+    private void Update()
     {
-            weaponsIntoPlayer.CurrentWeapon.GetComponent<WeaponController>().Shoot(context);
+        _playerMovement.MoveAlongDirection(PlayerDirection);
+        Vector3 movement = Vector3.right * PlayerDirection.x + Vector3.forward * PlayerDirection.y;
+        transform.rotation = Quaternion.LookRotation(movement, transform.up);
     }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        PlayerDirection = context.ReadValue<Vector2>();
+    }
+
     public void OnDash(InputAction.CallbackContext context)
     {
-        playerMovements.Dash(context, Vector3.one * CursorMovement, 10);
+        //_playerMovement.Dash(context, Vector3.one * CursorMovement, 10);
+    }
+
+    private float CalculateFacingAngle(Vector2 facingDirection)
+    {
+        var angle = Mathf.Asin((facingDirection.y)/facingDirection.magnitude);
+        return angle;
     }
 }
