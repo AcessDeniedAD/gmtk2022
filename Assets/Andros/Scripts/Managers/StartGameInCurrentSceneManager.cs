@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class StartGameInCurrentSceneManager : BaseManager
 {
+
+    private readonly PlayerManager _playerManager;
+
     public StartGameInCurrentSceneManager(PrefabsLoaderManager prefabsLoaderManager, GameManager gameManager, PlayerManager playerManager)
     {
+        _playerManager = playerManager;
+
         //Debug.Log("StartGameInCurrentSceneManager");
-        //playerManager.StartPlayerInSceneWithEquipedWeapons(prefabsLoaderManager.PlayerLoader.PlayerPrefab, new Vector3(1, 1, 0), new List<GameObject> { prefabsLoaderManager.WeaponsLoader.Gatling,  prefabsLoaderManager.WeaponsLoader.Shootgun }) ;
         //playerManager.StartPlayerInSceneWithEquipedWeapons(prefabsLoaderManager.PlayerLoader.PlayerPrefab, Vector3.down, new List<GameObject> {  prefabsLoaderManager.WeaponsLoader.Shootgun, prefabsLoaderManager.WeaponsLoader.Gatling });
     }
 }
