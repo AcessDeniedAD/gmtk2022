@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : BaseLivingObject
-{
-    
+{   
     public Vector2 PlayerDirection = Vector2.zero;
 
     [SerializeField]
@@ -15,22 +14,45 @@ public class PlayerController : BaseLivingObject
 
     private void Awake()
     {
+        _mainPlayerInput = new MainPlayerInput();
+        _mainPlayerInput.Enable();
         if(_playerMovement == null)
         {
             _playerMovement = gameObject.GetComponent<PlayerMovement>();
         }
+
+        _mainPlayerInput.Player.Move.performed += OnMove;
+        _mainPlayerInput.Player.Move.canceled += OnMove;
+
     }
 
-    private void Update()
+    private void OnDestroy()
+    {
+        _mainPlayerInput.Player.Move.performed -= OnMove;
+        _mainPlayerInput.Player.Move.canceled -= OnMove;
+        _mainPlayerInput.Disable(); 
+    }
+
+    private void FixedUpdate()
     {
         _playerMovement.MoveAlongDirection(PlayerDirection);
         Vector3 movement = Vector3.right * PlayerDirection.x + Vector3.forward * PlayerDirection.y;
-        transform.rotation = Quaternion.LookRotation(movement, transform.up);
+        if(movement != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(movement, transform.up);
+        }
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        PlayerDirection = context.ReadValue<Vector2>();
+        if (context.performed)
+        {
+            PlayerDirection = context.ReadValue<Vector2>();
+        }
+        else if (context.canceled)
+        {
+            PlayerDirection = Vector2.zero;
+        }
     }
 
     public void OnDash(InputAction.CallbackContext context)
@@ -38,9 +60,4 @@ public class PlayerController : BaseLivingObject
         //_playerMovement.Dash(context, Vector3.one * CursorMovement, 10);
     }
 
-    private float CalculateFacingAngle(Vector2 facingDirection)
-    {
-        var angle = Mathf.Asin((facingDirection.y)/facingDirection.magnitude);
-        return angle;
-    }
 }
