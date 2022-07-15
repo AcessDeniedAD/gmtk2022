@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 00d6a56a2d31c1f48939ec196ed80d67
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - VFXLoader: {fileID: 11400000, guid: 1b2699281fba4034cbd8ee981a0eb09b, type: 2}
+  - EnnemiesLoader: {fileID: 11400000, guid: 35920113fb12fec428a244567540df52, type: 2}
+  - PlayerLoader: {fileID: 11400000, guid: a49866a735c53cf44bd8d90911896d41, type: 2}
+  - WeaponsLoader: {fileID: 11400000, guid: 4739f556658f99d46bc4bac74bf3f38e, type: 2}
+  - HudLoader: {fileID: 11400000, guid: b73a7f7cab7ac734195398a04952751a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

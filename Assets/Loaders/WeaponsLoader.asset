@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f45f085028bc84cb77e0327913b6c5, type: 3}
+  m_Name: WeaponsLoader
+  m_EditorClassIdentifier: 
+  Gatling: {fileID: 5904746335875684468, guid: f995f483d79d1e746b0e0dc3ad7df535, type: 3}
+  Shootgun: {fileID: 5198309497777232328, guid: ea4ea6ade4153b045848b45eda7f14db, type: 3}

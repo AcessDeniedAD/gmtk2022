@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19daecd56bc2dd4e8d62c399cb1ef0c, type: 3}
+  m_Name: HudLoader
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 852873528451032538, guid: a7a47f9ab4948f5428165787c23d5e84, type: 3}
+  DamageText: {fileID: 5221982334210405634, guid: 852e3877ad6186747a9158dfe95bbb77, type: 3}
+  Panels: {fileID: 0}
