@@ -23,6 +23,8 @@ public class PlayerController : BaseLivingObject
 
         _mainPlayerInput.Player.Move.performed += OnMove;
         _mainPlayerInput.Player.Move.canceled += OnMove;
+        _mainPlayerInput.Player.Dash.started += OnDash;
+        _mainPlayerInput.Player.Jump.started += OnJump;
 
     }
 
@@ -30,6 +32,9 @@ public class PlayerController : BaseLivingObject
     {
         _mainPlayerInput.Player.Move.performed -= OnMove;
         _mainPlayerInput.Player.Move.canceled -= OnMove;
+        _mainPlayerInput.Player.Dash.performed -= OnDash;
+        _mainPlayerInput.Player.Dash.performed -= OnJump;
+
         _mainPlayerInput.Disable(); 
     }
 
@@ -57,7 +62,12 @@ public class PlayerController : BaseLivingObject
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        //_playerMovement.Dash(context, Vector3.one * CursorMovement, 10);
+        _playerMovement.Dash(PlayerDirection);
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        Debug.Log("Should jump");
     }
 
 }
