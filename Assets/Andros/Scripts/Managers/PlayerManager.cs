@@ -21,7 +21,7 @@ public class PlayerManager : BaseManager
 
     public void StartPlayerInScene(GameObject player)
     {
-        Player = _gameManager.InstantiateInGameManager(player, new Vector3(0, 0, 0), Quaternion.identity);
+        Player = _gameManager.InstantiateInGameManager(player, new Vector3(0.75f, 0.75f, 1.5f), Quaternion.identity);
         Player.name = "Player";
     }
 

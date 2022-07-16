@@ -28,7 +28,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float verticalVelocity;
 
-    private float groundDistanceCheck = 0.5f;
+    [SerializeField]
+    private float groundDistanceCheck = 0.1f;
 
     private bool _isDashing = false;
 
@@ -68,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
     private bool CheckCollision(Vector3 direction)
     {
         RaycastHit Hit;
-        return Physics.Raycast(transform.position, direction, out Hit, groundDistanceCheck);
+        return Physics.SphereCast(transform.position,0.05f, direction, out Hit, groundDistanceCheck);
     }
 
     public void ApplyGravity(float currentVelocity)
