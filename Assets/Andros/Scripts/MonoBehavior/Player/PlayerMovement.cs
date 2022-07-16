@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplyGravity(float currentVelocity)
     {
-        Debug.Log(currentVelocity);
+        //Debug.Log(currentVelocity);
         transform.Translate(new Vector3(0, currentVelocity, 0) * Time.fixedDeltaTime);
     }
 
