@@ -65,7 +65,7 @@ public class LevelManager : BaseManager
 
     public void DropHexa(string colorName)
     {
-
+        Debug.Log(colorName);
         _hexaLockedId = _hexaIdByColor[colorName];
         _hexaLocked = _hexas[_hexaLockedId];
         _gameManager.StartCoroutine(DropHexaCoroutine());
@@ -100,10 +100,10 @@ public class LevelManager : BaseManager
         foreach (int order in shuffledOrder) {
             var oldPosition = _hexas[order].transform.position;
             _hexas[order].transform.position = new Vector3(_position[i].x, oldPosition.y, _position[i].z);
-            _position[i] = oldPosition;
+            _position[i] = _hexas[order].transform.position;
             i += 1;
         }
-        
+        _order = shuffledOrder;
     }
 
     public void StartRandomHexaMove()
