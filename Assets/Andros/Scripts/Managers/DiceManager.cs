@@ -17,7 +17,6 @@ public class DiceManager : BaseManager
     {
         _gameManager = gameManager;
         _diceLoader = prefabsLoaderManager.DiceLoader;
-        _rollingDiceGameObject =
         _rollingDiceGameObject = _gameManager.InstantiateInGameManager(_diceLoader.RollingDice, Vector3.zero, Quaternion.identity);
 
         BuildFacesList();
@@ -55,14 +54,16 @@ public class DiceManager : BaseManager
     {
         _faces = new List<Face>()
         {
-            new Face(){name = "Red", material = _diceLoader.RedFace, difficultyLevel = 0 , weight = 1, id = 1},
-            new Face(){name = "Pink", material = _diceLoader.PinkFace, difficultyLevel = 0 , weight = 1,id = 2},
-            new Face(){name = "Purple", material = _diceLoader.PurpleFace,difficultyLevel = 0 , weight = 1, id = 3},
-            new Face(){name = "DarkBlue", material = _diceLoader.DarkBlueFace,difficultyLevel = 0 , weight = 1, id = 4},
-            new Face(){name = "LightBlue", material = _diceLoader.LightBlueFace,difficultyLevel = 0 , weight = 1, id = 5},
-            new Face(){name = "Orange", material = _diceLoader.OrangeFace,difficultyLevel = 0 , weight = 1, id = 6},
-            new Face(){name = "White", material = _diceLoader.WhiteFace,difficultyLevel = 0 , weight = 1, id = 7},
+            new Face(){name = "red", material = _diceLoader.RedFace, difficultyLevel = 0 , weight = 1, id = 1},
+            new Face(){name = "green", material = _diceLoader.GreenFace, difficultyLevel = 0 , weight = 1,id = 2},
+            new Face(){name = "purple", material = _diceLoader.PurpleFace,difficultyLevel = 0 , weight = 1, id = 3},
+            new Face(){name = "blue", material = _diceLoader.BlueFace,difficultyLevel = 0 , weight = 1, id = 4},
+            new Face(){name = "orange", material = _diceLoader.OrangeFace,difficultyLevel = 0 , weight = 1, id = 5},
+            new Face(){name = "yellow", material = _diceLoader.YellowFace,difficultyLevel = 0 , weight = 1, id = 6},
+            new Face(){name = "white", material = _diceLoader.WhiteFace,difficultyLevel = 0 , weight = 1, id = 7},
         };
+        Debug.Log(_faces[0].material.name + ", " + _faces[1].material.name + ", " + _faces[2].material.name + ", " + _faces[3].material.name + ", "
+            + _faces[4].material.name + ", " + _faces[5].material.name + ", " + _faces[6].material.name );
     }
 
     public void RollDice(float time)
@@ -124,7 +125,7 @@ public class DiceManager : BaseManager
                     {
                         case "forward":
                             closestDir = tr.forward;
-                            SelectMaterialByIndex(3);
+                            SelectMaterialByIndex(2);
                             break;
 
                         case "-forward":
@@ -139,12 +140,12 @@ public class DiceManager : BaseManager
 
                         case "-right":
                             closestDir = -tr.right;
-                            SelectMaterialByIndex(5);
+                            SelectMaterialByIndex(4);
                             break;
 
                         case "up":
                             closestDir = tr.up;
-                            SelectMaterialByIndex(4);
+                            SelectMaterialByIndex(3);
                             break;
 
                         case "-up":

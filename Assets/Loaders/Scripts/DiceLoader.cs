@@ -5,11 +5,11 @@ using UnityEngine;
 public class DiceLoader : ScriptableObject
 {
     public Material WhiteFace;
-    public Material DarkBlueFace;
+    public Material BlueFace;
     public Material PurpleFace;
-    public Material LightBlueFace;
     public Material OrangeFace;
-    public Material PinkFace;
+    public Material YellowFace;
+    public Material GreenFace;
     public Material RedFace;
 
     public GameObject RollingDice;
