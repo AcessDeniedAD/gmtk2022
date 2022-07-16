@@ -16,4 +16,5 @@ MonoBehaviour:
   EnnemiesLoader: {fileID: 11400000, guid: 35920113fb12fec428a244567540df52, type: 2}
   PlayerLoader: {fileID: 11400000, guid: a49866a735c53cf44bd8d90911896d41, type: 2}
   WeaponsLoader: {fileID: 11400000, guid: 4739f556658f99d46bc4bac74bf3f38e, type: 2}
+  DiceLoader: {fileID: 11400000, guid: 74d486676bb3aaf4bb6feb94bdcae544, type: 2}
   HudLoader: {fileID: 11400000, guid: b73a7f7cab7ac734195398a04952751a, type: 2}
