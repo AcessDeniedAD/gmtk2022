@@ -40,12 +40,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        verticalVelocity += _gravity * Time.deltaTime;
+        verticalVelocity += _gravity * Time.fixedDeltaTime;
+        ChackIfGrounded();
+        ApplyGravity(verticalVelocity);
+    }
+
+    private void Update()
+    {
         Vector3 movement = Vector3.right * PlayerDirection.x + Vector3.forward * PlayerDirection.y;
         MoveAlongDirection(movement);
         AdjustOrientation(movement);
-        ChackIfGrounded();
-        ApplyGravity(verticalVelocity);
     }
 
     private void ChackIfGrounded()
@@ -75,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveAlongDirection(Vector3 playerDirection)
     {
-        transform.position += playerDirection * _playerSpeed * Time.fixedDeltaTime * Time.timeScale;
+        transform.position += playerDirection * _playerSpeed * Time.deltaTime * Time.timeScale;
     }
 
     public void Dash()
