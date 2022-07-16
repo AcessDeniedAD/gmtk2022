@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
         verticalVelocity += _gravity * Time.fixedDeltaTime;
         ChackIfGrounded();
         ApplyGravity(verticalVelocity);
+        Debug.DrawLine(transform.position, transform.position - Vector3.up * 0.1f);
+        Debug.DrawRay(transform.position, Vector3.down, Color.yellow);
     }
 
     private void Update()
@@ -69,7 +71,13 @@ public class PlayerMovement : MonoBehaviour
     private bool CheckCollision(Vector3 direction)
     {
         RaycastHit Hit;
-        return Physics.SphereCast(transform.position,0.05f, direction, out Hit, groundDistanceCheck);
+        return Physics.BoxCast(transform.position + Vector3.up * (groundDistanceCheck+0.1f), Vector3.one * 0.1f, -Vector3.up, out Hit, Quaternion.identity, groundDistanceCheck);
+            
+    }
+
+    private void OnDrawGizmos()
+    {
+        Debug.DrawLine(transform.position, transform.position - Vector3.up * 0.1f);
     }
 
     public void ApplyGravity(float currentVelocity)
