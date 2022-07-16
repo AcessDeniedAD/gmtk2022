@@ -89,11 +89,14 @@ public class LevelManager : BaseManager
 
     public void ColorSwitch()
     {
-        int old_hexa_locked_index = _order.FindIndex(id => id == +_hexaLockedId);
+        int old_hexa_locked_index = _order.FindIndex(id => id == _hexaLockedId);
         List<int> shuffledOrder = _order.OrderBy(a => Guid.NewGuid()).ToList();
-        int new_hexa_locked_index = shuffledOrder.FindIndex(id => id == +_hexaLockedId);
-        (shuffledOrder[new_hexa_locked_index], shuffledOrder[old_hexa_locked_index]) = (shuffledOrder[old_hexa_locked_index], shuffledOrder[new_hexa_locked_index]);
+        int new_hexa_locked_index = shuffledOrder.FindIndex(id => id == _hexaLockedId);
+
+        (shuffledOrder[new_hexa_locked_index], shuffledOrder[old_hexa_locked_index]) 
+            = (shuffledOrder[old_hexa_locked_index], shuffledOrder[new_hexa_locked_index]);
         int i = 0;
+
         foreach (int order in shuffledOrder) {
             var oldPosition = _hexas[order].transform.position;
             _hexas[order].transform.position = new Vector3(_position[i].x, oldPosition.y, _position[i].z);
