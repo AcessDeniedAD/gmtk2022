@@ -7,7 +7,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Color_tapis
+    second: {fileID: 2100000, guid: d160e6a098d015f4ba5ee04916249ba8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: No Name
+    second: {fileID: 2100000, guid: 5d033b9a63e879a4b8c3646727b8a82e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Platform
     second: {fileID: 2100000, guid: 5d033b9a63e879a4b8c3646727b8a82e, type: 2}
   materials:
     materialImportMode: 1
