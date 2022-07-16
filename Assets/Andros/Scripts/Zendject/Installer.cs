@@ -14,6 +14,7 @@ public class Installer : MonoInstaller
         Container.Bind<HudManager>().AsSingle().NonLazy();
         Container.Bind<PlayerManager>().AsSingle();
         Container.Bind<StartGameInCurrentSceneManager>().AsSingle().NonLazy();
+        Container.Bind<LevelManager>().AsSingle().NonLazy();
 
         Container.Bind<DisplayDamagePooler>().AsSingle();
         Container.Bind<BulletsPoolerManager>().AsSingle();
