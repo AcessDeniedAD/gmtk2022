@@ -715,8 +715,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: d40f989e84bc2d64d86656c8551dd06e, type: 2}
     - target: {fileID: 4948892338119053876, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
+      propertyPath: _dashTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948892338119053876, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
+      propertyPath: _dashSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948892338119053876, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
+      propertyPath: _jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948892338119053876, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
       propertyPath: _playerSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948892338119053876, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
+      propertyPath: _dashCoolDown
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6030963477151417518, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
       propertyPath: _playerMovement
@@ -732,7 +748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308889935578174460, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 20.8
       objectReference: {fileID: 0}
     - target: {fileID: 6308889935578174460, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
       propertyPath: m_LocalPosition.z
