@@ -176,7 +176,8 @@ public class GameMasterManager : BaseManager
             yield return 0;
         }
 
-        _levelManager.DropHexa(_diceManager.GetDiceFace());
+        _levelManager.DropHexa(_diceManager.GetDiceFace(), DifficultyLevel);
+
         _diceManager.DisableRollingDiceInScene();
         yield return new WaitForSeconds(1);
         _statesManager.ChangeCurrentState(new States.CoinTime());
