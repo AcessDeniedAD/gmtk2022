@@ -20,8 +20,11 @@ public class LevelManager : BaseManager
     private float _journeyLength;
     private float _upPosition = 0.0f;
     private GameObject _hexa_locked;
-    public float speed = 2.0f;
-    public float downPosition = -1.0f;
+    private int _hexa_locked_id;
+    private bool _random_hexa_move = false;
+    public float speed = 10.0f;
+    public float downPosition = -10.0f;
+    public int platformMoveProba = 25;
 
     // Constructor
     public LevelManager(PrefabsLoaderManager prefabsLoaderManager, GameManager gameManager)
@@ -46,7 +49,8 @@ public class LevelManager : BaseManager
     }
 
     public void SelectedColor(string color){
-        _hexa_locked = _hexas[_hexa_id_by_color["red"]];
+        _hexa_locked_id = _hexa_id_by_color["red"];
+        _hexa_locked = _hexas[_hexa_locked_id];
 
     }
 
@@ -60,6 +64,7 @@ public class LevelManager : BaseManager
         }
         SelectedColor("red");
         _gameManager.StartCoroutine(HexaDrop());
+        //StartRandomHexaMove();
     }
 
 
@@ -81,8 +86,11 @@ public class LevelManager : BaseManager
 
     public void ColorSwitch()
     {
-        var shuffledOrder = _order.OrderBy(a => Guid.NewGuid()).ToList();
-        var i = 0;
+        int old_hexa_locked_index = _order.FindIndex(id => id == +_hexa_locked_id);
+        List<int> shuffledOrder = _order.OrderBy(a => Guid.NewGuid()).ToList();
+        int new_hexa_locked_index = shuffledOrder.FindIndex(id => id == +_hexa_locked_id);
+        (shuffledOrder[new_hexa_locked_index], shuffledOrder[old_hexa_locked_index]) = (shuffledOrder[old_hexa_locked_index], shuffledOrder[new_hexa_locked_index]);
+        int i = 0;
         foreach (int order in shuffledOrder) {
             var oldPosition = _hexas[order].transform.position;
             _hexas[order].transform.position = new Vector3(_position[i].x, oldPosition.y, _position[i].z);
@@ -92,8 +100,80 @@ public class LevelManager : BaseManager
         
     }
 
+    public void StartRandomHexaMove()
+    {
+        _random_hexa_move = true;
+        _gameManager.StartCoroutine(RandomHexaMoveCoro());
+    }
 
-    // COROUTINE 
+
+    public void StopRandomHexaMove()
+    {
+        _random_hexa_move = false;
+    }
+
+    IEnumerator RandomHexaMoveCoro()
+    {
+        System.Random rnd = new System.Random();
+        while (_random_hexa_move)
+        {
+ 
+            if (rnd.Next(0, 100) < platformMoveProba){
+                _random_hexa_move = false;
+                GameObject current_hexa = _hexas[rnd.Next(0, _hexas.Count)];
+                _gameManager.StartCoroutine(HexaMoveTopCoro(current_hexa));
+                yield return new WaitForSecondsRealtime(3);
+                _gameManager.StartCoroutine(HexaMoveDownCoro(current_hexa));
+            }
+
+            yield return 0;
+        }
+    }
+
+    IEnumerator HexaMoveTopCoro(GameObject hexa)
+    {
+        Vector3 down_position = hexa.transform.position;
+        float startTime = Time.time;
+        Vector3 top_position = new Vector3(down_position.x, down_position.y + 0.2f, down_position.z);
+        float journeyLength = Vector3.Distance(down_position, top_position);
+        while (top_position.y > hexa.transform.position.y)
+        {
+            float distCovered = (Time.time - startTime) * 0.3f;
+            float fractionOfJourney = distCovered / journeyLength;
+                if (true)
+                {
+                    hexa.transform.position = Vector3.Lerp(
+                   down_position,
+                   top_position,
+                   fractionOfJourney);
+                }
+            yield return 0;
+        }
+    }
+
+    IEnumerator HexaMoveDownCoro(GameObject hexa)
+    {
+        Vector3 top_position = hexa.transform.position;
+        Vector3 down_position = new Vector3(hexa.transform.position.x, top_position.y - 0.2f, hexa.transform.position.z);
+        float startTime = Time.time;
+        float journeyLength = Vector3.Distance(top_position,down_position);
+        while (down_position.y < hexa.transform.position.y)
+        {
+            float distCovered = (Time.time - startTime) * 0.3f;
+            float fractionOfJourney = distCovered / journeyLength;
+            if (true)
+            {
+                hexa.transform.position = Vector3.Lerp(
+               top_position,
+               down_position,
+               fractionOfJourney);
+            }
+            yield return 0;
+        }
+    }
+
+    
+// COROUTINE 
     IEnumerator HexaDrop()
     {
         _startTime = Time.time;
@@ -107,7 +187,8 @@ public class LevelManager : BaseManager
             {
                 if (!System.Object.ReferenceEquals(hexa, _hexa_locked))
                 {
-                    hexa.transform.position = Vector3.Lerp(
+                    
+                   hexa.transform.position = Vector3.Lerp(
                    new Vector3(hexa.transform.position.x, 0, hexa.transform.position.z),
                    new Vector3(hexa.transform.position.x, downPosition, hexa.transform.position.z),
                    fractionOfJourney);
@@ -118,6 +199,14 @@ public class LevelManager : BaseManager
 
             yield return 0;
         }
+        foreach (GameObject hexa in _hexas.Values)
+        {
+            if (!System.Object.ReferenceEquals(hexa, _hexa_locked))
+            {
+                hexa.SetActive(false);
+            }
+        }
+        ColorSwitch();
         _gameManager.StartCoroutine(HexaBackUp());
     }
 
@@ -140,10 +229,11 @@ public class LevelManager : BaseManager
                     _y_pos = hexa.transform.position.y;
                 }
             }
-            Debug.Log("Here");  
-            Debug.Log(_y_pos);
             yield return 0;
         }
-        ColorSwitch();
+        foreach (GameObject hexa in _hexas.Values)
+        {
+            hexa.SetActive(true);
+        }
     }
 }
