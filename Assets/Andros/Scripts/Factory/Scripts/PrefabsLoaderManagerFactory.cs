@@ -8,6 +8,7 @@ public class PrefabsLoaderManagerFactory : ScriptableObject, IFactory<PrefabsLoa
     public EnnemiesLoader EnnemiesLoader;
     public PlayerLoader PlayerLoader;
     public WeaponsLoader WeaponsLoader;
+    public LevelLoader LevelLoader;
     public DiceLoader DiceLoader;
     public HudLoader HudLoader;
 
@@ -18,6 +19,7 @@ public class PrefabsLoaderManagerFactory : ScriptableObject, IFactory<PrefabsLoa
         prefabsLoaderManager.EnnemiesLoader = EnnemiesLoader;
         prefabsLoaderManager.PlayerLoader = PlayerLoader;
         prefabsLoaderManager.WeaponsLoader = WeaponsLoader;
+        prefabsLoaderManager.LevelLoader = LevelLoader;
         prefabsLoaderManager.DiceLoader = DiceLoader;
         prefabsLoaderManager.HudLoader = HudLoader;
 

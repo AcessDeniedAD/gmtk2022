@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Color_tapis 2
+  m_Name: Color_tapis_green
   m_Shader: {fileID: -6465566751694194690, guid: f66edf69626a6d246bc81b4b8d0f4bb3, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -138,7 +138,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
-    - _Color: {r: 0.00784314, g: 0.13935602, b: 0.16078432, a: 1}
+    - _Color: {r: 0, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []

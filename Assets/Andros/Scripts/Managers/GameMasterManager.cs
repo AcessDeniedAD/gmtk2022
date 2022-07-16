@@ -134,7 +134,7 @@ public class GameMasterManager : BaseManager
 
         var timeToRoll = Random.Range(_rangesToRollingDiceTime[DifficultyLevel][0], _rangesToRollingDiceTime[DifficultyLevel][1]);
         _diceManager.RollDice(timeToRoll);
-
+        
         var timer = 0f;
         while (timer < timeToRoll)
         {

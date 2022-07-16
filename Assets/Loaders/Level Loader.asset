@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d92a598f3e835499e3ce7ab839400d, type: 3}
+  m_Name: Level Loader
+  m_EditorClassIdentifier: 
+  hexaPrefabRed: {fileID: 8090829840278808849, guid: f85b12e438329724cadb424dd0db0295, type: 3}
+  hexaPrefabBlue: {fileID: 5353671407132569322, guid: b35b0dea4938d3440aa06c6b2a169ae7, type: 3}
+  hexaPrefabGreen: {fileID: 4469507051742897401, guid: ce848197fd1ccbc49b69ad8d8904fee7, type: 3}
+  hexaPrefabYellow: {fileID: 7793621092522850487, guid: 1f7c5ef120183904791cdc3132e5c3a9, type: 3}
+  hexaPrefabOrange: {fileID: 6112271594279613192, guid: 4a5b5c74a1181744bb310cd2c5e5a0a4, type: 3}
+  hexaPrefabPurple: {fileID: 838769881433369805, guid: 470750e1915014e4d969ff2fe4859e23, type: 3}
