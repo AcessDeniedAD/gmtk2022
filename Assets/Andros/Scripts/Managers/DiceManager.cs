@@ -69,10 +69,18 @@ public class DiceManager : BaseManager
     }
     public IEnumerator RollDiceCoroutine(float time)
     {
+       
+        var facesDistance = new Dictionary<string, float>();
+        var canCheckDot = true;
         var timer = 0f;
-        var timeToChangeRotation = Random.Range(time/10, time/2);
+        var initialTime = time;
+        var timeToChangeRotation = Random.Range(initialTime / 5, initialTime / 2);
         Vector3 v3 = new Vector3(Random.Range(-180.0f, 180.0f), Random.Range(-180.0f, 180.0f), Random.Range(-180.0f, 180.0f));
         var initalSpeed = Random.Range(0.5f, 4);
+        var closestDirection = new KeyValuePair<string, float>();
+        Vector3 closestDir = Vector3.zero;
+        Quaternion initialRotation = Quaternion.identity;
+        float interpolator = 0;
         while (time >= 0)
         {
             time -= Time.deltaTime * Time.timeScale;
@@ -83,20 +91,68 @@ public class DiceManager : BaseManager
                 v3 += new Vector3(Random.Range(-50.0f, 50.0f), Random.Range(-50.0f, 50.0f), Random.Range(-50.0f, 50.0f));
                 //v3 = new Vector3(Random.Range(-180.0f, 180.0f), Random.Range(-180.0f, 180.0f), Random.Range(-180.0f, 180.0f));
                 timer = 0.0f;
-                timeToChangeRotation = Random.Range(time / 10, time / 2); ;
+                timeToChangeRotation = Random.Range(initialTime / 5, initialTime / 2); ;
             }
-            if(timer> time / 10)
+            if(time > initialTime / 10)
             {
                 _rollingDiceGameObject.transform.Rotate(v3 * Time.deltaTime * Time.timeScale * time * initalSpeed);
             }
             else
             {
-                _rollingDiceGameObject.transform.Rotate(v3 * Time.deltaTime * Time.timeScale * time * initalSpeed);
+               
+                var tr = _rollingDiceGameObject.transform;
+                var cameraDirection = (Camera.main.transform.position - tr.position).normalized;
+                if (canCheckDot)
+                {
+                  
+                    facesDistance.Add("forward", Vector3.Dot(tr.forward, cameraDirection));
+                    facesDistance.Add("-forward", Vector3.Dot(-tr.forward, cameraDirection));
+
+                    facesDistance.Add("right", Vector3.Dot(tr.right, cameraDirection));
+                    facesDistance.Add("-right", Vector3.Dot(-tr.right, cameraDirection));
+
+                    facesDistance.Add("up", Vector3.Dot(tr.up, cameraDirection));
+                    facesDistance.Add("-up", Vector3.Dot(-tr.up, cameraDirection));
+
+                    closestDirection = facesDistance.OrderByDescending(f => f.Value).First();
+                    
+                    canCheckDot = false;
+
+                    switch (closestDirection.Key)
+                    {
+                        case "forward":
+                            closestDir = tr.forward;
+                            break;
+                        case "-forward":
+                            closestDir = -tr.forward;
+                            break;
+
+                        case "right":
+                            closestDir = tr.right;
+                            break;
+                        case "-right":
+                            closestDir = -tr.right;
+                            break;
+
+                        case "up":
+                            closestDir = tr.up;
+                            break;
+                        case "-up":
+                            closestDir = -tr.up;
+                            break;
+
+                    }
+                    initialRotation = tr.rotation;
+                }
+
+
+                Quaternion qto = new Quaternion();
+                qto.SetFromToRotation(closestDir, cameraDirection);
+                interpolator += Time.deltaTime;
+                _rollingDiceGameObject.transform.rotation = Quaternion.Lerp(initialRotation, qto * initialRotation, interpolator / (initialTime / 10) );
             }
-            
 
             yield return 0;
         }
-
     }
 }
