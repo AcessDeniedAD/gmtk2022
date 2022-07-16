@@ -59,7 +59,7 @@ public class LevelManager : BaseManager
             AddNewHexa(hexaInfo.Key, hexaInfo.Value.transform.position, hexaInfo.Value.transform.rotation);
             z += 10;
         }
-        DropHexa("red");
+
         //StartRandomHexaMove();
     }
 
@@ -214,10 +214,14 @@ public class LevelManager : BaseManager
             }
         }
         ColorSwitch();
-        _gameManager.StartCoroutine(HexaComeBack());
+        HexaComeBack();
     }
 
-    IEnumerator HexaComeBack()
+    public void HexaComeBack()
+    {
+        _gameManager.StartCoroutine(HexaComeBackCoroutine());
+    }
+    IEnumerator HexaComeBackCoroutine()
     {
         float speedDown = 15;
         foreach (GameObject hexa in _hexas.Values)
