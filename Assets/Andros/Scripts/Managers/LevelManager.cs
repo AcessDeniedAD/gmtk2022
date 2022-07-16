@@ -18,7 +18,8 @@ public class LevelManager : BaseManager
     private GameObject _parentLevel;
     private float _startTime;
     private float _journeyLength;
-    private float _upPosition = 0.0f;
+    private float _onStageYPosition = 0.0f;
+    private float _upYPosition = 10.0f;
     private GameObject _hexaLocked;
     private int _hexaLockedId;
     private bool _randomHexaMove = false;
@@ -58,16 +59,16 @@ public class LevelManager : BaseManager
             AddNewHexa(hexaInfo.Key, hexaInfo.Value.transform.position, hexaInfo.Value.transform.rotation);
             z += 10;
         }
-        _gameManager.StartCoroutine(HexaDrop());
+        DropHexa("red");
         //StartRandomHexaMove();
     }
 
-    public void DropHexa(string faceName)
+    public void DropHexa(string colorName)
     {
 
-        _hexaLockedId = _hexaIdByColor[faceName];
+        _hexaLockedId = _hexaIdByColor[colorName];
         _hexaLocked = _hexas[_hexaLockedId];
-        _gameManager.StartCoroutine(HexaDrop());
+        _gameManager.StartCoroutine(DropHexaCoroutine());
     }
 
     public void AddNewHexa(string color, Vector3 position, Quaternion rotation)
@@ -176,7 +177,7 @@ public class LevelManager : BaseManager
 
     
 // COROUTINE 
-    IEnumerator HexaDrop()
+    IEnumerator DropHexaCoroutine()
     {
         _startTime = Time.time;
         _journeyLength = Vector3.Distance(new Vector3(0, 0, 0), new Vector3(0, DownPosition, 0));
@@ -197,9 +198,7 @@ public class LevelManager : BaseManager
                     if(hexa.transform.localScale.x > 0)
                         hexa.transform.localScale -= Vector3.one * Time.deltaTime * Time.timeScale;
                 }
-               
             }
-
             yield return 0;
         }
         foreach (GameObject hexa in _hexas.Values)
@@ -207,34 +206,37 @@ public class LevelManager : BaseManager
             if (!System.Object.ReferenceEquals(hexa, _hexaLocked))
             {
                 hexa.transform.localScale = Vector3.one;
+                hexa.transform.position = new Vector3(hexa.transform.position.x, _upYPosition, hexa.transform.position.z);
                 hexa.SetActive(false);
             }
         }
         ColorSwitch();
-        _gameManager.StartCoroutine(HexaBackUp());
+        _gameManager.StartCoroutine(HexaComeBack());
     }
 
-    IEnumerator HexaBackUp()
+    IEnumerator HexaComeBack()
     {
+        float speedDown = 15;
         foreach (GameObject hexa in _hexas.Values)
         {
             hexa.SetActive(true);
         }
         _startTime = Time.time;
-        _journeyLength = Vector3.Distance(new Vector3(0, 0, 0), new Vector3(0, DownPosition, 0));
-        while (_yPos < _upPosition)
+        _journeyLength = Vector3.Distance(new Vector3(0, 0, 0), new Vector3(0, _upYPosition, 0));
+        _yPos = _upYPosition;
+        while (_yPos > _onStageYPosition)
         {
-            float distCovered = (Time.time - _startTime) * Speed;
+            float distCovered = (Time.time - _startTime) * speedDown * Time.timeScale;
             float fractionOfJourney = distCovered / _journeyLength;
             foreach (GameObject hexa in _hexas.Values)
             {
                 if (!System.Object.ReferenceEquals(hexa,_hexaLocked))
                 {
                     hexa.transform.position = Vector3.Lerp(
-                   new Vector3(hexa.transform.position.x, DownPosition, hexa.transform.position.z),
-                   new Vector3(hexa.transform.position.x, 0, hexa.transform.position.z),
+                   new Vector3(hexa.transform.position.x, _upYPosition, hexa.transform.position.z),
+                   new Vector3(hexa.transform.position.x, _onStageYPosition, hexa.transform.position.z),
                    fractionOfJourney);
-                    _yPos = hexa.transform.position.y;
+                   _yPos = hexa.transform.position.y;
                 }
             }
             yield return 0;
