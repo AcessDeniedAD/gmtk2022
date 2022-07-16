@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a5c7f7dd7ed5a4d9026d68a26cdaa1, type: 3}
+  m_Name: DiceLoader
+  m_EditorClassIdentifier: 
+  WhiteFace: {fileID: 2100000, guid: d09b203ea92cf59478167ad5b06d26cf, type: 2}
+  DarkBlueFace: {fileID: 2100000, guid: ec03573742e97e24eb89088cf9a06772, type: 2}
+  PurpleFace: {fileID: 2100000, guid: 0a1881f34f5897c40a19766d1a59e4f1, type: 2}
+  LightBlueFace: {fileID: 2100000, guid: ab148836353967745879d1ccd357ccfa, type: 2}
+  OrangeFace: {fileID: 2100000, guid: ddc9f5bdb72085a42ac8f6c12b7b8028, type: 2}
+  PinkFace: {fileID: 2100000, guid: 9f0b093e54f5d124a99647a5d15f670f, type: 2}
+  RedFace: {fileID: 2100000, guid: 7cf182e3c6c1d9c4899628a8bac29b3b, type: 2}
+  RollingDice: {fileID: 919132149155446097, guid: d59a9177769e5094b81e8e663c920d60, type: 3}

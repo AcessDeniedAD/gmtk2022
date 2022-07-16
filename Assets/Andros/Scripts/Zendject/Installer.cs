@@ -7,6 +7,7 @@ public class Installer : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<LivingObjectEvents>().AsSingle().NonLazy();
+        Container.Bind<DiceManager>().AsSingle();
         Container.Bind<GameMasterManager>().AsSingle().NonLazy();
         Container.Bind<StatesManager>().AsSingle();
         Container.Bind<GameManager>().FromNewComponentOnNewGameObject().AsSingle();

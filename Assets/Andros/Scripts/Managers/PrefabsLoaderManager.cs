@@ -5,6 +5,6 @@
     public PlayerLoader PlayerLoader;
     public WeaponsLoader WeaponsLoader;
     public LevelLoader LevelLoader;
-
+    public DiceLoader DiceLoader;
     public HudLoader HudLoader;
 }

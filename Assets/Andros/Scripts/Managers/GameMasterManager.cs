@@ -8,12 +8,30 @@ public class GameMasterManager : BaseManager
 
     private readonly StatesManager _statesManager;
     private readonly GameManager _gameManager;
+    private readonly DiceManager _diceManager;
     private float _difficultyTimer =0 ;
     private bool _isDifficultyTimerEnabled = true;
     private List<List<float>> _rangesToRollingDiceTime = new List<List<float>>();
     private List<float> _timesToChangeLevels = new List<float> ();
     private List<float> _timesToWaitBeforePlatformsFall = new List<float>();
-    public GameMasterManager(StatesManager statesManager, GameManager gameManager)
+    public GameMasterManager(StatesManager statesManager, GameManager gameManager, DiceManager diceManager)
+    {
+        BuildDifficultiesLists();
+
+        _statesManager = statesManager;
+        _gameManager = gameManager;
+        _diceManager = diceManager;
+
+        EventsManager.StartListening(nameof(StatesEvents.OnCountDownIn), StartCountdown);
+        EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), StartRollDice);
+        EventsManager.StartListening(nameof(StatesEvents.OnDiceIsShowedIn), StartShowedDiceTime);
+
+        _statesManager.ChangeCurrentState(new States.CountDown());
+
+        GameManager.GameUpdateHandler += DifficultyChanger;
+    }
+
+    public void BuildDifficultiesLists()
     {
         _rangesToRollingDiceTime.Add(new List<float>() { 4, 5 });//1
         _rangesToRollingDiceTime.Add(new List<float>() { 3.5f, 5 });//2
@@ -59,21 +77,15 @@ public class GameMasterManager : BaseManager
         _timesToWaitBeforePlatformsFall.Add(2);//12
         _timesToWaitBeforePlatformsFall.Add(1.5f);//13
         _timesToWaitBeforePlatformsFall.Add(1);//14
-
-        _statesManager = statesManager;
-        _gameManager = gameManager;
-       
-        EventsManager.StartListening(nameof(StatesEvents.OnCountDownIn), StartCountdown);
-        EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), StartRollDice);
-        EventsManager.StartListening(nameof(StatesEvents.OnDiceIsShowedIn), StartShowedDiceTime);
-        _statesManager.ChangeCurrentState(new States.CountDown());
-
-        GameManager.GameUpdateHandler += DifficultyChanger;
     }
     public void DifficultyChanger()
     {
-        _difficultyTimer += Time.deltaTime * Time.timeScale;
-        if (DifficultyLevel <= _timesToChangeLevels.Count -1)
+        if (_isDifficultyTimerEnabled)
+        {
+            _difficultyTimer += Time.deltaTime * Time.timeScale;
+        }
+        
+        if (DifficultyLevel < _timesToChangeLevels.Count -1)
         {
             if (_difficultyTimer > _timesToChangeLevels[DifficultyLevel])
             {
@@ -113,9 +125,16 @@ public class GameMasterManager : BaseManager
 
     IEnumerator StartRollDiceCoroutine()
     {
+        
+        _diceManager.EnableRollingDiceInScene();
+        _diceManager.BuildNewFacesOnDice(DifficultyLevel);
         _isDifficultyTimerEnabled = true;
         Debug.Log("DICE IS ROLLING MODAFOCKA");
+
+
         var timeToRoll = Random.Range(_rangesToRollingDiceTime[DifficultyLevel][0], _rangesToRollingDiceTime[DifficultyLevel][1]);
+        _diceManager.RollDice(timeToRoll);
+
         var timer = 0f;
         while (timer < timeToRoll)
         {
@@ -132,6 +151,7 @@ public class GameMasterManager : BaseManager
 
     IEnumerator StartShowedDiceTimeCoroutine()
     {
+        
         _isDifficultyTimerEnabled = false;
         Debug.Log("DICE IS SHOWED MODAFOCKA");
         var timer = 0f;
@@ -145,6 +165,8 @@ public class GameMasterManager : BaseManager
 
         Debug.Log("plateform Fall after " + _timesToWaitBeforePlatformsFall[DifficultyLevel] + " duringTime");
 
+        _diceManager.DisableRollingDiceInScene();
+        yield return new WaitForSeconds(1);
         _statesManager.ChangeCurrentState(new States.RollDice());
     }
 

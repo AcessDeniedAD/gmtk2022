@@ -4,54 +4,61 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : BaseLivingObject
-{
-    [HideInInspector]
-    public Vector2 CursorMovement = Vector2.zero;
+{   
+    public Vector2 PlayerDirection = Vector2.zero;
 
-    private int CurrentWeaponId = 0;
-    private WeaponsIntoPlayer weaponsIntoPlayer;
-    private PlayerMovements playerMovements;
+    [SerializeField]
+    private PlayerMovement _playerMovement;
 
-    private void Start()
+    private MainPlayerInput _mainPlayerInput;
+
+
+    private void Awake()
     {
-        weaponsIntoPlayer = gameObject.GetComponent<WeaponsIntoPlayer>();
-        playerMovements = gameObject.GetComponent<PlayerMovements>();
-    }
-    public void OnMoveCursor(InputAction.CallbackContext context)
-    {
-        CursorMovement = context.ReadValue<Vector2>();
-    }
-    public void OnChangeWeaponLeft(InputAction.CallbackContext context)
-    {
-        if (context.started)
+        _mainPlayerInput = new MainPlayerInput();
+        _mainPlayerInput.Enable();
+        if(_playerMovement == null)
         {
-            CurrentWeaponId--;
-            if (CurrentWeaponId < 0)
-            {
-                CurrentWeaponId = weaponsIntoPlayer.EquipedWeapons.Count - 1;
-            }
-            weaponsIntoPlayer.ChangeWeapon(CurrentWeaponId);
+            _playerMovement = gameObject.GetComponent<PlayerMovement>();
+        }
+
+        _mainPlayerInput.Player.Move.performed += OnMove;
+        _mainPlayerInput.Player.Move.canceled += OnMove;
+        _mainPlayerInput.Player.Dash.started += OnDash;
+        _mainPlayerInput.Player.Jump.started += OnJump;
+
+    }
+
+    private void OnDestroy()
+    {
+        _mainPlayerInput.Player.Move.performed -= OnMove;
+        _mainPlayerInput.Player.Move.canceled -= OnMove;
+        _mainPlayerInput.Player.Dash.performed -= OnDash;
+        _mainPlayerInput.Player.Dash.performed -= OnJump;
+
+        _mainPlayerInput.Disable(); 
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            _playerMovement.PlayerDirection = context.ReadValue<Vector2>();
+        }
+        else if (context.canceled)
+        {
+            _playerMovement.PlayerDirection = Vector2.zero;
         }
     }
-    public void OnChangeWeaponRight(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            CurrentWeaponId++;
-            if (CurrentWeaponId > weaponsIntoPlayer.EquipedWeapons.Count - 1)
-            {
-                CurrentWeaponId = 0;
-            }
-            weaponsIntoPlayer.ChangeWeapon(CurrentWeaponId);
-        }
-    }
 
-    public void OnShoot(InputAction.CallbackContext context)
-    {
-            weaponsIntoPlayer.CurrentWeapon.GetComponent<WeaponController>().Shoot(context);
-    }
     public void OnDash(InputAction.CallbackContext context)
     {
-        playerMovements.Dash(context, Vector3.one * CursorMovement, 10);
+        _playerMovement.Dash();
     }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        _playerMovement.Jump();
+    }
+
 }

@@ -19,11 +19,11 @@ public class WeaponController : MonoBehaviour
 
     void FixedUpdate()
     {
-        var dir = playerController.CursorMovement;
-        if(dir != Vector2.zero)
-        {
-            lastDir = dir;
-        }
+        //var dir = playerController.CursorMovement;
+        //if(dir != Vector2.zero)
+        //{
+        //    lastDir = dir;
+        //}
 
         var angle = Mathf.Atan2(lastDir.y, lastDir.x ) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
