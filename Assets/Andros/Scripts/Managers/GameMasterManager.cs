@@ -165,7 +165,7 @@ public class GameMasterManager : BaseManager
             yield return 0;
         }
 
-        _levelManager.DropHexa(_diceManager.GetDiceFace());
+        _levelManager.DropHexa(_diceManager.GetDiceFace(), DifficultyLevel);
         Debug.Log("plateform Fall after " + _timesToWaitBeforePlatformsFall[DifficultyLevel] + " duringTime");
 
         _diceManager.DisableRollingDiceInScene();
