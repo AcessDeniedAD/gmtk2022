@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!162 &1
 EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
@@ -12,24 +13,6 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedSceneGuid-2:
       value: 06090450000d0a0308570823147b0744454e1e73797d74347c7a4931e3e56d3a
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 0057015504535c59590c597342700e4414164f7b2d7b7136287e4d6bbae5326f
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 5450065e5d060b085c5f082643770844424e4d787d7d736475704f6ae1b0366d
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 5b01570407030d5e0f595a7446710a44404e192b7d70256878781930b1e36c6d
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 5402505104020c585b5f0f21132609444f164e7c7c2971667d7c4467b4b26c60
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 06090450000d0a0308570823147b0744454e1e73797d74347c7a4931e3e56d3a
-      flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 54545502570d0b5954585e75447b5d44174f4d2c757b74687c2d4462bbb16d68
       flags: 0
     RecentlyUsedScenePath-0:
       value: 224247031146467a030a1e2d036c6f1c031011243f67003528255215e7e5381ce7ea39faa8183e2e3b03fd3505301270d40f0c07d40a1809101cf40f1fec5e061fcc0cdc
@@ -62,7 +45,7 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
     UnityEditor.ShaderGraph.Blackboard:
-      value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd3c3e302a07a37e0901373ae01e0008f707250d171df81a53a5465d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd80908fecb0f9cfddf1eff4e7a1b1eae482f0fdaee1e1928b86d888ed909c968797a7cf
+      value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd3c3e302a07a37e0901373ae01e0008f707250d171df81a53a5415d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd80908fecb0f9cfddf1eff4e7a1b1eae482f0fdaee1e1928b86d888ed909c968797a7cf
       flags: 0
     UnityEditor.ShaderGraph.FloatingWindowsLayout2:
       value: 181344140043005e1a220d3b1f364b524c0c5a27130c293326201334cee5322ca0bd30e8eb293a707b0fd0180b3d0a36fc0d3d04e649500d1002ee0b5dbd1d2c27c00ad113cb1e10e41f1addc80993b98d9884a69ae6d8f0d1cda9e8fbfefaf9f9dea3fdb9ade882f0f7b0e1e380cafbf2c3adc18e9cd285a2908b82ec869c8395949c9483d68a8e97ddbd90bf
