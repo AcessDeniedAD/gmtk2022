@@ -9,7 +9,6 @@ using Zenject;
 public class StatesManager
 {
     BaseState currentState;
-
     public BaseState CurrentState { 
         get
         {

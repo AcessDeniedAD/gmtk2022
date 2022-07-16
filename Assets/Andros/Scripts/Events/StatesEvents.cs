@@ -9,27 +9,30 @@ public class StatesEvents
     {
 
     }
+    //TODO USE static String instead  unityAction;
+    public UnityAction<Args> OnTitleScreenIn;
+    public UnityAction<Args> OnTitleScreenOut;
 
     public  UnityAction<Args> OnBeginIn;
     public  UnityAction<Args> OnBeginOut;
 
-    public  UnityAction<Args> OnRunIn;
-    public  UnityAction<Args> OnRunOut;
+    public UnityAction<Args> OnCountDownIn;
+    public UnityAction<Args> OnCountDownOut;
 
-    public  UnityAction<Args> OnWinIn;
-    public  UnityAction<Args> OnWinOut;
+    public  UnityAction<Args> OnRollDiceIn;
+    public  UnityAction<Args> OnRollDiceOut;
 
-    public  UnityAction<Args> OnEndIn;
-    public  UnityAction<Args> OnEndOut;
+    public UnityAction<Args> OnDiceIsShowedIn;
+    public UnityAction<Args> OnDiceIsShowedOut;
+
+    public  UnityAction<Args> OnLooseIn;
+    public  UnityAction<Args> OnLooseOut;
 
     public UnityAction<Args> OnPauseIn;
     public UnityAction<Args> OnPauseOut;
 
-    public UnityAction<Args> OnFallingIn;
-    public UnityAction<Args> OnFallingOut;
-
-    public UnityAction<Args> OnLandingIn;
-    public UnityAction<Args> OnLandingOut;
+    public UnityAction<Args> OnResultMenuIn;
+    public UnityAction<Args> OnResultMenuOut;
     
     public class StatesEventArgs : Args
     {
