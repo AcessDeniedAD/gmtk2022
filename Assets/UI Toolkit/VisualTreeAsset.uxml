@@ -1,3 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="width: 500px; height: 500px; left: 25px; top: 25px; right: 1244px; bottom: 554px; opacity: 1; background-color: rgb(128, 128, 128);" />
+    <ui:VisualElement style="width: 50px; height: 50px; position: absolute; left: 25%; top: 25%; right: 25%; bottom: 25%; background-color: rgb(72, 140, 85);" />
+    <ui:Label text="07s" display-tooltip-when-elided="true" name="Timer" style="-unity-font: url(&apos;project://database/Assets/Visuals/Fonts/Voice%20of%20the%20Highlander.ttf?fileID=12800000&amp;guid=d9e0dcff3dc87e4449a85106fb901bd7&amp;type=3#Voice of the Highlander&apos;); left: 90%; align-items: flex-end; white-space: nowrap; -unity-text-align: lower-left; -unity-font-style: bold;" />
 </ui:UXML>
