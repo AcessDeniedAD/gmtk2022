@@ -10,6 +10,8 @@ public class DiceManager : BaseManager
     private readonly DiceLoader _diceLoader;
     private List<Face> _currentFacesOnDice = new List<Face>();
 
+    public string ShownFaceMaterialName = "mat";
+
     private List<Face> _faces;
     public DiceManager(PrefabsLoaderManager prefabsLoaderManager, GameManager gameManager)
     {
@@ -53,13 +55,13 @@ public class DiceManager : BaseManager
     {
         _faces = new List<Face>()
         {
-            new Face(){name = "RedFace", material = _diceLoader.RedFace, difficultyLevel = 0 , weight = 1, id = 1},
-            new Face(){name = "PinkFace", material = _diceLoader.PinkFace, difficultyLevel = 0 , weight = 1,id = 2},
-            new Face(){name = "PurpleFace", material = _diceLoader.PurpleFace,difficultyLevel = 0 , weight = 1, id = 3},
-            new Face(){name = "DarkBlueFace", material = _diceLoader.DarkBlueFace,difficultyLevel = 0 , weight = 1, id = 4},
-            new Face(){name = "LightBlueFace", material = _diceLoader.LightBlueFace,difficultyLevel = 0 , weight = 1, id = 5},
-            new Face(){name = "OrangeFace", material = _diceLoader.OrangeFace,difficultyLevel = 0 , weight = 1, id = 6},
-            new Face(){name = "WhiteFace", material = _diceLoader.WhiteFace,difficultyLevel = 0 , weight = 1, id = 7},
+            new Face(){name = "Red", material = _diceLoader.RedFace, difficultyLevel = 0 , weight = 1, id = 1},
+            new Face(){name = "Pink", material = _diceLoader.PinkFace, difficultyLevel = 0 , weight = 1,id = 2},
+            new Face(){name = "Purple", material = _diceLoader.PurpleFace,difficultyLevel = 0 , weight = 1, id = 3},
+            new Face(){name = "DarkBlue", material = _diceLoader.DarkBlueFace,difficultyLevel = 0 , weight = 1, id = 4},
+            new Face(){name = "LightBlue", material = _diceLoader.LightBlueFace,difficultyLevel = 0 , weight = 1, id = 5},
+            new Face(){name = "Orange", material = _diceLoader.OrangeFace,difficultyLevel = 0 , weight = 1, id = 6},
+            new Face(){name = "White", material = _diceLoader.WhiteFace,difficultyLevel = 0 , weight = 1, id = 7},
         };
     }
 
@@ -122,30 +124,37 @@ public class DiceManager : BaseManager
                     {
                         case "forward":
                             closestDir = tr.forward;
+                            SelectMaterialByIndex(3);
                             break;
+
                         case "-forward":
                             closestDir = -tr.forward;
+                            SelectMaterialByIndex(6);
                             break;
 
                         case "right":
                             closestDir = tr.right;
+                            SelectMaterialByIndex(1);
                             break;
+
                         case "-right":
                             closestDir = -tr.right;
+                            SelectMaterialByIndex(5);
                             break;
 
                         case "up":
                             closestDir = tr.up;
+                            SelectMaterialByIndex(4);
                             break;
+
                         case "-up":
                             closestDir = -tr.up;
+                            SelectMaterialByIndex(0);
                             break;
 
                     }
                     initialRotation = tr.rotation;
                 }
-
-
                 Quaternion qto = new Quaternion();
                 qto.SetFromToRotation(closestDir, cameraDirection);
                 interpolator += Time.deltaTime;
@@ -154,5 +163,17 @@ public class DiceManager : BaseManager
 
             yield return 0;
         }
+    }
+
+    private void SelectMaterialByIndex(int i)
+    {
+        ShownFaceMaterialName = _rollingDiceGameObject.GetComponent<MeshRenderer>().sharedMaterials[i].name;
+        Debug.Log("SelectedMaterial is " + ShownFaceMaterialName);
+    }
+
+    public string GetDiceFace()
+    {
+        var face = _faces.Where(x => x.material.name == ShownFaceMaterialName).Single();
+        return face.name;
     }
 }
