@@ -13,6 +13,9 @@ public class GameMasterManager : BaseManager
     private float _difficultyTimer =0 ;
     private bool _isDifficultyTimerEnabled = true;
     private List<List<float>> _rangesToRollingDiceTime = new List<List<float>>();
+
+    private List<List<float>> _rangesToCoinTime = new List<List<float>>();
+
     private List<float> _timesToChangeLevels = new List<float> ();
     private List<float> _timesToWaitBeforePlatformsFall = new List<float>();
     public GameMasterManager(StatesManager statesManager, GameManager gameManager, DiceManager diceManager, LevelManager levelManager)
@@ -26,6 +29,7 @@ public class GameMasterManager : BaseManager
 
         EventsManager.StartListening(nameof(StatesEvents.OnCountDownIn), StartCountdown);
         EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), StartRollDice);
+        EventsManager.StartListening(nameof(StatesEvents.OnCoinTimeIn), StartCoinTime);
         EventsManager.StartListening(nameof(StatesEvents.OnDiceIsShowedIn), StartShowedDiceTime);
 
         _statesManager.ChangeCurrentState(new States.CountDown());
@@ -50,6 +54,21 @@ public class GameMasterManager : BaseManager
         _rangesToRollingDiceTime.Add(new List<float>() { 0.5f, 1f });//12
         _rangesToRollingDiceTime.Add(new List<float>() { 0.3f, 1f });//13
         _rangesToRollingDiceTime.Add(new List<float>() { 0.3f, 0.5f });//14
+
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//1
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//2
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//3
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//4
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//5
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//6
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//7
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//8
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//9
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//10
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//11
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//12
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//13
+        _rangesToCoinTime.Add(new List<float>() { 4, 5 });//14
 
         _timesToChangeLevels.Add(6);//1
         _timesToChangeLevels.Add(10);//2
@@ -93,7 +112,6 @@ public class GameMasterManager : BaseManager
             if (_difficultyTimer > _timesToChangeLevels[DifficultyLevel])
             {
                 DifficultyLevel++;
-                Debug.Log("Difficulty level change to " + DifficultyLevel);
             }
         }
     }
@@ -120,7 +138,6 @@ public class GameMasterManager : BaseManager
         Debug.Log("2");
         yield return new WaitForSeconds(1);
         Debug.Log("3");
-
         yield return new WaitForSeconds(1);
      
         _statesManager.ChangeCurrentState(new States.RollDice());
@@ -128,12 +145,9 @@ public class GameMasterManager : BaseManager
 
     IEnumerator StartRollDiceCoroutine()
     {
-        
         _diceManager.EnableRollingDiceInScene();
         _diceManager.BuildNewFacesOnDice(DifficultyLevel);
         _isDifficultyTimerEnabled = true;
-        Debug.Log("DICE IS ROLLING MODAFOCKA");
-
 
         var timeToRoll = Random.Range(_rangesToRollingDiceTime[DifficultyLevel][0], _rangesToRollingDiceTime[DifficultyLevel][1]);
         _diceManager.RollDice(timeToRoll);
@@ -147,15 +161,12 @@ public class GameMasterManager : BaseManager
             yield return 0;
         }
 
-        Debug.Log("DICE IS STOP WITH "+ timeToRoll +" duringTime");
-
         _statesManager.ChangeCurrentState(new States.DiceIsShowed());
     }
 
     IEnumerator StartShowedDiceTimeCoroutine()
     {
         _isDifficultyTimerEnabled = false;
-        Debug.Log("DICE IS SHOWED MODAFOCKA");
         var timer = 0f;
         while (timer < _timesToWaitBeforePlatformsFall[DifficultyLevel])
         {
@@ -166,10 +177,23 @@ public class GameMasterManager : BaseManager
         }
 
         _levelManager.DropHexa(_diceManager.GetDiceFace(), DifficultyLevel);
-        Debug.Log("plateform Fall after " + _timesToWaitBeforePlatformsFall[DifficultyLevel] + " duringTime");
 
         _diceManager.DisableRollingDiceInScene();
         yield return new WaitForSeconds(1);
+        _statesManager.ChangeCurrentState(new States.CoinTime());
+    }
+    private void StartCoinTime(Args args)
+    {
+        _gameManager.StartCoroutine(CoinTimeCoroutine());
+    }
+
+    IEnumerator CoinTimeCoroutine()
+    {
+        Debug.Log("TIME TO GET COIN");
+        var timeToGetCoin = Random.Range(_rangesToRollingDiceTime[DifficultyLevel][0], _rangesToRollingDiceTime[DifficultyLevel][1]);
+        yield return new WaitForSeconds(timeToGetCoin);
+        Debug.Log("STOP TIME TO GET COIN");
+     
         _statesManager.ChangeCurrentState(new States.RollDice());
     }
 
