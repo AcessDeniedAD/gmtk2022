@@ -9,7 +9,7 @@ using Zenject;
 public class StatesManager
 {
     BaseState currentState;
-    public BaseState CurrentState { 
+    public BaseState CurrentState {
         get
         {
             return currentState;
@@ -20,6 +20,14 @@ public class StatesManager
             currentState = value;
             currentState.In();
         }
+    }
+
+    public bool CheckState(BaseState state){
+        if(currentState == state)
+        {
+            return true;
+        }
+        return false;
     }
 
     public void ChangeCurrentState(BaseState state)
