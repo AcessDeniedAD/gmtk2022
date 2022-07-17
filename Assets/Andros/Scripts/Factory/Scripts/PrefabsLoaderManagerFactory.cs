@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Factory/ResourcesLoaderManagerFactory", order = 1)]
@@ -10,7 +8,8 @@ public class PrefabsLoaderManagerFactory : ScriptableObject, IFactory<PrefabsLoa
     public EnnemiesLoader EnnemiesLoader;
     public PlayerLoader PlayerLoader;
     public WeaponsLoader WeaponsLoader;
-
+    public LevelLoader LevelLoader;
+    public DiceLoader DiceLoader;
     public HudLoader HudLoader;
 
     public PrefabsLoaderManager Create()
@@ -20,8 +19,10 @@ public class PrefabsLoaderManagerFactory : ScriptableObject, IFactory<PrefabsLoa
         prefabsLoaderManager.EnnemiesLoader = EnnemiesLoader;
         prefabsLoaderManager.PlayerLoader = PlayerLoader;
         prefabsLoaderManager.WeaponsLoader = WeaponsLoader;
-
+        prefabsLoaderManager.LevelLoader = LevelLoader;
+        prefabsLoaderManager.DiceLoader = DiceLoader;
         prefabsLoaderManager.HudLoader = HudLoader;
+
         return prefabsLoaderManager;
     }
 }

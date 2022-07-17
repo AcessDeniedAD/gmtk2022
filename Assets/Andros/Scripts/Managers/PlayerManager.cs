@@ -6,33 +6,28 @@ using Zenject;
 public class PlayerManager : BaseManager
 {
     [HideInInspector]
-    public List<GameObject> Players;
-    public PlayerManager()
+    public GameObject Player;
+
+    private readonly StatesManager _statesManager;
+
+    private readonly PrefabsLoaderManager _prefabsLoaderManager;
+
+    private readonly GameManager _gameManager;
+    public PlayerManager(PrefabsLoaderManager prefabsLoaderManager, GameManager gameManager, StatesManager statesManager)
     {
-        Players = new List<GameObject>();        
+        _prefabsLoaderManager = prefabsLoaderManager;
+        _statesManager = statesManager;
+        _gameManager = gameManager;
+        StartPlayerInScene(_prefabsLoaderManager.PlayerLoader.PlayerPrefab);
     }
-    public void StartPlayerInSceneWithEquipedWeapons(GameObject player, Vector3 dir, List<GameObject> weaponsPrefab)
+
+    public void StartPlayerInScene(GameObject player)
     {
-        var playerGo = GameObject.Instantiate(player);
-        playerGo.GetComponent<PlayerMovements>().Direction = dir;
-        Players.Add(playerGo);
-        for (int i = 0; i < weaponsPrefab.Count; i++)
-        {
-            var weaponGo = GameObject.Instantiate(weaponsPrefab[i]);
-            playerGo.GetComponent<WeaponsIntoPlayer>().EquipedWeapons.Add(weaponGo);
-            weaponGo.transform.parent = playerGo.transform;
-            weaponGo.transform.localPosition = Vector3.zero;
-            weaponGo.GetComponent<WeaponController>().Init();
-            weaponGo.GetComponent<WeaponController>().Shooter.Init();
-            if (i != 0)
-            {
-                weaponGo.SetActive(false);
-            }
-            else
-            {
-                playerGo.GetComponent<WeaponsIntoPlayer>().CurrentWeapon = weaponGo;
-            }
-        }
+        Player = _gameManager.InstantiateInGameManager(player, new Vector3(0.0f, 0.75f, 0.0f), Quaternion.identity);
+        Player.GetComponent<PlayerMovement>()._statesManager = _statesManager;
+        Player.name = "Player";
     }
+
+  
    
 }

@@ -21,6 +21,23 @@ namespace States
         }
     }
 
+    public class TitleScreen : BaseState
+    {
+        public TitleScreen()
+        {
+            ElementsCanMove = false;
+        }
+        public override void In()
+        {
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnTitleScreenIn));
+        }
+        public override void Out()
+        {
+
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnTitleScreenOut));
+        }
+    }
+
     public class Begin : BaseState
     {
         public Begin()
@@ -37,88 +54,86 @@ namespace States
             EventsManager.TriggerEvent(nameof(StatesEvents.OnBeginIn));
         }
     }
-    public class Run : BaseState
+    public class CountDown : BaseState
     {
-        public Run()
+        public CountDown()
+        {
+            ElementsCanMove = false;
+        }
+        public override void In()
+        {
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnCountDownIn));
+        }
+        public override void Out()
+        {
+
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnCountDownOut));
+        }
+    }
+
+    public class RollDice : BaseState
+    {
+        public RollDice()
         {
             ElementsCanMove = true;
         }
         public override void In()
         {
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnRunIn));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnRollDiceIn));
         }
         public override void Out()
         {
 
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnRunOut));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnRollDiceOut));
         }
     }
 
-    public class Win : BaseState
+    public class DiceIsShowed : BaseState
     {
-        public Win()
+        public DiceIsShowed()
         {
             ElementsCanMove = false;
         }
         public override void In()
         {
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnWinIn));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnDiceIsShowedIn));
         }
         public override void Out()
         {
 
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnWinOut));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnDiceIsShowedOut));
         }
     }
 
-    public class End : BaseState
+    public class Loose : BaseState
     {
-        public End()
+        public Loose()
         {
             ElementsCanMove = false;
         }
         public override void In()
         {
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnEndIn));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnLooseIn));
         }
         public override void Out()
         {
-
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnEndOut));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnLooseOut));
         }
     }
 
-    public class Falling : BaseState
+    public class CoinTime : BaseState
     {
-        public Falling()
+        public CoinTime()
         {
-            ElementsCanMove = false;
+            ElementsCanMove = true;
         }
         public override void In()
         {
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnFallingIn));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnCoinTimeIn));
         }
         public override void Out()
         {
-
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnFallingOut));
-        }
-    }
-
-    public class Landing : BaseState
-    {
-        public Landing()
-        {
-            ElementsCanMove = false;
-        }
-        public override void In()
-        {
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnLandingIn));
-        }
-        public override void Out()
-        {
-
-            EventsManager.TriggerEvent(nameof(StatesEvents.OnLandingOut));
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnCoinTimeOut));
         }
     }
 
@@ -134,8 +149,23 @@ namespace States
         }
         public override void Out()
         {
-
             EventsManager.TriggerEvent(nameof(StatesEvents.OnPauseOut));
+        }
+    }
+
+    public class ResultMenu : BaseState
+    {
+        public ResultMenu()
+        {
+            ElementsCanMove = false;
+        }
+        public override void In()
+        {
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnResultMenuIn));
+        }
+        public override void Out()
+        {
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnResultMenuOut));
         }
     }
 

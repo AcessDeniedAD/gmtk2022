@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Enemy
   - EnemyBullet
+  - Missile
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - Bullets
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Antagonist
+  - CastShadow
+  - Coin
   - 
   - 
   - 

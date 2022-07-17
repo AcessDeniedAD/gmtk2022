@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af56cea224640246bb0fc19cb6676c2, type: 3}
   m_Name: PlayerLoader
   m_EditorClassIdentifier: 
-  PlayerPrefab: {fileID: 4496221024623677529, guid: f90ffd96ee4e49d4681b54e8bca8af09, type: 3}
-  Id: 1
+  PlayerPrefab: {fileID: 7420423192752499991, guid: ca586f2c6ce711c4f87d4e595476caf4, type: 3}
   Speed: 5
-  StartDirection: {x: 0, y: 1, z: 0}
