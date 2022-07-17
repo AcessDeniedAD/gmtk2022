@@ -18,7 +18,8 @@ public class PlayerManager : BaseManager
     private readonly ZenjectSceneLoader _sceneLoader;
 
     private readonly GameManager _gameManager;
-    public bool isDead;
+    private Vector3 _initialPosition;
+    public bool IsDead;
     public PlayerManager(ZenjectSceneLoader sceneLoader, PrefabsLoaderManager prefabsLoaderManager, GameManager gameManager, StatesManager statesManager, DiceManager diceManager, HudManager hudManager, LevelManager levelManager)
     {
         _prefabsLoaderManager = prefabsLoaderManager;
@@ -37,6 +38,7 @@ public class PlayerManager : BaseManager
         PlayerMovement playerMove = Player.GetComponent<PlayerMovement>();
         playerMove._statesManager = _statesManager;
         playerMove._playerManager = this;
+        _initialPosition = Player.transform.position;
         Player.name = "Player";
     }
 
@@ -48,9 +50,7 @@ public class PlayerManager : BaseManager
 
     public void SetIsDead()
     {
-        Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name);
-;
+        Player.transform.position = _initialPosition;
     }
 
   

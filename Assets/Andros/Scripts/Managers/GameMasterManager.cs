@@ -18,7 +18,7 @@ public class GameMasterManager : BaseManager
 
     private List<float> _timesToChangeLevels = new List<float> ();
     private List<float> _timesToWaitBeforePlatformsFall = new List<float>();
-
+    private bool isLoose =false;
     public GameMasterManager(StatesManager statesManager, GameManager gameManager, DiceManager diceManager, LevelManager levelManager)
     {
         BuildDifficultiesLists();
@@ -28,21 +28,13 @@ public class GameMasterManager : BaseManager
         _diceManager = diceManager;
         _levelManager = levelManager;
 
-        gameManager.StartCoroutine(WaitGameIsStart());
         GameManager.GameUpdateHandler += DifficultyChanger;
         _levelManager = levelManager;
-    }
-       
-    IEnumerator WaitGameIsStart()
-    {
-        while (! _gameManager.GameIsStart)
-        {
-            yield return 0;
-        }
         EventsManager.StartListening(nameof(StatesEvents.OnCountDownIn), StartCountdown);
         EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), StartRollDice);
         EventsManager.StartListening(nameof(StatesEvents.OnCoinTimeIn), StartCoinTime);
         EventsManager.StartListening(nameof(StatesEvents.OnDiceIsShowedIn), StartShowedDiceTime);
+        EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
 
         _statesManager.ChangeCurrentState(new States.CountDown());
     }
@@ -108,6 +100,10 @@ public class GameMasterManager : BaseManager
         _timesToWaitBeforePlatformsFall.Add(1.5f);//13
         _timesToWaitBeforePlatformsFall.Add(1);//14
     }
+    public void Loose(Args args)
+    {
+        isLoose = true;
+    }
     public void DifficultyChanger()
     {
         if (_isDifficultyTimerEnabled)
@@ -128,6 +124,7 @@ public class GameMasterManager : BaseManager
     {
         _difficultyTimer = 0;
         _gameManager.StartCoroutine(CountDownCoroutine());
+        isLoose = false;
     }
     public void StartShowedDiceTime(Args args)
     {
@@ -168,8 +165,15 @@ public class GameMasterManager : BaseManager
             Debug.Log(".");
             yield return 0;
         }
-
-        _statesManager.ChangeCurrentState(new States.DiceIsShowed());
+        if (isLoose)
+        {
+            _statesManager.ChangeCurrentState(new States.CountDown());
+        }
+        else
+        {
+            _statesManager.ChangeCurrentState(new States.DiceIsShowed());
+        }
+        
     }
 
     IEnumerator StartShowedDiceTimeCoroutine()
@@ -188,7 +192,14 @@ public class GameMasterManager : BaseManager
 
         _diceManager.DisableRollingDiceInScene();
         yield return new WaitForSeconds(1);
-        _statesManager.ChangeCurrentState(new States.CoinTime());
+        if (isLoose)
+        {
+            _statesManager.ChangeCurrentState(new States.CountDown());
+        }
+        else
+        {
+            _statesManager.ChangeCurrentState(new States.CoinTime());
+        }
     }
     private void StartCoinTime(Args args)
     {
@@ -201,8 +212,15 @@ public class GameMasterManager : BaseManager
         var timeToGetCoin = Random.Range(_rangesToRollingDiceTime[DifficultyLevel][0], _rangesToRollingDiceTime[DifficultyLevel][1]);
         yield return new WaitForSeconds(timeToGetCoin);
         Debug.Log("STOP TIME TO GET COIN");
-     
-        _statesManager.ChangeCurrentState(new States.RollDice());
+
+        if (isLoose)
+        {
+            _statesManager.ChangeCurrentState(new States.CountDown());
+        }
+        else
+        {
+            _statesManager.ChangeCurrentState(new States.RollDice());
+        }
     }
 
 }

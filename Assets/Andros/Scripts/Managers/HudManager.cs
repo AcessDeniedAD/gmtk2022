@@ -29,7 +29,6 @@ public class HudManager
 
     private void StartGame()
     {
-        _gamerManager.GameIsStart = false;
         _gamerManager.StartCoroutine(WaitStartGame());
     }
 
@@ -44,7 +43,6 @@ public class HudManager
         while (!_gamerManager.GameIsStart)
         {
              yield return new WaitForSecondsRealtime(5);
-            _gamerManager.GameIsStart = true;
             currentCanvas.SetActive(false);
         }
     }

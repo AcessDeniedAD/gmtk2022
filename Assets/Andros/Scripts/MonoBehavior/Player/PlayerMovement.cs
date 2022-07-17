@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Loose(Args args)
     {
-        if (!_playerManager.isDead)
+        if (!_playerManager.IsDead)
         {
             _playerManager.SetIsDead();
         }
