@@ -12,7 +12,7 @@ public class CoinManager : BaseManager
         _gameManager = gameManager;
         _prefabsLoaderManager = prefabsLoaderManager;
         coinPoolerManager = _poolerManager;
-        coinPoolerManager.InstantiatePooledObjectsIntoParent(new GameObject(), new GameObject(), 100);
+        //coinPoolerManager.InstantiatePooledObjectsIntoParent(new GameObject(), new GameObject(""), 100);
     }
 
 }
