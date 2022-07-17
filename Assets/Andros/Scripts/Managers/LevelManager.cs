@@ -123,7 +123,7 @@ public class LevelManager : BaseManager
                 if(i != old_hexa_locked_index)
                 {
                     Vector3 hexa_size = Hexas[order].transform.localScale;
-                    float scale_pourcentage = 0.80f;
+                    float scale_pourcentage = 0.50f;
                     ChangeHexaSize(order, new Vector3(hexa_size.x * scale_pourcentage, hexa_size.y * scale_pourcentage, hexa_size.z * scale_pourcentage));
                 }
             }
