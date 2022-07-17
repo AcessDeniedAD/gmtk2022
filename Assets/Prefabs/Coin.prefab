@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3974185441590730003}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 0.75000167, y: 0.42455244, z: 1.3653822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58,15 +58,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6261b1d36f13384498c22944ebd98560, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0896
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6261b1d36f13384498c22944ebd98560, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0896
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6261b1d36f13384498c22944ebd98560, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0896
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6261b1d36f13384498c22944ebd98560, type: 3}
       propertyPath: m_LocalPosition.x
@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d05f6c4b1edb2da4790c18d27c516b5c, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 6261b1d36f13384498c22944ebd98560, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4569332679115334080, guid: 5efe98b6c5cb70540bc87420c21f1fd7, type: 3}
     - target: {fileID: 919132149155446097, guid: 6261b1d36f13384498c22944ebd98560, type: 3}
       propertyPath: m_Name
       value: Jetons
