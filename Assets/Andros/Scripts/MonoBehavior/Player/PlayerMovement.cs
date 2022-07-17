@@ -44,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool _hasJumped = false;
 
+    private float _floorHeight = 0f;
+
+    RaycastHit Hit;
+
+
     private void Awake()
     {
         EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
@@ -96,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         {
             verticalVelocity = 0;
             _isGrounded = true;
+            //transform.position = new Vector3 (transform.position.x, groundDistanceCheck, transform.position.z);
             _playerAnimatorController.SetBool("isJumping", false);
         }
         else
@@ -106,8 +112,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CheckCollision(Vector3 direction)
     {
-        RaycastHit Hit;
-        return Physics.BoxCast(transform.position + Vector3.up * (groundDistanceCheck+0.1f), Vector3.one * 0.1f, -Vector3.up, out Hit, Quaternion.identity, groundDistanceCheck);
+        return Physics.BoxCast(transform.position + Vector3.up * (groundDistanceCheck), Vector3.one * 0.05f, -Vector3.up, out Hit, Quaternion.identity, groundDistanceCheck);
             
     }
 
@@ -119,7 +124,10 @@ public class PlayerMovement : MonoBehaviour
     public void ApplyGravity(float currentVelocity)
     {
         //Debug.Log(currentVelocity);
-        transform.Translate(new Vector3(0, currentVelocity, 0) * Time.fixedDeltaTime);
+        if(!_isGrounded)
+        {
+            transform.Translate(new Vector3(0, currentVelocity, 0) * Time.fixedDeltaTime);
+        }
     }
 
     public void MoveAlongDirection(Vector3 playerDirection)
