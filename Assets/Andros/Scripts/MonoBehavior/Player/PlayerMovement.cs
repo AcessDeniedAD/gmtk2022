@@ -100,6 +100,10 @@ public class PlayerMovement : MonoBehaviour
         if (CheckCollision(Vector3.down) && verticalVelocity < 0)
         {
             verticalVelocity = 0;
+            if(!_isGrounded)
+            {
+                EventsManager.TriggerEvent("PlayerLand");
+            }
             _isGrounded = true;
             //transform.position = new Vector3 (transform.position.x, groundDistanceCheck, transform.position.z);
             _playerAnimatorController.SetBool("isJumping", false);
@@ -175,6 +179,7 @@ public class PlayerMovement : MonoBehaviour
         if( _isGrounded)
         {
             _playerAnimatorController.SetBool("isJumping", true);
+            EventsManager.TriggerEvent("PlayerJump");
             verticalVelocity = _jumpForce;
         }
     }
@@ -188,7 +193,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.transform.tag == "Coin")
             {
+                EventsManager.TriggerEvent("PlayerCatchCoin");
                 Score.Coins++;
+                if(Score.Coins % 5 ==0)
+                {
+                    EventsManager.TriggerEvent("CrowdCheer");
+                }
+                if(Score.Coins % 20 ==0)
+                {
+                    EventsManager.TriggerEvent("JackPotSound");
+                }
                 hit.transform.gameObject.SetActive(false);
             }
         }
