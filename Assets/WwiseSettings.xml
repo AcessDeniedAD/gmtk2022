@@ -11,7 +11,7 @@
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>G:\Wwise 2019.2.15.7667\Wwise 2021.1.9.7847</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../../GMTK2022_WWISE/GMTK_2022_WWISE_PROJECT/GMTK_2022_WWISE_PROJECT.wproj</WwiseProjectPath>
+  <WwiseProjectPath>G:/GMTK2022_WWISE/GMTK_2022_WWISE_PROJECT/GMTK_2022_WWISE_PROJECT.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>

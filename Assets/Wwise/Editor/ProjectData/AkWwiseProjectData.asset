@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: e0bf67802451544d8c3e4c3848eac692
     GuidInternal: 
-    m_lastTime: -8585435919359597935
+    m_lastTime: -8585435519896169425
     List:
     - name: Ambiance
       guid: 4bde3aa35f6f5c42a163ce42023428d0
@@ -292,7 +292,7 @@ MonoBehaviour:
     ParentPath: Events\DICE
     guid: eb1b684cf39a9b458fb1caf04cedea93
     GuidInternal: 
-    m_lastTime: -8585435898185511589
+    m_lastTime: -8585435520951080487
     List:
     - name: Amb_Casino
       guid: 8d0ca7a15beb774ea7b41fa77bf7fb18
@@ -632,8 +632,8 @@ MonoBehaviour:
         guid: a79cf96d20a3614ab296730b3de94c5d
       Path: Events\DICE\Platform_Fall
       maxAttenuation: 0
-      maxDuration: 1.965125
-      minDuration: 1.965125
+      maxDuration: 1.962542
+      minDuration: 1.508962
     - name: Play_Music
       guid: b9fa97bde4e6be479c462ff14fa1d53e
       id: 2932040671
@@ -834,7 +834,7 @@ MonoBehaviour:
     m_lastTime: -8585437105306194503
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000a0000000b0000000c0000000e0000001300000014000000150000001a0000001c0000001d0000001e0000001f00000020000000
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000a0000000b0000000c0000000e0000001300000014000000150000001a0000001c0000001d0000001e0000001f00000020000000220000002300000024000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

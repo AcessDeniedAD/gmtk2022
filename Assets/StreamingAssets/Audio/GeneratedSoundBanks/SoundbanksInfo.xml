@@ -3,7 +3,7 @@
 	<RootPaths>
 		<ProjectRoot>G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\</ProjectRoot>
 		<SourceFilesRoot>G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>G:\GMTK2022\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<SoundBanksRoot>E:\GMTK2022\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="648143296">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3816441072">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -20,7 +20,7 @@
 				<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2528941608">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2590296114">
 			<ObjectPath>\SoundBanks\Default Work Unit\MAIN</ObjectPath>
 			<ShortName>MAIN</ShortName>
 			<Path>MAIN.bnk</Path>
@@ -33,7 +33,7 @@
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
-						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+						<AuxBus Id="670697577" Name="MusicVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MusicVerb"/>
 					</AuxBusSends>
 				</Event>
 				<Event Id="210953680" Name="Amb_Void" ObjectPath="\Events\DICE\Amb_Void" DurationType="Infinite">
@@ -431,22 +431,10 @@
 						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="1923954360" Name="Music_Angry" ObjectPath="\Events\DICE\Music_Angry" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="254461850" Language="SFX">
-							<ShortName>Ambiance_Casino [2022-07-16 120317].wav</ShortName>
-							<Path>SFX\Ambiance_Casino [2022-07-16 120317]_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<ActionPostEvent>
-						<ActionPostEventEntry Id="1990061228" Name="Jackpot_Event" ObjectPath="\Events\DICE\Jackpot_Event"/>
-					</ActionPostEvent>
+				<Event Id="1923954360" Name="Music_Angry" ObjectPath="\Events\DICE\Music_Angry" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="1206605712" Name="Angry" ObjectPath="\States\Music\Dice_State\Angry"/>
 					</ActionSetState>
-					<AuxBusSends>
-						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="4081526380" Name="Music_Calm" ObjectPath="\Events\DICE\Music_Calm" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
@@ -469,11 +457,11 @@
 						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="822236408" Name="Platform_Fall" ObjectPath="\Events\DICE\Platform_Fall" DurationType="OneShot" DurationMin="1.965125" DurationMax="1.965125">
+				<Event Id="822236408" Name="Platform_Fall" ObjectPath="\Events\DICE\Platform_Fall" DurationType="OneShot" DurationMin="1.508962" DurationMax="1.962542">
 					<IncludedMemoryFiles>
-						<File Id="751830157" Language="SFX">
-							<ShortName>Platform_Fall [2022-07-16 125943].wav</ShortName>
-							<Path>SFX\Platform_Fall [2022-07-16 125943]_10C4C929.wem</Path>
+						<File Id="271457001" Language="SFX">
+							<ShortName>Platform_Fall_2 [2022-07-17 113009].wav</ShortName>
+							<Path>SFX\Platform_Fall_2 [2022-07-17 113009]_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -523,7 +511,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
-						<ActionSetStateEntry Id="3753286132" Name="Calm" ObjectPath="\States\Music\Dice_State\Calm"/>
+						<ActionSetStateEntry Id="1206605712" Name="Angry" ObjectPath="\States\Music\Dice_State\Angry"/>
 					</ActionSetState>
 					<AuxBusSends>
 						<AuxBus Id="670697577" Name="MusicVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MusicVerb"/>
@@ -673,6 +661,10 @@
 				<File Id="256967972" Language="SFX">
 					<ShortName>Main_Character_Dash_Whoosh_4 [2022-07-16 153725].wav</ShortName>
 					<Path>SFX\Main_Character_Dash_Whoosh_4 [2022-07-16 153725]_10C4C929.wem</Path>
+				</File>
+				<File Id="271457001" Language="SFX">
+					<ShortName>Platform_Fall_2 [2022-07-17 113009].wav</ShortName>
+					<Path>SFX\Platform_Fall_2 [2022-07-17 113009]_10C4C929.wem</Path>
 				</File>
 				<File Id="291209103" Language="SFX">
 					<ShortName>Huge_Hand_Slap_2 [2022-07-16 192541].wav</ShortName>
