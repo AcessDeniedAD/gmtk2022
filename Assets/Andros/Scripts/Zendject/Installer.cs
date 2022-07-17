@@ -17,6 +17,7 @@ public class Installer : MonoInstaller
         Container.Bind<PlayerManager>().AsSingle();
         Container.Bind<StartGameInCurrentSceneManager>().AsSingle().NonLazy();
         Container.Bind<LevelManager>().AsSingle().NonLazy();
+
         Container.Bind<CoinPoolerManager>().AsSingle();
     }
 }

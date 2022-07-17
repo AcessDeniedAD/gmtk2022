@@ -8,8 +8,10 @@ public class DiceManager : BaseManager
     private GameObject _rollingDiceGameObject;
     private readonly GameManager _gameManager;
     private readonly DiceLoader _diceLoader;
+    private GameObject _bossHeadGameObject;
     private List<Face> _currentFacesOnDice = new List<Face>();
-    private bool _rollDice = true;
+    private List<GameObject> _facesList = new List<GameObject>();
+
     public string ShownFaceMaterialName = "mat";
 
     private List<Face> _faces;
@@ -17,22 +19,38 @@ public class DiceManager : BaseManager
     {
         _gameManager = gameManager;
         _diceLoader = prefabsLoaderManager.DiceLoader;
-        _rollingDiceGameObject = _gameManager.InstantiateInGameManager(_diceLoader.RollingDice, new Vector3(3.5f,0.4f,-1.5f), Quaternion.identity);
-
+        _rollingDiceGameObject = _gameManager.InstantiateInGameManager(_diceLoader.RollingDice, _diceLoader.BossFace.transform.position, _diceLoader.BossFace.transform.rotation);
+        _bossHeadGameObject = _gameManager.InstantiateInGameManager(_diceLoader.BossFace, _diceLoader.BossFace.transform.position, _diceLoader.BossFace.transform.rotation);
+        _bossHeadGameObject.transform.localScale = _diceLoader.BossFace.transform.localScale;
+        _rollingDiceGameObject.transform.localScale = _diceLoader.BossFace.transform.localScale;
+        _bossHeadGameObject.SetActive(false);
+        string[] faceNames = new string[] { "faceWhistle", "faceSmile", "faceSad", "faceYell" };
+        foreach (string NameFace in faceNames)
+        {
+            GameObject face = _bossHeadGameObject.transform.Find(NameFace).gameObject;
+            _facesList.Add(face);
+            face.SetActive(false);
+        }
         BuildFacesList();
     }
 
     public void EnableRollingDiceInScene()
     {
-        _rollDice = true;
         _rollingDiceGameObject.SetActive(true);
     }
     public void DisableRollingDiceInScene()
     {
-        _rollDice = false;
         _rollingDiceGameObject.SetActive(false);
     }
 
+    public void RandomFaceActivation()
+    {
+        foreach(GameObject face in _facesList)
+        {
+            face.SetActive(false);
+        }
+        _facesList[new System.Random().Next(0,3)].SetActive(true);
+    }
     public void BuildNewFacesOnDice(int difficultyLevel)
     {
         var mr = _rollingDiceGameObject.GetComponent<MeshRenderer>();
@@ -68,13 +86,19 @@ public class DiceManager : BaseManager
             + _faces[4].material.name + ", " + _faces[5].material.name + ", " + _faces[6].material.name );
     }
 
+    public void SwapDice()
+    {
+        _bossHeadGameObject.SetActive(true);
+        _rollingDiceGameObject.SetActive(false);
+        
+    }
+
     public void RollDice(float time)
     {
         _gameManager.StartCoroutine(RollDiceCoroutine(time));
     }
     public IEnumerator RollDiceCoroutine(float time)
     {
-       
         var facesDistance = new Dictionary<string, float>();
         var canCheckDot = true;
         var timer = 0f;
@@ -86,6 +110,8 @@ public class DiceManager : BaseManager
         Vector3 closestDir = Vector3.zero;
         Quaternion initialRotation = Quaternion.identity;
         float interpolator = 0;
+        _bossHeadGameObject.SetActive(false);
+        _rollingDiceGameObject.SetActive(true);
         while (time >= 0)
         {
             time -= Time.deltaTime * Time.timeScale;
@@ -165,6 +191,7 @@ public class DiceManager : BaseManager
             }
 
             yield return 0;
+
         }
     }
 

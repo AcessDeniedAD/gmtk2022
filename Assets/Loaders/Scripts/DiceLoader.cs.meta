@@ -3,7 +3,16 @@ guid: 80a5c7f7dd7ed5a4d9026d68a26cdaa1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - WhiteFace: {instanceID: 0}
+  - BlueFace: {instanceID: 0}
+  - PurpleFace: {instanceID: 0}
+  - OrangeFace: {instanceID: 0}
+  - YellowFace: {instanceID: 0}
+  - GreenFace: {instanceID: 0}
+  - RedFace: {instanceID: 0}
+  - RollingDice: {instanceID: 0}
+  - BossFace: {fileID: 3560945264909486214, guid: 545a1a7a056d075438485bf135976f8a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

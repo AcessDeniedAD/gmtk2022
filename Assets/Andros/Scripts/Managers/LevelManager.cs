@@ -55,7 +55,7 @@ public class LevelManager : BaseManager
         InitLevel();
     }
 
-    public void InitLevel()
+    private void InitLevel()
     {
         int z = 0;
         foreach (KeyValuePair<string,GameObject> hexaInfo in _hexaPrefabs)
@@ -63,6 +63,7 @@ public class LevelManager : BaseManager
             AddNewHexa(hexaInfo.Key, hexaInfo.Value.transform.position, hexaInfo.Value.transform.rotation);
             z += 10;
         }
+        //StartRandomHexaMove();
     }
 
     public void DropHexa(string colorName, int difficultyLevel)
@@ -122,7 +123,7 @@ public class LevelManager : BaseManager
                 if(i != old_hexa_locked_index)
                 {
                     Vector3 hexa_size = Hexas[order].transform.localScale;
-                    float scale_pourcentage = 0.70f;
+                    float scale_pourcentage = 0.80f;
                     ChangeHexaSize(order, new Vector3(hexa_size.x * scale_pourcentage, hexa_size.y * scale_pourcentage, hexa_size.z * scale_pourcentage));
                 }
             }

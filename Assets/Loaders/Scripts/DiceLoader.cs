@@ -13,4 +13,6 @@ public class DiceLoader : ScriptableObject
     public Material RedFace;
 
     public GameObject RollingDice;
+    public GameObject BossFace;
+    public List<GameObject> BossFaces;
 }
