@@ -41,6 +41,7 @@ public class CoinManager : BaseManager
             }
             var coin = _poolerManager.GetPooledObject();
             coin.SetActive(true);
+            EventsManager.TriggerEvent("CoinFalling");
             coin.transform.position = new Vector3(go.transform.position.x, 10, go.transform.position.z);
             coin.GetComponent<Coin>().Down(new Vector3(go.transform.position.x,0.2f,go.transform.position.z),false);
             coinsOnScene.Add(coin);
