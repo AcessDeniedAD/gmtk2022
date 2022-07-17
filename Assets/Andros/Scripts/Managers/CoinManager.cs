@@ -55,6 +55,7 @@ public class CoinManager : BaseManager
             coin.GetComponent<Coin>().StopAllCoroutines();
             coin.GetComponent<Coin>().Down(new Vector3(coin.transform.position.x, -8f, coin.transform.position.z),true);
         }
+        coinsOnScene.Clear();
         yield return 0;
     }
 }

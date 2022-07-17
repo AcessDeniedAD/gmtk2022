@@ -156,7 +156,7 @@ MonoBehaviour:
   _dashSpeed: 2
   _dashTime: 0.2
   _dashCoolDown: 2
-  _gravity: -9.81
+  _gravity: -12.81
   _jumpForce: 5
   verticalVelocity: 0
   groundDistanceCheck: 0.1
