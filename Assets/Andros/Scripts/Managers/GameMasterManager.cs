@@ -120,6 +120,7 @@ public class GameMasterManager : BaseManager
     {
         _difficultyTimer = 0;
         _gameManager.StartCoroutine(CountDownCoroutine());
+        
     }
     public void StartShowedDiceTime(Args args)
     {
@@ -139,7 +140,7 @@ public class GameMasterManager : BaseManager
         yield return new WaitForSeconds(1);
         Debug.Log("3");
         yield return new WaitForSeconds(1);
-     
+        GameObject.Find("TitleScreen").SetActive(false);
         _statesManager.ChangeCurrentState(new States.RollDice());
     }
 
