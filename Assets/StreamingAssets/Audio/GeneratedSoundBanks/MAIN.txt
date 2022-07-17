@@ -1,0 +1,141 @@
+Event	ID	Name			Wwise Object Path	Notes
+	210953680	Amb_Void			\DICE\Amb_Void	
+	407918435	Platform_Color_Switch			\DICE\Platform_Color_Switch	
+	719538334	Main_Character_Land			\DICE\Main_Character_Land	
+	725804277	Dice_Spinning			\DICE\Dice_Spinning	
+	822236408	Platform_Fall			\DICE\Platform_Fall	
+	867755697	Crowd_Evil			\DICE\Crowd_Evil	
+	995454915	Crowd_Booing			\DICE\Crowd_Booing	
+	1360930638	Crowd_Cheering			\DICE\Crowd_Cheering	
+	1923954360	Music_Angry			\DICE\Music_Angry	
+	1947750782	Crowd_Angry			\DICE\Crowd_Angry	
+	1990061228	Jackpot_Event			\DICE\Jackpot_Event	
+	2256949692	Regular_Dice_UI			\DICE\Regular_Dice_UI	
+	2932040671	Play_Music			\DICE\Play_Music	
+	3108786345	Main_Character_Dash			\DICE\Main_Character_Dash	
+	3191067555	Chips_Handle			\DICE\Chips_Handle	
+	3573208756	Evil_Dice_Switch_Mood			\DICE\Evil_Dice_Switch_Mood	
+	3650885368	Main_Character_Footsteps_Run			\DICE\Main_Character_Footsteps_Run	
+	3679537681	Huge_Hand_Slap			\DICE\Huge_Hand_Slap	
+	3915021121	Main_Character_Jump			\DICE\Main_Character_Jump	
+	4081526380	Music_Calm			\DICE\Music_Calm	
+	4093901766	Music_Trouble			\DICE\Music_Trouble	
+	4162951119	Amb_Casino			\DICE\Amb_Casino	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3957039406	Dice_State			\Music\Dice_State	
+
+State	ID	Name	State Group			Notes
+	730829630	Trouble	Dice_State			
+	748895195	None	Dice_State			
+	1206605712	Angry	Dice_State			
+	3753286132	Calm	Dice_State			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	725804277	Dice_Spinning			\Default Work Unit\Dice_Spinning	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	32323416	World_FX			\Default Work Unit\Master Audio Bus\SFX\World_FX	
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	2363688687	Evil_Dice			\Default Work Unit\Master Audio Bus\SFX\Evil_Dice	
+	2981377429	Ambiance			\Default Work Unit\Master Audio Bus\Ambiance	
+	3094055254	Main_Character			\Default Work Unit\Master Audio Bus\SFX\Main_Character	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	670697577	MusicVerb			\Default Work Unit\Master Audio Bus\Reverb\MusicVerb	
+	3006101373	MainVerb			\Default Work Unit\Master Audio Bus\Reverb\MainVerb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	146611661	Wwise Time Stretch (Custom)	Wwise Time Stretch			
+	602546716	Room_Large	Wwise RoomVerb			
+	1203617187	Machine_Gun_Hangar	Wwise RoomVerb			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	6762539	Chips_Handle_10	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_10 [2022-07-16 122242]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_10		76480
+	7467161	Crowd_Angry	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Crowd_Angry [2022-07-16 125619]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Crowd_Reaction\Crowd_Angry		1529412
+	8357546	Main_Character_Dash_Whoosh_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Whoosh_3 [2022-07-16 153724]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Whoosh\Main_Character_Dash_Whoosh_3		23944
+	15966534	Crowd_Cheering	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Crowd_Cheering [2022-07-16 125617]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Crowd_Reaction\Crowd_Cheering		1528384
+	21001996	Main_Character_Footsteps_Run_8	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_8 [2022-07-16 160505]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_8		176776
+	40747097	Chips_Handle_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_1 [2022-07-16 122235]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_1		86032
+	71286750	Main_Character_Footsteps_Run_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_3 [2022-07-16 160501]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_3		150508
+	72331561	Main_Character_Footsteps_Run_4	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_4 [2022-07-16 181611]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_4		90808
+	73181689	Dice_Shake_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Shake_1 [2022-07-16 122828]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Shake\Dice_Shake_1		66928
+	99947582	Main_Character_Footsteps_Run_12	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_12 [2022-07-16 181617]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_12		64540
+	105355163	Dice_Calm	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\GMTK2022_Music_Calm_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music_State\Music_Calm\Dice_Calm\Dice_Calm		8192064
+	109623120	Dice_Switch_4	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Switch_4 [2022-07-16 121821]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Switch\Dice_Switch_4		29462
+	124711712	Main_Character_Footsteps_Run_13	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_13 [2022-07-16 160512]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_13		152896
+	126997489	Main_Character_Footsteps_Run_4	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_4 [2022-07-16 160502]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_4		160060
+	130451687	Main_Character_Footsteps_Run_11	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_11 [2022-07-16 160510]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_11		163048
+	151851861	Dice_Shake_4	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Shake_4 [2022-07-16 122831]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Shake\Dice_Shake_4		66928
+	168617671	Chips_Handle_9	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_9 [2022-07-16 122241]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_9		95584
+	170533732	Main_Character_Land_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Land_2 [2022-07-16 190026]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Land\Main_Character_Land\Main_Character_Land_2		291908
+	171598124	Main_Character_Footsteps_Run_12	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_12 [2022-07-16 160511]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_12		162448
+	174246285	Huge_Hand_Slap_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Huge_Hand_Slap_3 [2022-07-16 192542]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Huge_Hand\Huge_Hand_Slap\Huge_Hand_Slap_3		48270
+	203174795	Chips_Handle_5	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_5 [2022-07-16 122238]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_5		114688
+	205874023	Main_Character_Dash_Air_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Air_3 [2022-07-16 153721]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Air\Main_Character_Dash_Air_3		66928
+	213816641	Main_Character_Dash_Air_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Air_2 [2022-07-16 153721]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Air\Main_Character_Dash_Air_2		66928
+	214784045	Main_Character_Footsteps_Scraps_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Scraps_1 [2022-07-16 190006]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Scraps\Main_Character_Footsteps_Scraps_1		52600
+	221733998	Huge_Hand_Slap_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Huge_Hand_Slap_1 [2022-07-16 192540]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Huge_Hand\Huge_Hand_Slap\Huge_Hand_Slap_1		51196
+	224480504	Dice_Trouble	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\GMTK2022_Music_Trouble_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music_State\Music_Trouble\Dice_Trouble\Dice_Trouble		8192064
+	234598096	Jackpot_Jingle	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Jackpot_Jingle [2022-07-16 122350]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Jackpot\Jackpot_Jingle		840640
+	236569694	Main_Character_Footsteps_Run_15	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_15 [2022-07-16 160513]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_15		148120
+	248932518	Main_Character_Footsteps_Run_7	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_7 [2022-07-16 160504]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_7		176776
+	254461850	Amb_Casino	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Ambiance_Casino [2022-07-16 120317]_D79FB2B7.wem		\Actor-Mixer Hierarchy\SD\Ambiance\Amb_Casino\Amb_Casino		15283264
+	254923088	Main_Character_Footsteps_Run_14	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_14 [2022-07-16 160512]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_14		164836
+	256967972	Main_Character_Dash_Whoosh_4	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Whoosh_4 [2022-07-16 153725]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Whoosh\Main_Character_Dash_Whoosh_4		23944
+	291209103	Huge_Hand_Slap_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Huge_Hand_Slap_2 [2022-07-16 192541]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Huge_Hand\Huge_Hand_Slap\Huge_Hand_Slap_2		51614
+	291885684	Dice_Shake_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Shake_3 [2022-07-16 122830]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Shake\Dice_Shake_3		57376
+	319517080	Chips_Handle_4	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_4 [2022-07-16 122237]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_4		57376
+	330872153	Chips_Handle_7	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_7 [2022-07-16 122239]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_7		76480
+	371262872	Main_Character_Footsteps_Run_9	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_9 [2022-07-16 181615]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_9		105136
+	391401936	Main_Character_Footsteps_Run_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_2 [2022-07-16 181610]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_2		81256
+	406917056	Main_Character_Footsteps_Run_11	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_11 [2022-07-16 181616]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_11		73496
+	408739253	Main_Character_Footsteps_Run_10	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_10 [2022-07-16 160509]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_10		157672
+	414141492	Main_Character_Land_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Land_3 [2022-07-16 190027]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Land\Main_Character_Land\Main_Character_Land_3		305728
+	424081063	Main_Character_Footsteps_Run_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_3 [2022-07-16 181611]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_3		71704
+	435985107	Dice_Switch_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Switch_3 [2022-07-16 121819]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Switch\Dice_Switch_3		36010
+	517659878	Main_Character_Dash_Whoosh_6	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Whoosh_6 [2022-07-16 153726]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Whoosh\Main_Character_Dash_Whoosh_6		32900
+	530360498	Main_Character_Footsteps_Run_10	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_10 [2022-07-16 181615]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_10		81256
+	562752072	Main_Character_Footsteps_Run_6	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_6 [2022-07-16 160504]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_6		143344
+	598345294	Main_Character_Footsteps_Run_6	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_6 [2022-07-16 181613]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_6		99168
+	617680615	Main_Character_Dash_Air_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Air_1 [2022-07-16 153720]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Air\Main_Character_Dash_Air_1		77976
+	617794723	Chips_Handle_6	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_6 [2022-07-16 122239]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_6		95584
+	622475278	GMTK2022_Music_Angry_Intro	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\GMTK2022_Music_Angry_Intro_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music_State\Music_Angry\Music_Angry_Intro\GMTK2022_Music_Angry_Intro		2304064
+	639056884	Main_Character_Dash_Whoosh_5	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Whoosh_5 [2022-07-16 153726]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Whoosh\Main_Character_Dash_Whoosh_5		26332
+	640629606	Main_Character_Land_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Land_1 [2022-07-16 190025]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Land\Main_Character_Land\Main_Character_Land_1		294976
+	669600058	Main_Character_Footsteps_Scraps_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Scraps_3 [2022-07-16 190017]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Scraps\Main_Character_Footsteps_Scraps_3		95584
+	670799467	Dice_Switch_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Switch_2 [2022-07-16 121818]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Switch\Dice_Switch_2		23944
+	678218569	Dice_Switch_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Switch_1 [2022-07-16 121817]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Switch\Dice_Switch_1		18784
+	690212596	Crowd_Evil	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Crowd_Evil [2022-07-16 125615]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Crowd_Reaction\Crowd_Evil		1528384
+	703054185	Chips_Handle_8	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_8 [2022-07-16 122240]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_8		95584
+	713270554	Main_Character_Footsteps_Run_7	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_7 [2022-07-16 181613]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_7		86032
+	722106277	GMTK2022_Music_Angry_Loop_A	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\GMTK2022_Music_Angry_Loop_A_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music_State\Music_Angry\Music_Angry_Loop_A\GMTK2022_Music_Angry_Loop_A		4608064
+	722803541	Main_Character_Footsteps_Scraps_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Scraps_2 [2022-07-16 190015]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Scraps\Main_Character_Footsteps_Scraps_2		100360
+	727758813	Main_Character_Dash_Whoosh_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Whoosh_1 [2022-07-16 153723]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Whoosh\Main_Character_Dash_Whoosh_1		26000
+	730878133	Main_Character_Footsteps_Run_14	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_14 [2022-07-16 181618]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_14		87228
+	734368836	Main_Character_Footsteps_Run_13	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_13 [2022-07-16 181617]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_13		89316
+	735353838	Main_Character_Footsteps_Run_5	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_5 [2022-07-16 181612]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_5		93196
+	744819156	Main_Character_Footsteps_Run_5	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_5 [2022-07-16 160503]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_5		169612
+	751830157	Platform_Fall	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Platform_Fall [2022-07-16 125943]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Platform\Platform_Fall\Platform_Fall		188716
+	754041737	Chips_Handle_3	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_3 [2022-07-16 122237]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_3		57376
+	792646289	GMTK2022_Music_Angry_Loop_B	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\GMTK2022_Music_Angry_Loop_B_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music_State\Music_Angry\Music_Angry_Loop_B\GMTK2022_Music_Angry_Loop_B		4608064
+	800381016	Dice_Shake_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Shake_2 [2022-07-16 122829]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Evil_Dice\Evil_Dice_Switch_Mood\Evil_Dice_Shake\Dice_Shake_2		66928
+	820182645	Platform_Color_Switch	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Platform_Color_Switch [2022-07-16 125904]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Platform\Platform_Color_Switch\Platform_Color_Switch		267520
+	848489012	Huge_Hand_Slap_4	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Huge_Hand_Slap_4 [2022-07-16 192543]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Huge_Hand\Huge_Hand_Slap\Huge_Hand_Slap_4		46180
+	870992020	Main_Character_Footsteps_Run_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_2 [2022-07-16 160501]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_2		152896
+	886519334	Chips_Handle_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Chips_Handle_2 [2022-07-16 122236]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Chips\Chips_Handle\Chips_Handle_2		76480
+	899211174	Main_Character_Dash_Whoosh_2	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Dash_Whoosh_2 [2022-07-16 153724]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Dash\Main_Character_Dash_Whoosh\Main_Character_Dash_Whoosh_2		23944
+	938075712	Main_Character_Footsteps_Run_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_1 [2022-07-16 181609]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_1		69316
+	942255838	Crowd_Booing	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Crowd_Booing [2022-07-16 125622]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Crowd_Reaction\Crowd_Booing		1528384
+	950383147	Dice_Spinning	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Dice_Spinning [2022-07-16 170509]_D79FB2B7.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Regular_Dice\Dice_Spinning		253192
+	1007581210	Main_Character_Jump	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Jump [2022-07-16 190040]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Jump\Main_Character_Jump		217372
+	1008413959	Main_Character_Footsteps_Run_1	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_1 [2022-07-16 160500]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_1		157672
+	1014794286	Coin_Falling	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Coin_Falling [2022-07-16 122349]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\World_FX\Coins\Coin_Falling		305728
+	1055117772	Main_Character_Footsteps_Run_9	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_9 [2022-07-16 160506]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Metal_Run\Main_Character_Footsteps_Run_9		152896
+	1062527462	Amb_Void	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Amb_Void [2022-07-17 011317]_D79FB2B7.wem		\Actor-Mixer Hierarchy\SD\Ambiance\Amb_Void\Amb_Void		5807680
+	1070157625	Main_Character_Footsteps_Run_8	G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\SFX\Main_Character_Footsteps_Run_8 [2022-07-16 181614]_10C4C929.wem		\Actor-Mixer Hierarchy\SD\SFX\Main_Character\Footsteps\Main_Character_Footsteps_Main_Run\Main_Character_Footsteps_Run_8		97972
+

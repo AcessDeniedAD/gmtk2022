@@ -1,0 +1,841 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143a560fbcfcbe642b9ed8ec12dd5865, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 85fe3297ab6aac40927033ab7a54a74c
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 85fe3297ab6aac40927033ab7a54a74c
+    GuidInternal: 
+    m_lastTime: -8585437105305249140
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: e0bf67802451544d8c3e4c3848eac692
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: e0bf67802451544d8c3e4c3848eac692
+    GuidInternal: 
+    m_lastTime: -8585435919359597935
+    List:
+    - name: Ambiance
+      guid: 4bde3aa35f6f5c42a163ce42023428d0
+      id: 2981377429
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Ambiance
+        ObjectType: 2
+        guid: 4bde3aa35f6f5c42a163ce42023428d0
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiance
+    - name: Evil_Dice
+      guid: dd2c4d4b0296884eaf2c76e20f7b9855
+      id: 2363688687
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 5bb3532f2ac0154db1808b0df4f36a10
+      - ElementName: Evil_Dice
+        ObjectType: 2
+        guid: dd2c4d4b0296884eaf2c76e20f7b9855
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\Evil_Dice
+    - name: Main_Character
+      guid: ed84ce9f7cdd7946bd95042509cfa4f5
+      id: 3094055254
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 5bb3532f2ac0154db1808b0df4f36a10
+      - ElementName: Main_Character
+        ObjectType: 2
+        guid: ed84ce9f7cdd7946bd95042509cfa4f5
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\Main_Character
+    - name: MainVerb
+      guid: dab230d59344e046aa7b2de2a9b996c8
+      id: 3006101373
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverb
+        ObjectType: 2
+        guid: b0424b9c26a2ec46841f2c20e918bec0
+      - ElementName: MainVerb
+        ObjectType: 1
+        guid: dab230d59344e046aa7b2de2a9b996c8
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 8a71c596f52259438e99bae737b3b0df
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 8a71c596f52259438e99bae737b3b0df
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: MusicVerb
+      guid: a13c1467a69f9042a985373ff8c72706
+      id: 670697577
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverb
+        ObjectType: 2
+        guid: b0424b9c26a2ec46841f2c20e918bec0
+      - ElementName: MusicVerb
+        ObjectType: 1
+        guid: a13c1467a69f9042a985373ff8c72706
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MusicVerb
+    - name: Reverb
+      guid: b0424b9c26a2ec46841f2c20e918bec0
+      id: 348963605
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverb
+        ObjectType: 2
+        guid: b0424b9c26a2ec46841f2c20e918bec0
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb
+    - name: SFX
+      guid: 5bb3532f2ac0154db1808b0df4f36a10
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 5bb3532f2ac0154db1808b0df4f36a10
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
+    - name: UI
+      guid: 6361c5a4577bcc48bf7a30c0508baf91
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UI
+        ObjectType: 2
+        guid: 6361c5a4577bcc48bf7a30c0508baf91
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
+    - name: World_FX
+      guid: 2821de947e23b943a5ce6e926b0e29f4
+      id: 32323416
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e0bf67802451544d8c3e4c3848eac692
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 5bb3532f2ac0154db1808b0df4f36a10
+      - ElementName: World_FX
+        ObjectType: 2
+        guid: 2821de947e23b943a5ce6e926b0e29f4
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\World_FX
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 42ec65c8ca6cd7439cdf33e67ff98aca
+    ParentPath: SoundBanks\Default Work Unit
+    guid: 42ec65c8ca6cd7439cdf33e67ff98aca
+    GuidInternal: 
+    m_lastTime: -8585435898185796697
+    List:
+    - name: MAIN
+      guid: bfde893b66be034a819e27ad80df8958
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42ec65c8ca6cd7439cdf33e67ff98aca
+      - ElementName: MAIN
+        ObjectType: 7
+        guid: bfde893b66be034a819e27ad80df8958
+      Path: SoundBanks\Default Work Unit\MAIN
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 1c02513fbd461e48bb8536b2cf88f724
+    ParentPath: Events\Default Work Unit
+    guid: 1c02513fbd461e48bb8536b2cf88f724
+    GuidInternal: 
+    m_lastTime: -8585435919359287948
+    List: []
+  - PhysicalPath: Events\DICE.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: DICE
+      ObjectType: 12
+      guid: eb1b684cf39a9b458fb1caf04cedea93
+    ParentPath: Events\DICE
+    guid: eb1b684cf39a9b458fb1caf04cedea93
+    GuidInternal: 
+    m_lastTime: -8585435898185511589
+    List:
+    - name: Amb_Casino
+      guid: 8d0ca7a15beb774ea7b41fa77bf7fb18
+      id: 4162951119
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Amb_Casino
+        ObjectType: 3
+        guid: 8d0ca7a15beb774ea7b41fa77bf7fb18
+      Path: Events\DICE\Amb_Casino
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Amb_Void
+      guid: 424134a23658e54793cf806234f173db
+      id: 210953680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Amb_Void
+        ObjectType: 3
+        guid: 424134a23658e54793cf806234f173db
+      Path: Events\DICE\Amb_Void
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Chips_Handle
+      guid: f60bf68718554b45a977538d6d7cb807
+      id: 3191067555
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Chips_Handle
+        ObjectType: 3
+        guid: f60bf68718554b45a977538d6d7cb807
+      Path: Events\DICE\Chips_Handle
+      maxAttenuation: 0
+      maxDuration: 0.607435
+      minDuration: 0.303718
+    - name: Crowd_Angry
+      guid: de67613a490edb489e7d52be1a3386df
+      id: 1947750782
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Crowd_Angry
+        ObjectType: 3
+        guid: de67613a490edb489e7d52be1a3386df
+      Path: Events\DICE\Crowd_Angry
+      maxAttenuation: 0
+      maxDuration: 7.965354
+      minDuration: 7.965354
+    - name: Crowd_Booing
+      guid: 54ed43a69c7852429e8338ba3f87a2af
+      id: 995454915
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Crowd_Booing
+        ObjectType: 3
+        guid: 54ed43a69c7852429e8338ba3f87a2af
+      Path: Events\DICE\Crowd_Booing
+      maxAttenuation: 0
+      maxDuration: 7.96
+      minDuration: 7.96
+    - name: Crowd_Cheering
+      guid: c7395611f8dd8441900cb20c2e3135f8
+      id: 1360930638
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Crowd_Cheering
+        ObjectType: 3
+        guid: c7395611f8dd8441900cb20c2e3135f8
+      Path: Events\DICE\Crowd_Cheering
+      maxAttenuation: 0
+      maxDuration: 7.96
+      minDuration: 7.96
+    - name: Crowd_Evil
+      guid: f5eea25e26a3b34ab1251184549fe02d
+      id: 867755697
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Crowd_Evil
+        ObjectType: 3
+        guid: f5eea25e26a3b34ab1251184549fe02d
+      Path: Events\DICE\Crowd_Evil
+      maxAttenuation: 0
+      maxDuration: 7.96
+      minDuration: 7.96
+    - name: Dice_Spinning
+      guid: aa5bf18525cd0944a605c71fdfc84816
+      id: 725804277
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Dice_Spinning
+        ObjectType: 3
+        guid: aa5bf18525cd0944a605c71fdfc84816
+      Path: Events\DICE\Dice_Spinning
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Evil_Dice_Switch_Mood
+      guid: 331175210fbd7843932d8e9911ec42ec
+      id: 3573208756
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Evil_Dice_Switch_Mood
+        ObjectType: 3
+        guid: 331175210fbd7843932d8e9911ec42ec
+      Path: Events\DICE\Evil_Dice_Switch_Mood
+      maxAttenuation: 0
+      maxDuration: 0.6965
+      minDuration: 0.597
+    - name: Huge_Hand_Slap
+      guid: 27951c66c2c6474f8b2db0d84900fe05
+      id: 3679537681
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Huge_Hand_Slap
+        ObjectType: 3
+        guid: 27951c66c2c6474f8b2db0d84900fe05
+      Path: Events\DICE\Huge_Hand_Slap
+      maxAttenuation: 0
+      maxDuration: 0.536979
+      minDuration: 0.480375
+    - name: Jackpot_Event
+      guid: 275b68995f40504087221f0eefbd89bd
+      id: 1990061228
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Jackpot_Event
+        ObjectType: 3
+        guid: 275b68995f40504087221f0eefbd89bd
+      Path: Events\DICE\Jackpot_Event
+      maxAttenuation: 0
+      maxDuration: 4.378
+      minDuration: 4.378
+    - name: Main_Character_Dash
+      guid: 05a7440e7426df45a65a2a93b38fd669
+      id: 3108786345
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Main_Character_Dash
+        ObjectType: 3
+        guid: 05a7440e7426df45a65a2a93b38fd669
+      Path: Events\DICE\Main_Character_Dash
+      maxAttenuation: 0
+      maxDuration: 0.632071
+      minDuration: 0.331085
+    - name: Main_Character_Footsteps_Run
+      guid: 043ebe3ebfed484da0fb2d917b15ae00
+      id: 3650885368
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Main_Character_Footsteps_Run
+        ObjectType: 3
+        guid: 043ebe3ebfed484da0fb2d917b15ae00
+      Path: Events\DICE\Main_Character_Footsteps_Run
+      maxAttenuation: 10
+      maxDuration: -1
+      minDuration: -1
+    - name: Main_Character_Jump
+      guid: 4404a0d5190321489eec055748ac666d
+      id: 3915021121
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Main_Character_Jump
+        ObjectType: 3
+        guid: 4404a0d5190321489eec055748ac666d
+      Path: Events\DICE\Main_Character_Jump
+      maxAttenuation: 0
+      maxDuration: 0.978494
+      minDuration: 0.777529
+    - name: Main_Character_Land
+      guid: 59130fd8da0e6644a19dcfda190469e8
+      id: 719538334
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Main_Character_Land
+        ObjectType: 3
+        guid: 59130fd8da0e6644a19dcfda190469e8
+      Path: Events\DICE\Main_Character_Land
+      maxAttenuation: 0
+      maxDuration: 1.839321
+      minDuration: 1.75616
+    - name: Music_Angry
+      guid: 082ddf217cc0a3498ac91c28a3a5e181
+      id: 1923954360
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Music_Angry
+        ObjectType: 3
+        guid: 082ddf217cc0a3498ac91c28a3a5e181
+      Path: Events\DICE\Music_Angry
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Music_Calm
+      guid: 00c7d1605462654b8ccb95be988d9b8e
+      id: 4081526380
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Music_Calm
+        ObjectType: 3
+        guid: 00c7d1605462654b8ccb95be988d9b8e
+      Path: Events\DICE\Music_Calm
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Music_Trouble
+      guid: d93223ca77438b4c9590fe30470926da
+      id: 4093901766
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Music_Trouble
+        ObjectType: 3
+        guid: d93223ca77438b4c9590fe30470926da
+      Path: Events\DICE\Music_Trouble
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Platform_Color_Switch
+      guid: a03f4368ec5fac42b645f11c4e0fcc51
+      id: 407918435
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Platform_Color_Switch
+        ObjectType: 3
+        guid: a03f4368ec5fac42b645f11c4e0fcc51
+      Path: Events\DICE\Platform_Color_Switch
+      maxAttenuation: 0
+      maxDuration: 1.025643
+      minDuration: 0.913744
+    - name: Platform_Fall
+      guid: a79cf96d20a3614ab296730b3de94c5d
+      id: 822236408
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Platform_Fall
+        ObjectType: 3
+        guid: a79cf96d20a3614ab296730b3de94c5d
+      Path: Events\DICE\Platform_Fall
+      maxAttenuation: 0
+      maxDuration: 1.965125
+      minDuration: 1.965125
+    - name: Play_Music
+      guid: b9fa97bde4e6be479c462ff14fa1d53e
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: b9fa97bde4e6be479c462ff14fa1d53e
+      Path: Events\DICE\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Regular_Dice_UI
+      guid: 113b2c8e990afc41bed173879c194417
+      id: 2256949692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: DICE
+        ObjectType: 12
+        guid: eb1b684cf39a9b458fb1caf04cedea93
+      - ElementName: Regular_Dice_UI
+        ObjectType: 3
+        guid: 113b2c8e990afc41bed173879c194417
+      Path: Events\DICE\Regular_Dice_UI
+      maxAttenuation: 0
+      maxDuration: 1.025643
+      minDuration: 0.913744
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 4998b51ec5e6c84eb58a4c91eaaf24b0
+    ParentPath: Game Parameters\Default Work Unit
+    guid: 4998b51ec5e6c84eb58a4c91eaaf24b0
+    GuidInternal: 
+    m_lastTime: -8585436203727646768
+    List:
+    - name: Dice_Spinning
+      guid: 07d081468aff19479acfb2bf818de8cd
+      id: 725804277
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4998b51ec5e6c84eb58a4c91eaaf24b0
+      - ElementName: Dice_Spinning
+        ObjectType: 13
+        guid: 07d081468aff19479acfb2bf818de8cd
+      Path: Game Parameters\Default Work Unit\Dice_Spinning
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: f0a53fb92abb9040beef7cba03ba29ec
+    ParentPath: States\Default Work Unit
+    guid: f0a53fb92abb9040beef7cba03ba29ec
+    GuidInternal: 
+    m_lastTime: -8585436437133402109
+    List: []
+  - PhysicalPath: States\Music.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music
+      ObjectType: 12
+      guid: e513a78809d53d409ec3a11320eba684
+    ParentPath: States\Music
+    guid: e513a78809d53d409ec3a11320eba684
+    GuidInternal: 
+    m_lastTime: -8585436437133102297
+    List:
+    - name: Dice_State
+      guid: 535052ac496f6040815caaeba84c4169
+      id: 3957039406
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: e513a78809d53d409ec3a11320eba684
+      - ElementName: Dice_State
+        ObjectType: 9
+        guid: 535052ac496f6040815caaeba84c4169
+      Path: States\Music\Dice_State
+      values:
+      - name: Angry
+        guid: 9e3d2cd8472e3a489434019be5e9597d
+        id: 1206605712
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: e513a78809d53d409ec3a11320eba684
+        - ElementName: Dice_State
+          ObjectType: 9
+          guid: 535052ac496f6040815caaeba84c4169
+        - ElementName: Angry
+          ObjectType: 8
+          guid: 9e3d2cd8472e3a489434019be5e9597d
+      - name: Calm
+        guid: 4a34320c71f1244e8332862083a593d5
+        id: 3753286132
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: e513a78809d53d409ec3a11320eba684
+        - ElementName: Dice_State
+          ObjectType: 9
+          guid: 535052ac496f6040815caaeba84c4169
+        - ElementName: Calm
+          ObjectType: 8
+          guid: 4a34320c71f1244e8332862083a593d5
+      - name: None
+        guid: f1e6a9ffcd715c4da2aa871b3224a341
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: e513a78809d53d409ec3a11320eba684
+        - ElementName: Dice_State
+          ObjectType: 9
+          guid: 535052ac496f6040815caaeba84c4169
+        - ElementName: None
+          ObjectType: 8
+          guid: f1e6a9ffcd715c4da2aa871b3224a341
+      - name: Trouble
+        guid: 8f33a0d3c0a0f54ca9eb6a3daae03f84
+        id: 730829630
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: e513a78809d53d409ec3a11320eba684
+        - ElementName: Dice_State
+          ObjectType: 9
+          guid: 535052ac496f6040815caaeba84c4169
+        - ElementName: Trouble
+          ObjectType: 8
+          guid: 8f33a0d3c0a0f54ca9eb6a3daae03f84
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: df4d89c007de954186c2627f1dbb223e
+    ParentPath: Switches\Default Work Unit
+    guid: df4d89c007de954186c2627f1dbb223e
+    GuidInternal: 
+    m_lastTime: -8585437105305834584
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 2e543ef66bc60f4bb1cc4a5cb2217bbf
+    ParentPath: Triggers\Default Work Unit
+    guid: 2e543ef66bc60f4bb1cc4a5cb2217bbf
+    GuidInternal: 
+    m_lastTime: -8585437105306194503
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000a0000000b0000000c0000000e0000001300000014000000150000001a0000001c0000001d0000001e0000001f00000020000000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 

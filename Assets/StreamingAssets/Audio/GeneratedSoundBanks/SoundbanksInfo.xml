@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\</ProjectRoot>
+		<SourceFilesRoot>G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>G:\GMTK2022\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>G:\GMTK2022_WWISE\GMTK_2022_WWISE_PROJECT\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="648143296">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="670697577" Name="MusicVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MusicVerb"/>
+				<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+			</IncludedAuxBusses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="2528941608">
+			<ObjectPath>\SoundBanks\Default Work Unit\MAIN</ObjectPath>
+			<ShortName>MAIN</ShortName>
+			<Path>MAIN.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4162951119" Name="Amb_Casino" ObjectPath="\Events\DICE\Amb_Casino" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="254461850" Language="SFX">
+							<ShortName>Ambiance_Casino [2022-07-16 120317].wav</ShortName>
+							<Path>SFX\Ambiance_Casino [2022-07-16 120317]_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="210953680" Name="Amb_Void" ObjectPath="\Events\DICE\Amb_Void" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1062527462" Language="SFX">
+							<ShortName>Amb_Void [2022-07-17 011317].wav</ShortName>
+							<Path>SFX\Amb_Void [2022-07-17 011317]_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3191067555" Name="Chips_Handle" ObjectPath="\Events\DICE\Chips_Handle" DurationType="OneShot" DurationMin="0.303718" DurationMax="0.607435">
+					<IncludedMemoryFiles>
+						<File Id="6762539" Language="SFX">
+							<ShortName>Chips_Handle_10 [2022-07-16 122242].wav</ShortName>
+							<Path>SFX\Chips_Handle_10 [2022-07-16 122242]_10C4C929.wem</Path>
+						</File>
+						<File Id="40747097" Language="SFX">
+							<ShortName>Chips_Handle_1 [2022-07-16 122235].wav</ShortName>
+							<Path>SFX\Chips_Handle_1 [2022-07-16 122235]_10C4C929.wem</Path>
+						</File>
+						<File Id="168617671" Language="SFX">
+							<ShortName>Chips_Handle_9 [2022-07-16 122241].wav</ShortName>
+							<Path>SFX\Chips_Handle_9 [2022-07-16 122241]_10C4C929.wem</Path>
+						</File>
+						<File Id="203174795" Language="SFX">
+							<ShortName>Chips_Handle_5 [2022-07-16 122238].wav</ShortName>
+							<Path>SFX\Chips_Handle_5 [2022-07-16 122238]_10C4C929.wem</Path>
+						</File>
+						<File Id="319517080" Language="SFX">
+							<ShortName>Chips_Handle_4 [2022-07-16 122237].wav</ShortName>
+							<Path>SFX\Chips_Handle_4 [2022-07-16 122237]_10C4C929.wem</Path>
+						</File>
+						<File Id="330872153" Language="SFX">
+							<ShortName>Chips_Handle_7 [2022-07-16 122239].wav</ShortName>
+							<Path>SFX\Chips_Handle_7 [2022-07-16 122239]_10C4C929.wem</Path>
+						</File>
+						<File Id="617794723" Language="SFX">
+							<ShortName>Chips_Handle_6 [2022-07-16 122239].wav</ShortName>
+							<Path>SFX\Chips_Handle_6 [2022-07-16 122239]_10C4C929.wem</Path>
+						</File>
+						<File Id="703054185" Language="SFX">
+							<ShortName>Chips_Handle_8 [2022-07-16 122240].wav</ShortName>
+							<Path>SFX\Chips_Handle_8 [2022-07-16 122240]_10C4C929.wem</Path>
+						</File>
+						<File Id="754041737" Language="SFX">
+							<ShortName>Chips_Handle_3 [2022-07-16 122237].wav</ShortName>
+							<Path>SFX\Chips_Handle_3 [2022-07-16 122237]_10C4C929.wem</Path>
+						</File>
+						<File Id="886519334" Language="SFX">
+							<ShortName>Chips_Handle_2 [2022-07-16 122236].wav</ShortName>
+							<Path>SFX\Chips_Handle_2 [2022-07-16 122236]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1947750782" Name="Crowd_Angry" ObjectPath="\Events\DICE\Crowd_Angry" DurationType="OneShot" DurationMin="7.965354" DurationMax="7.965354">
+					<IncludedMemoryFiles>
+						<File Id="7467161" Language="SFX">
+							<ShortName>Crowd_Angry [2022-07-16 125619].wav</ShortName>
+							<Path>SFX\Crowd_Angry [2022-07-16 125619]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="995454915" Name="Crowd_Booing" ObjectPath="\Events\DICE\Crowd_Booing" DurationType="OneShot" DurationMin="7.96" DurationMax="7.96">
+					<IncludedMemoryFiles>
+						<File Id="942255838" Language="SFX">
+							<ShortName>Crowd_Booing [2022-07-16 125622].wav</ShortName>
+							<Path>SFX\Crowd_Booing [2022-07-16 125622]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1360930638" Name="Crowd_Cheering" ObjectPath="\Events\DICE\Crowd_Cheering" DurationType="OneShot" DurationMin="7.96" DurationMax="7.96">
+					<IncludedMemoryFiles>
+						<File Id="15966534" Language="SFX">
+							<ShortName>Crowd_Cheering [2022-07-16 125617].wav</ShortName>
+							<Path>SFX\Crowd_Cheering [2022-07-16 125617]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="867755697" Name="Crowd_Evil" ObjectPath="\Events\DICE\Crowd_Evil" DurationType="OneShot" DurationMin="7.96" DurationMax="7.96">
+					<IncludedMemoryFiles>
+						<File Id="690212596" Language="SFX">
+							<ShortName>Crowd_Evil [2022-07-16 125615].wav</ShortName>
+							<Path>SFX\Crowd_Evil [2022-07-16 125615]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="725804277" Name="Dice_Spinning" ObjectPath="\Events\DICE\Dice_Spinning" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="950383147" Language="SFX">
+							<ShortName>Dice_Spinning [2022-07-16 170509].wav</ShortName>
+							<Path>SFX\Dice_Spinning [2022-07-16 170509]_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="407918435" Name="Platform_Color_Switch" ObjectPath="\Events\DICE\Platform_Color_Switch"/>
+					</ActionPostEvent>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3573208756" Name="Evil_Dice_Switch_Mood" ObjectPath="\Events\DICE\Evil_Dice_Switch_Mood" DurationType="OneShot" DurationMin="0.597" DurationMax="0.6965">
+					<IncludedMemoryFiles>
+						<File Id="73181689" Language="SFX">
+							<ShortName>Dice_Shake_1 [2022-07-16 122828].wav</ShortName>
+							<Path>SFX\Dice_Shake_1 [2022-07-16 122828]_10C4C929.wem</Path>
+						</File>
+						<File Id="109623120" Language="SFX">
+							<ShortName>Dice_Switch_4 [2022-07-16 121821].wav</ShortName>
+							<Path>SFX\Dice_Switch_4 [2022-07-16 121821]_10C4C929.wem</Path>
+						</File>
+						<File Id="151851861" Language="SFX">
+							<ShortName>Dice_Shake_4 [2022-07-16 122831].wav</ShortName>
+							<Path>SFX\Dice_Shake_4 [2022-07-16 122831]_10C4C929.wem</Path>
+						</File>
+						<File Id="291885684" Language="SFX">
+							<ShortName>Dice_Shake_3 [2022-07-16 122830].wav</ShortName>
+							<Path>SFX\Dice_Shake_3 [2022-07-16 122830]_10C4C929.wem</Path>
+						</File>
+						<File Id="435985107" Language="SFX">
+							<ShortName>Dice_Switch_3 [2022-07-16 121819].wav</ShortName>
+							<Path>SFX\Dice_Switch_3 [2022-07-16 121819]_10C4C929.wem</Path>
+						</File>
+						<File Id="670799467" Language="SFX">
+							<ShortName>Dice_Switch_2 [2022-07-16 121818].wav</ShortName>
+							<Path>SFX\Dice_Switch_2 [2022-07-16 121818]_10C4C929.wem</Path>
+						</File>
+						<File Id="678218569" Language="SFX">
+							<ShortName>Dice_Switch_1 [2022-07-16 121817].wav</ShortName>
+							<Path>SFX\Dice_Switch_1 [2022-07-16 121817]_10C4C929.wem</Path>
+						</File>
+						<File Id="800381016" Language="SFX">
+							<ShortName>Dice_Shake_2 [2022-07-16 122829].wav</ShortName>
+							<Path>SFX\Dice_Shake_2 [2022-07-16 122829]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3679537681" Name="Huge_Hand_Slap" ObjectPath="\Events\DICE\Huge_Hand_Slap" DurationType="OneShot" DurationMin="0.480375" DurationMax="0.536979">
+					<IncludedMemoryFiles>
+						<File Id="174246285" Language="SFX">
+							<ShortName>Huge_Hand_Slap_3 [2022-07-16 192542].wav</ShortName>
+							<Path>SFX\Huge_Hand_Slap_3 [2022-07-16 192542]_10C4C929.wem</Path>
+						</File>
+						<File Id="221733998" Language="SFX">
+							<ShortName>Huge_Hand_Slap_1 [2022-07-16 192540].wav</ShortName>
+							<Path>SFX\Huge_Hand_Slap_1 [2022-07-16 192540]_10C4C929.wem</Path>
+						</File>
+						<File Id="291209103" Language="SFX">
+							<ShortName>Huge_Hand_Slap_2 [2022-07-16 192541].wav</ShortName>
+							<Path>SFX\Huge_Hand_Slap_2 [2022-07-16 192541]_10C4C929.wem</Path>
+						</File>
+						<File Id="848489012" Language="SFX">
+							<ShortName>Huge_Hand_Slap_4 [2022-07-16 192543].wav</ShortName>
+							<Path>SFX\Huge_Hand_Slap_4 [2022-07-16 192543]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1990061228" Name="Jackpot_Event" ObjectPath="\Events\DICE\Jackpot_Event" DurationType="OneShot" DurationMin="4.378" DurationMax="4.378">
+					<IncludedMemoryFiles>
+						<File Id="234598096" Language="SFX">
+							<ShortName>Jackpot_Jingle [2022-07-16 122350].wav</ShortName>
+							<Path>SFX\Jackpot_Jingle [2022-07-16 122350]_10C4C929.wem</Path>
+						</File>
+						<File Id="1014794286" Language="SFX">
+							<ShortName>Coin_Falling [2022-07-16 122349].wav</ShortName>
+							<Path>SFX\Coin_Falling [2022-07-16 122349]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3108786345" Name="Main_Character_Dash" ObjectPath="\Events\DICE\Main_Character_Dash" DurationType="OneShot" DurationMin="0.331085" DurationMax="0.632071">
+					<IncludedMemoryFiles>
+						<File Id="8357546" Language="SFX">
+							<ShortName>Main_Character_Dash_Whoosh_3 [2022-07-16 153724].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Whoosh_3 [2022-07-16 153724]_10C4C929.wem</Path>
+						</File>
+						<File Id="205874023" Language="SFX">
+							<ShortName>Main_Character_Dash_Air_3 [2022-07-16 153721].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Air_3 [2022-07-16 153721]_10C4C929.wem</Path>
+						</File>
+						<File Id="213816641" Language="SFX">
+							<ShortName>Main_Character_Dash_Air_2 [2022-07-16 153721].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Air_2 [2022-07-16 153721]_10C4C929.wem</Path>
+						</File>
+						<File Id="214784045" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Scraps_1 [2022-07-16 190006].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Scraps_1 [2022-07-16 190006]_10C4C929.wem</Path>
+						</File>
+						<File Id="256967972" Language="SFX">
+							<ShortName>Main_Character_Dash_Whoosh_4 [2022-07-16 153725].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Whoosh_4 [2022-07-16 153725]_10C4C929.wem</Path>
+						</File>
+						<File Id="517659878" Language="SFX">
+							<ShortName>Main_Character_Dash_Whoosh_6 [2022-07-16 153726].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Whoosh_6 [2022-07-16 153726]_10C4C929.wem</Path>
+						</File>
+						<File Id="617680615" Language="SFX">
+							<ShortName>Main_Character_Dash_Air_1 [2022-07-16 153720].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Air_1 [2022-07-16 153720]_10C4C929.wem</Path>
+						</File>
+						<File Id="639056884" Language="SFX">
+							<ShortName>Main_Character_Dash_Whoosh_5 [2022-07-16 153726].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Whoosh_5 [2022-07-16 153726]_10C4C929.wem</Path>
+						</File>
+						<File Id="669600058" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Scraps_3 [2022-07-16 190017].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Scraps_3 [2022-07-16 190017]_10C4C929.wem</Path>
+						</File>
+						<File Id="722803541" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Scraps_2 [2022-07-16 190015].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Scraps_2 [2022-07-16 190015]_10C4C929.wem</Path>
+						</File>
+						<File Id="727758813" Language="SFX">
+							<ShortName>Main_Character_Dash_Whoosh_1 [2022-07-16 153723].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Whoosh_1 [2022-07-16 153723]_10C4C929.wem</Path>
+						</File>
+						<File Id="899211174" Language="SFX">
+							<ShortName>Main_Character_Dash_Whoosh_2 [2022-07-16 153724].wav</ShortName>
+							<Path>SFX\Main_Character_Dash_Whoosh_2 [2022-07-16 153724]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3650885368" Name="Main_Character_Footsteps_Run" ObjectPath="\Events\DICE\Main_Character_Footsteps_Run" MaxAttenuation="10." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="21001996" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_8 [2022-07-16 160505].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_8 [2022-07-16 160505]_10C4C929.wem</Path>
+						</File>
+						<File Id="71286750" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_3 [2022-07-16 160501].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_3 [2022-07-16 160501]_10C4C929.wem</Path>
+						</File>
+						<File Id="72331561" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_4 [2022-07-16 181611].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_4 [2022-07-16 181611]_10C4C929.wem</Path>
+						</File>
+						<File Id="99947582" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_12 [2022-07-16 181617].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_12 [2022-07-16 181617]_10C4C929.wem</Path>
+						</File>
+						<File Id="124711712" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_13 [2022-07-16 160512].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_13 [2022-07-16 160512]_10C4C929.wem</Path>
+						</File>
+						<File Id="126997489" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_4 [2022-07-16 160502].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_4 [2022-07-16 160502]_10C4C929.wem</Path>
+						</File>
+						<File Id="130451687" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_11 [2022-07-16 160510].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_11 [2022-07-16 160510]_10C4C929.wem</Path>
+						</File>
+						<File Id="171598124" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_12 [2022-07-16 160511].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_12 [2022-07-16 160511]_10C4C929.wem</Path>
+						</File>
+						<File Id="236569694" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_15 [2022-07-16 160513].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_15 [2022-07-16 160513]_10C4C929.wem</Path>
+						</File>
+						<File Id="248932518" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_7 [2022-07-16 160504].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_7 [2022-07-16 160504]_10C4C929.wem</Path>
+						</File>
+						<File Id="254923088" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_14 [2022-07-16 160512].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_14 [2022-07-16 160512]_10C4C929.wem</Path>
+						</File>
+						<File Id="371262872" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_9 [2022-07-16 181615].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_9 [2022-07-16 181615]_10C4C929.wem</Path>
+						</File>
+						<File Id="391401936" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_2 [2022-07-16 181610].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_2 [2022-07-16 181610]_10C4C929.wem</Path>
+						</File>
+						<File Id="406917056" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_11 [2022-07-16 181616].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_11 [2022-07-16 181616]_10C4C929.wem</Path>
+						</File>
+						<File Id="408739253" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_10 [2022-07-16 160509].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_10 [2022-07-16 160509]_10C4C929.wem</Path>
+						</File>
+						<File Id="424081063" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_3 [2022-07-16 181611].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_3 [2022-07-16 181611]_10C4C929.wem</Path>
+						</File>
+						<File Id="530360498" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_10 [2022-07-16 181615].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_10 [2022-07-16 181615]_10C4C929.wem</Path>
+						</File>
+						<File Id="562752072" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_6 [2022-07-16 160504].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_6 [2022-07-16 160504]_10C4C929.wem</Path>
+						</File>
+						<File Id="598345294" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_6 [2022-07-16 181613].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_6 [2022-07-16 181613]_10C4C929.wem</Path>
+						</File>
+						<File Id="713270554" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_7 [2022-07-16 181613].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_7 [2022-07-16 181613]_10C4C929.wem</Path>
+						</File>
+						<File Id="730878133" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_14 [2022-07-16 181618].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_14 [2022-07-16 181618]_10C4C929.wem</Path>
+						</File>
+						<File Id="734368836" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_13 [2022-07-16 181617].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_13 [2022-07-16 181617]_10C4C929.wem</Path>
+						</File>
+						<File Id="735353838" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_5 [2022-07-16 181612].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_5 [2022-07-16 181612]_10C4C929.wem</Path>
+						</File>
+						<File Id="744819156" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_5 [2022-07-16 160503].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_5 [2022-07-16 160503]_10C4C929.wem</Path>
+						</File>
+						<File Id="870992020" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_2 [2022-07-16 160501].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_2 [2022-07-16 160501]_10C4C929.wem</Path>
+						</File>
+						<File Id="938075712" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_1 [2022-07-16 181609].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_1 [2022-07-16 181609]_10C4C929.wem</Path>
+						</File>
+						<File Id="1008413959" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_1 [2022-07-16 160500].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_1 [2022-07-16 160500]_10C4C929.wem</Path>
+						</File>
+						<File Id="1055117772" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_9 [2022-07-16 160506].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_9 [2022-07-16 160506]_10C4C929.wem</Path>
+						</File>
+						<File Id="1070157625" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Run_8 [2022-07-16 181614].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Run_8 [2022-07-16 181614]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3915021121" Name="Main_Character_Jump" ObjectPath="\Events\DICE\Main_Character_Jump" DurationType="OneShot" DurationMin="0.777529" DurationMax="0.978494">
+					<IncludedMemoryFiles>
+						<File Id="1007581210" Language="SFX">
+							<ShortName>Main_Character_Footsteps_Jump [2022-07-16 190040].wav</ShortName>
+							<Path>SFX\Main_Character_Footsteps_Jump [2022-07-16 190040]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="719538334" Name="Main_Character_Land" ObjectPath="\Events\DICE\Main_Character_Land" DurationType="OneShot" DurationMin="1.75616" DurationMax="1.839321">
+					<IncludedMemoryFiles>
+						<File Id="170533732" Language="SFX">
+							<ShortName>Main_Character_Land_2 [2022-07-16 190026].wav</ShortName>
+							<Path>SFX\Main_Character_Land_2 [2022-07-16 190026]_10C4C929.wem</Path>
+						</File>
+						<File Id="414141492" Language="SFX">
+							<ShortName>Main_Character_Land_3 [2022-07-16 190027].wav</ShortName>
+							<Path>SFX\Main_Character_Land_3 [2022-07-16 190027]_10C4C929.wem</Path>
+						</File>
+						<File Id="640629606" Language="SFX">
+							<ShortName>Main_Character_Land_1 [2022-07-16 190025].wav</ShortName>
+							<Path>SFX\Main_Character_Land_1 [2022-07-16 190025]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1923954360" Name="Music_Angry" ObjectPath="\Events\DICE\Music_Angry" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="254461850" Language="SFX">
+							<ShortName>Ambiance_Casino [2022-07-16 120317].wav</ShortName>
+							<Path>SFX\Ambiance_Casino [2022-07-16 120317]_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1990061228" Name="Jackpot_Event" ObjectPath="\Events\DICE\Jackpot_Event"/>
+					</ActionPostEvent>
+					<ActionSetState>
+						<ActionSetStateEntry Id="1206605712" Name="Angry" ObjectPath="\States\Music\Dice_State\Angry"/>
+					</ActionSetState>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="4081526380" Name="Music_Calm" ObjectPath="\Events\DICE\Music_Calm" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3753286132" Name="Calm" ObjectPath="\States\Music\Dice_State\Calm"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4093901766" Name="Music_Trouble" ObjectPath="\Events\DICE\Music_Trouble" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="730829630" Name="Trouble" ObjectPath="\States\Music\Dice_State\Trouble"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="407918435" Name="Platform_Color_Switch" ObjectPath="\Events\DICE\Platform_Color_Switch" DurationType="OneShot" DurationMin="0.913744" DurationMax="1.025643">
+					<IncludedMemoryFiles>
+						<File Id="820182645" Language="SFX">
+							<ShortName>Platform_Color_Switch [2022-07-16 125904].wav</ShortName>
+							<Path>SFX\Platform_Color_Switch [2022-07-16 125904]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="822236408" Name="Platform_Fall" ObjectPath="\Events\DICE\Platform_Fall" DurationType="OneShot" DurationMin="1.965125" DurationMax="1.965125">
+					<IncludedMemoryFiles>
+						<File Id="751830157" Language="SFX">
+							<ShortName>Platform_Fall [2022-07-16 125943].wav</ShortName>
+							<Path>SFX\Platform_Fall [2022-07-16 125943]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\DICE\Play_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="105355163" Language="SFX">
+							<ShortName>GMTK2022_Music_Calm.wav</ShortName>
+							<Path>SFX\GMTK2022_Music_Calm_D79FB2B7.wem</Path>
+						</File>
+						<File Id="224480504" Language="SFX">
+							<ShortName>GMTK2022_Music_Trouble.wav</ShortName>
+							<Path>SFX\GMTK2022_Music_Trouble_D79FB2B7.wem</Path>
+						</File>
+						<File Id="622475278" Language="SFX">
+							<ShortName>GMTK2022_Music_Angry_Intro.wav</ShortName>
+							<Path>SFX\GMTK2022_Music_Angry_Intro_D79FB2B7.wem</Path>
+						</File>
+						<File Id="722106277" Language="SFX">
+							<ShortName>GMTK2022_Music_Angry_Loop_A.wav</ShortName>
+							<Path>SFX\GMTK2022_Music_Angry_Loop_A_D79FB2B7.wem</Path>
+						</File>
+						<File Id="792646289" Language="SFX">
+							<ShortName>GMTK2022_Music_Angry_Loop_B.wav</ShortName>
+							<Path>SFX\GMTK2022_Music_Angry_Loop_B_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D82C3D9E-2E47-483A-9434-019BE5E9597D}">
+							<Media>
+								<File Id="622475278"/>
+								<File Id="722106277"/>
+								<File Id="792646289"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{0C32344A-F171-4E24-8332-862083A593D5}">
+							<Media>
+								<File Id="105355163"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{D3A0338F-A0C0-4CF5-A9EB-6A3DAAE03F84}">
+							<Media>
+								<File Id="224480504"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="3753286132" Name="Calm" ObjectPath="\States\Music\Dice_State\Calm"/>
+					</ActionSetState>
+					<AuxBusSends>
+						<AuxBus Id="670697577" Name="MusicVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MusicVerb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="2256949692" Name="Regular_Dice_UI" ObjectPath="\Events\DICE\Regular_Dice_UI" DurationType="OneShot" DurationMin="0.913744" DurationMax="1.025643">
+					<IncludedMemoryFiles>
+						<File Id="820182645" Language="SFX">
+							<ShortName>Platform_Color_Switch [2022-07-16 125904].wav</ShortName>
+							<Path>SFX\Platform_Color_Switch [2022-07-16 125904]_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+					</AuxBusSends>
+				</Event>
+			</IncludedEvents>
+			<IncludedAuxBusses>
+				<AuxBus Id="670697577" Name="MusicVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MusicVerb"/>
+				<AuxBus Id="3006101373" Name="MainVerb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\MainVerb"/>
+			</IncludedAuxBusses>
+			<IncludedMemoryFiles>
+				<File Id="6762539" Language="SFX">
+					<ShortName>Chips_Handle_10 [2022-07-16 122242].wav</ShortName>
+					<Path>SFX\Chips_Handle_10 [2022-07-16 122242]_10C4C929.wem</Path>
+				</File>
+				<File Id="7467161" Language="SFX">
+					<ShortName>Crowd_Angry [2022-07-16 125619].wav</ShortName>
+					<Path>SFX\Crowd_Angry [2022-07-16 125619]_10C4C929.wem</Path>
+				</File>
+				<File Id="8357546" Language="SFX">
+					<ShortName>Main_Character_Dash_Whoosh_3 [2022-07-16 153724].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Whoosh_3 [2022-07-16 153724]_10C4C929.wem</Path>
+				</File>
+				<File Id="15966534" Language="SFX">
+					<ShortName>Crowd_Cheering [2022-07-16 125617].wav</ShortName>
+					<Path>SFX\Crowd_Cheering [2022-07-16 125617]_10C4C929.wem</Path>
+				</File>
+				<File Id="21001996" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_8 [2022-07-16 160505].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_8 [2022-07-16 160505]_10C4C929.wem</Path>
+				</File>
+				<File Id="40747097" Language="SFX">
+					<ShortName>Chips_Handle_1 [2022-07-16 122235].wav</ShortName>
+					<Path>SFX\Chips_Handle_1 [2022-07-16 122235]_10C4C929.wem</Path>
+				</File>
+				<File Id="71286750" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_3 [2022-07-16 160501].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_3 [2022-07-16 160501]_10C4C929.wem</Path>
+				</File>
+				<File Id="72331561" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_4 [2022-07-16 181611].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_4 [2022-07-16 181611]_10C4C929.wem</Path>
+				</File>
+				<File Id="73181689" Language="SFX">
+					<ShortName>Dice_Shake_1 [2022-07-16 122828].wav</ShortName>
+					<Path>SFX\Dice_Shake_1 [2022-07-16 122828]_10C4C929.wem</Path>
+				</File>
+				<File Id="99947582" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_12 [2022-07-16 181617].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_12 [2022-07-16 181617]_10C4C929.wem</Path>
+				</File>
+				<File Id="105355163" Language="SFX">
+					<ShortName>GMTK2022_Music_Calm.wav</ShortName>
+					<Path>SFX\GMTK2022_Music_Calm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="109623120" Language="SFX">
+					<ShortName>Dice_Switch_4 [2022-07-16 121821].wav</ShortName>
+					<Path>SFX\Dice_Switch_4 [2022-07-16 121821]_10C4C929.wem</Path>
+				</File>
+				<File Id="124711712" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_13 [2022-07-16 160512].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_13 [2022-07-16 160512]_10C4C929.wem</Path>
+				</File>
+				<File Id="126997489" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_4 [2022-07-16 160502].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_4 [2022-07-16 160502]_10C4C929.wem</Path>
+				</File>
+				<File Id="130451687" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_11 [2022-07-16 160510].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_11 [2022-07-16 160510]_10C4C929.wem</Path>
+				</File>
+				<File Id="151851861" Language="SFX">
+					<ShortName>Dice_Shake_4 [2022-07-16 122831].wav</ShortName>
+					<Path>SFX\Dice_Shake_4 [2022-07-16 122831]_10C4C929.wem</Path>
+				</File>
+				<File Id="168617671" Language="SFX">
+					<ShortName>Chips_Handle_9 [2022-07-16 122241].wav</ShortName>
+					<Path>SFX\Chips_Handle_9 [2022-07-16 122241]_10C4C929.wem</Path>
+				</File>
+				<File Id="170533732" Language="SFX">
+					<ShortName>Main_Character_Land_2 [2022-07-16 190026].wav</ShortName>
+					<Path>SFX\Main_Character_Land_2 [2022-07-16 190026]_10C4C929.wem</Path>
+				</File>
+				<File Id="171598124" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_12 [2022-07-16 160511].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_12 [2022-07-16 160511]_10C4C929.wem</Path>
+				</File>
+				<File Id="174246285" Language="SFX">
+					<ShortName>Huge_Hand_Slap_3 [2022-07-16 192542].wav</ShortName>
+					<Path>SFX\Huge_Hand_Slap_3 [2022-07-16 192542]_10C4C929.wem</Path>
+				</File>
+				<File Id="203174795" Language="SFX">
+					<ShortName>Chips_Handle_5 [2022-07-16 122238].wav</ShortName>
+					<Path>SFX\Chips_Handle_5 [2022-07-16 122238]_10C4C929.wem</Path>
+				</File>
+				<File Id="205874023" Language="SFX">
+					<ShortName>Main_Character_Dash_Air_3 [2022-07-16 153721].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Air_3 [2022-07-16 153721]_10C4C929.wem</Path>
+				</File>
+				<File Id="213816641" Language="SFX">
+					<ShortName>Main_Character_Dash_Air_2 [2022-07-16 153721].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Air_2 [2022-07-16 153721]_10C4C929.wem</Path>
+				</File>
+				<File Id="214784045" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Scraps_1 [2022-07-16 190006].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Scraps_1 [2022-07-16 190006]_10C4C929.wem</Path>
+				</File>
+				<File Id="221733998" Language="SFX">
+					<ShortName>Huge_Hand_Slap_1 [2022-07-16 192540].wav</ShortName>
+					<Path>SFX\Huge_Hand_Slap_1 [2022-07-16 192540]_10C4C929.wem</Path>
+				</File>
+				<File Id="224480504" Language="SFX">
+					<ShortName>GMTK2022_Music_Trouble.wav</ShortName>
+					<Path>SFX\GMTK2022_Music_Trouble_D79FB2B7.wem</Path>
+				</File>
+				<File Id="234598096" Language="SFX">
+					<ShortName>Jackpot_Jingle [2022-07-16 122350].wav</ShortName>
+					<Path>SFX\Jackpot_Jingle [2022-07-16 122350]_10C4C929.wem</Path>
+				</File>
+				<File Id="236569694" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_15 [2022-07-16 160513].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_15 [2022-07-16 160513]_10C4C929.wem</Path>
+				</File>
+				<File Id="248932518" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_7 [2022-07-16 160504].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_7 [2022-07-16 160504]_10C4C929.wem</Path>
+				</File>
+				<File Id="254461850" Language="SFX">
+					<ShortName>Ambiance_Casino [2022-07-16 120317].wav</ShortName>
+					<Path>SFX\Ambiance_Casino [2022-07-16 120317]_D79FB2B7.wem</Path>
+				</File>
+				<File Id="254923088" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_14 [2022-07-16 160512].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_14 [2022-07-16 160512]_10C4C929.wem</Path>
+				</File>
+				<File Id="256967972" Language="SFX">
+					<ShortName>Main_Character_Dash_Whoosh_4 [2022-07-16 153725].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Whoosh_4 [2022-07-16 153725]_10C4C929.wem</Path>
+				</File>
+				<File Id="291209103" Language="SFX">
+					<ShortName>Huge_Hand_Slap_2 [2022-07-16 192541].wav</ShortName>
+					<Path>SFX\Huge_Hand_Slap_2 [2022-07-16 192541]_10C4C929.wem</Path>
+				</File>
+				<File Id="291885684" Language="SFX">
+					<ShortName>Dice_Shake_3 [2022-07-16 122830].wav</ShortName>
+					<Path>SFX\Dice_Shake_3 [2022-07-16 122830]_10C4C929.wem</Path>
+				</File>
+				<File Id="319517080" Language="SFX">
+					<ShortName>Chips_Handle_4 [2022-07-16 122237].wav</ShortName>
+					<Path>SFX\Chips_Handle_4 [2022-07-16 122237]_10C4C929.wem</Path>
+				</File>
+				<File Id="330872153" Language="SFX">
+					<ShortName>Chips_Handle_7 [2022-07-16 122239].wav</ShortName>
+					<Path>SFX\Chips_Handle_7 [2022-07-16 122239]_10C4C929.wem</Path>
+				</File>
+				<File Id="371262872" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_9 [2022-07-16 181615].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_9 [2022-07-16 181615]_10C4C929.wem</Path>
+				</File>
+				<File Id="391401936" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_2 [2022-07-16 181610].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_2 [2022-07-16 181610]_10C4C929.wem</Path>
+				</File>
+				<File Id="406917056" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_11 [2022-07-16 181616].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_11 [2022-07-16 181616]_10C4C929.wem</Path>
+				</File>
+				<File Id="408739253" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_10 [2022-07-16 160509].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_10 [2022-07-16 160509]_10C4C929.wem</Path>
+				</File>
+				<File Id="414141492" Language="SFX">
+					<ShortName>Main_Character_Land_3 [2022-07-16 190027].wav</ShortName>
+					<Path>SFX\Main_Character_Land_3 [2022-07-16 190027]_10C4C929.wem</Path>
+				</File>
+				<File Id="424081063" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_3 [2022-07-16 181611].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_3 [2022-07-16 181611]_10C4C929.wem</Path>
+				</File>
+				<File Id="435985107" Language="SFX">
+					<ShortName>Dice_Switch_3 [2022-07-16 121819].wav</ShortName>
+					<Path>SFX\Dice_Switch_3 [2022-07-16 121819]_10C4C929.wem</Path>
+				</File>
+				<File Id="517659878" Language="SFX">
+					<ShortName>Main_Character_Dash_Whoosh_6 [2022-07-16 153726].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Whoosh_6 [2022-07-16 153726]_10C4C929.wem</Path>
+				</File>
+				<File Id="530360498" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_10 [2022-07-16 181615].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_10 [2022-07-16 181615]_10C4C929.wem</Path>
+				</File>
+				<File Id="562752072" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_6 [2022-07-16 160504].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_6 [2022-07-16 160504]_10C4C929.wem</Path>
+				</File>
+				<File Id="598345294" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_6 [2022-07-16 181613].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_6 [2022-07-16 181613]_10C4C929.wem</Path>
+				</File>
+				<File Id="617680615" Language="SFX">
+					<ShortName>Main_Character_Dash_Air_1 [2022-07-16 153720].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Air_1 [2022-07-16 153720]_10C4C929.wem</Path>
+				</File>
+				<File Id="617794723" Language="SFX">
+					<ShortName>Chips_Handle_6 [2022-07-16 122239].wav</ShortName>
+					<Path>SFX\Chips_Handle_6 [2022-07-16 122239]_10C4C929.wem</Path>
+				</File>
+				<File Id="622475278" Language="SFX">
+					<ShortName>GMTK2022_Music_Angry_Intro.wav</ShortName>
+					<Path>SFX\GMTK2022_Music_Angry_Intro_D79FB2B7.wem</Path>
+				</File>
+				<File Id="639056884" Language="SFX">
+					<ShortName>Main_Character_Dash_Whoosh_5 [2022-07-16 153726].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Whoosh_5 [2022-07-16 153726]_10C4C929.wem</Path>
+				</File>
+				<File Id="640629606" Language="SFX">
+					<ShortName>Main_Character_Land_1 [2022-07-16 190025].wav</ShortName>
+					<Path>SFX\Main_Character_Land_1 [2022-07-16 190025]_10C4C929.wem</Path>
+				</File>
+				<File Id="669600058" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Scraps_3 [2022-07-16 190017].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Scraps_3 [2022-07-16 190017]_10C4C929.wem</Path>
+				</File>
+				<File Id="670799467" Language="SFX">
+					<ShortName>Dice_Switch_2 [2022-07-16 121818].wav</ShortName>
+					<Path>SFX\Dice_Switch_2 [2022-07-16 121818]_10C4C929.wem</Path>
+				</File>
+				<File Id="678218569" Language="SFX">
+					<ShortName>Dice_Switch_1 [2022-07-16 121817].wav</ShortName>
+					<Path>SFX\Dice_Switch_1 [2022-07-16 121817]_10C4C929.wem</Path>
+				</File>
+				<File Id="690212596" Language="SFX">
+					<ShortName>Crowd_Evil [2022-07-16 125615].wav</ShortName>
+					<Path>SFX\Crowd_Evil [2022-07-16 125615]_10C4C929.wem</Path>
+				</File>
+				<File Id="703054185" Language="SFX">
+					<ShortName>Chips_Handle_8 [2022-07-16 122240].wav</ShortName>
+					<Path>SFX\Chips_Handle_8 [2022-07-16 122240]_10C4C929.wem</Path>
+				</File>
+				<File Id="713270554" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_7 [2022-07-16 181613].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_7 [2022-07-16 181613]_10C4C929.wem</Path>
+				</File>
+				<File Id="722106277" Language="SFX">
+					<ShortName>GMTK2022_Music_Angry_Loop_A.wav</ShortName>
+					<Path>SFX\GMTK2022_Music_Angry_Loop_A_D79FB2B7.wem</Path>
+				</File>
+				<File Id="722803541" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Scraps_2 [2022-07-16 190015].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Scraps_2 [2022-07-16 190015]_10C4C929.wem</Path>
+				</File>
+				<File Id="727758813" Language="SFX">
+					<ShortName>Main_Character_Dash_Whoosh_1 [2022-07-16 153723].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Whoosh_1 [2022-07-16 153723]_10C4C929.wem</Path>
+				</File>
+				<File Id="730878133" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_14 [2022-07-16 181618].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_14 [2022-07-16 181618]_10C4C929.wem</Path>
+				</File>
+				<File Id="734368836" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_13 [2022-07-16 181617].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_13 [2022-07-16 181617]_10C4C929.wem</Path>
+				</File>
+				<File Id="735353838" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_5 [2022-07-16 181612].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_5 [2022-07-16 181612]_10C4C929.wem</Path>
+				</File>
+				<File Id="744819156" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_5 [2022-07-16 160503].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_5 [2022-07-16 160503]_10C4C929.wem</Path>
+				</File>
+				<File Id="751830157" Language="SFX">
+					<ShortName>Platform_Fall [2022-07-16 125943].wav</ShortName>
+					<Path>SFX\Platform_Fall [2022-07-16 125943]_10C4C929.wem</Path>
+				</File>
+				<File Id="754041737" Language="SFX">
+					<ShortName>Chips_Handle_3 [2022-07-16 122237].wav</ShortName>
+					<Path>SFX\Chips_Handle_3 [2022-07-16 122237]_10C4C929.wem</Path>
+				</File>
+				<File Id="792646289" Language="SFX">
+					<ShortName>GMTK2022_Music_Angry_Loop_B.wav</ShortName>
+					<Path>SFX\GMTK2022_Music_Angry_Loop_B_D79FB2B7.wem</Path>
+				</File>
+				<File Id="800381016" Language="SFX">
+					<ShortName>Dice_Shake_2 [2022-07-16 122829].wav</ShortName>
+					<Path>SFX\Dice_Shake_2 [2022-07-16 122829]_10C4C929.wem</Path>
+				</File>
+				<File Id="820182645" Language="SFX">
+					<ShortName>Platform_Color_Switch [2022-07-16 125904].wav</ShortName>
+					<Path>SFX\Platform_Color_Switch [2022-07-16 125904]_10C4C929.wem</Path>
+				</File>
+				<File Id="848489012" Language="SFX">
+					<ShortName>Huge_Hand_Slap_4 [2022-07-16 192543].wav</ShortName>
+					<Path>SFX\Huge_Hand_Slap_4 [2022-07-16 192543]_10C4C929.wem</Path>
+				</File>
+				<File Id="870992020" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_2 [2022-07-16 160501].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_2 [2022-07-16 160501]_10C4C929.wem</Path>
+				</File>
+				<File Id="886519334" Language="SFX">
+					<ShortName>Chips_Handle_2 [2022-07-16 122236].wav</ShortName>
+					<Path>SFX\Chips_Handle_2 [2022-07-16 122236]_10C4C929.wem</Path>
+				</File>
+				<File Id="899211174" Language="SFX">
+					<ShortName>Main_Character_Dash_Whoosh_2 [2022-07-16 153724].wav</ShortName>
+					<Path>SFX\Main_Character_Dash_Whoosh_2 [2022-07-16 153724]_10C4C929.wem</Path>
+				</File>
+				<File Id="938075712" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_1 [2022-07-16 181609].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_1 [2022-07-16 181609]_10C4C929.wem</Path>
+				</File>
+				<File Id="942255838" Language="SFX">
+					<ShortName>Crowd_Booing [2022-07-16 125622].wav</ShortName>
+					<Path>SFX\Crowd_Booing [2022-07-16 125622]_10C4C929.wem</Path>
+				</File>
+				<File Id="950383147" Language="SFX">
+					<ShortName>Dice_Spinning [2022-07-16 170509].wav</ShortName>
+					<Path>SFX\Dice_Spinning [2022-07-16 170509]_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1007581210" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Jump [2022-07-16 190040].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Jump [2022-07-16 190040]_10C4C929.wem</Path>
+				</File>
+				<File Id="1008413959" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_1 [2022-07-16 160500].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_1 [2022-07-16 160500]_10C4C929.wem</Path>
+				</File>
+				<File Id="1014794286" Language="SFX">
+					<ShortName>Coin_Falling [2022-07-16 122349].wav</ShortName>
+					<Path>SFX\Coin_Falling [2022-07-16 122349]_10C4C929.wem</Path>
+				</File>
+				<File Id="1055117772" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_9 [2022-07-16 160506].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_9 [2022-07-16 160506]_10C4C929.wem</Path>
+				</File>
+				<File Id="1062527462" Language="SFX">
+					<ShortName>Amb_Void [2022-07-17 011317].wav</ShortName>
+					<Path>SFX\Amb_Void [2022-07-17 011317]_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1070157625" Language="SFX">
+					<ShortName>Main_Character_Footsteps_Run_8 [2022-07-16 181614].wav</ShortName>
+					<Path>SFX\Main_Character_Footsteps_Run_8 [2022-07-16 181614]_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="725804277" Name="Dice_Spinning" ObjectPath="\Game Parameters\Default Work Unit\Dice_Spinning"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="730829630" Name="Trouble" ObjectPath="\States\Music\Dice_State\Trouble" GUID="{D3A0338F-A0C0-4CF5-A9EB-6A3DAAE03F84}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1206605712" Name="Angry" ObjectPath="\States\Music\Dice_State\Angry" GUID="{D82C3D9E-2E47-483A-9434-019BE5E9597D}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3753286132" Name="Calm" ObjectPath="\States\Music\Dice_State\Calm" GUID="{0C32344A-F171-4E24-8332-862083A593D5}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3957039406" Name="Dice_State" ObjectPath="\States\Music\Dice_State" GUID="{AC525053-6F49-4060-815C-AAEBA84C4169}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Music\Dice_State\None" GUID="{FFA9E6F1-71CD-4D5C-A2AA-871B3224A341}"/>
+						<State Id="1206605712" Name="Angry" ObjectPath="\States\Music\Dice_State\Angry" GUID="{D82C3D9E-2E47-483A-9434-019BE5E9597D}"/>
+						<State Id="730829630" Name="Trouble" ObjectPath="\States\Music\Dice_State\Trouble" GUID="{D3A0338F-A0C0-4CF5-A9EB-6A3DAAE03F84}"/>
+						<State Id="3753286132" Name="Calm" ObjectPath="\States\Music\Dice_State\Calm" GUID="{0C32344A-F171-4E24-8332-862083A593D5}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
