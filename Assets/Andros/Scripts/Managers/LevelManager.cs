@@ -55,7 +55,7 @@ public class LevelManager : BaseManager
         InitLevel();
     }
 
-    private void InitLevel()
+    public void InitLevel()
     {
         int z = 0;
         foreach (KeyValuePair<string,GameObject> hexaInfo in _hexaPrefabs)
@@ -63,7 +63,6 @@ public class LevelManager : BaseManager
             AddNewHexa(hexaInfo.Key, hexaInfo.Value.transform.position, hexaInfo.Value.transform.rotation);
             z += 10;
         }
-        //StartRandomHexaMove();
     }
 
     public void DropHexa(string colorName, int difficultyLevel)

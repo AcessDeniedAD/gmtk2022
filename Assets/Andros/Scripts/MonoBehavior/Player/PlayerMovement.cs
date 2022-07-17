@@ -8,10 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public Vector2 PlayerDirection;
 
-    Animator _playerAnimatorController;
-
-
     public StatesManager _statesManager;
+    public PlayerManager _playerManager;
+    Animator _playerAnimatorController;
     [SerializeField]
     private float _playerSpeed = 0.5f;
 
@@ -46,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+    EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
         EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
         if (_playerAnimatorController == null)
         {
@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y < -1.0f && !_statesManager.IsCurrentState(new States.Loose()))
         {
             _statesManager.ChangeCurrentState(new States.Loose());
+            
         }
 
 
@@ -87,7 +88,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Loose(Args args)
     {
-        Debug.Log("C'est loose enculé :D");
+        if (!_playerManager.IsDead)
+        {
+            _playerManager.SetIsDead();
+        }
     }
 
     private void ChackIfGrounded()
