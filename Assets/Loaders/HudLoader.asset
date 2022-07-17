@@ -12,6 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19daecd56bc2dd4e8d62c399cb1ef0c, type: 3}
   m_Name: HudLoader
   m_EditorClassIdentifier: 
-  Canvas: {fileID: 852873528451032538, guid: a7a47f9ab4948f5428165787c23d5e84, type: 3}
-  DamageText: {fileID: 5221982334210405634, guid: 852e3877ad6186747a9158dfe95bbb77, type: 3}
-  Panels: {fileID: 0}

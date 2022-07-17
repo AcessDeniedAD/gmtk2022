@@ -9,7 +9,7 @@ public class DiceManager : BaseManager
     private readonly GameManager _gameManager;
     private readonly DiceLoader _diceLoader;
     private List<Face> _currentFacesOnDice = new List<Face>();
-
+    private bool _rollDice = true;
     public string ShownFaceMaterialName = "mat";
 
     private List<Face> _faces;
@@ -24,10 +24,12 @@ public class DiceManager : BaseManager
 
     public void EnableRollingDiceInScene()
     {
+        _rollDice = true;
         _rollingDiceGameObject.SetActive(true);
     }
     public void DisableRollingDiceInScene()
     {
+        _rollDice = false;
         _rollingDiceGameObject.SetActive(false);
     }
 

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/HudLoader", order = 1)]
+[CreateAssetMenu(menuName = "ScriptableObjects/HudLoader")]
 public class HudLoader : ScriptableObject
 {
-    //public GameObject Canvas;
+    public GameObject Canvas;
     //public GameObject DamageText;
 }

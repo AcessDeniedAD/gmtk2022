@@ -8,18 +8,45 @@ using Zenject;
 
 public class HudManager
 {
-    private HudLoader hudLoader;
     private Panels panels;
+    private PrefabsLoaderManager _prefabsLoaderManager;
     private GameObject currentCanvas;
+    private GameManager _gamerManager;
 
-    public HudManager(PrefabsLoaderManager prefabsLoaderManager)
+    public HudManager(PrefabsLoaderManager prefabsLoaderManager, GameManager gameManager)
     {
-        //hudLoader = prefabsLoaderManager.HudLoader;
-        //EventsManager.StartListening(nameof(LivingObjectEvents.DamageHandler), DisplayDamage);
-        //currentCanvas = GameObject.Instantiate(hudLoader.Canvas);
-        //panels = currentCanvas.GetComponent<Panels>();
-      
+        _gamerManager = gameManager;
+        _prefabsLoaderManager = prefabsLoaderManager;
+        GenerateTitleScreen();
+        StartGame();
+    }   
+
+    private void GenerateTitleScreen()
+    {
+        GameObject canvas_prefab = _prefabsLoaderManager.HudLoader.Canvas;
+        currentCanvas = _gamerManager.InstantiateInGameManager(canvas_prefab, canvas_prefab.transform.position, canvas_prefab.transform.rotation);
     }
+
+    private void StartGame()
+    {
+        _gamerManager.StartCoroutine(WaitStartGame());
+    }
+
+    public void ShowTitleScreen()
+    {
+        currentCanvas.SetActive(true);
+        StartGame();
+    }
+
+    IEnumerator WaitStartGame()
+    {   
+        while (!_gamerManager.GameIsStart)
+        {
+             yield return new WaitForSecondsRealtime(5);
+            currentCanvas.SetActive(false);
+        }
+    }
+    
     //private void DisplayDamage(Args args)
     //{
     //    //if (args.GetType() != typeof(LivingObjectEvents.LivingObjectDamageArgs))

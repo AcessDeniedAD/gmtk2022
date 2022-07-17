@@ -18,12 +18,14 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public static event GameEventManager GameFixedUpdateHandler;
     private StatesManager statesManager;
     private PrefabsLoaderManager resourcesLoaderManager;
+    public bool GameIsStart;
 
     [Inject]
     private void Init(StatesManager statesManager, PrefabsLoaderManager resourcesLoaderManager)
     {
         this.statesManager = statesManager;
         this.resourcesLoaderManager = resourcesLoaderManager;
+        DontDestroyOnLoad(gameObject);
     }
     private void Awake()
     {
