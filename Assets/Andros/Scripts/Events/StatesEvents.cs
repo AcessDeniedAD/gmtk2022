@@ -25,7 +25,10 @@ public class StatesEvents
     public UnityAction<Args> OnDiceIsShowedIn;
     public UnityAction<Args> OnDiceIsShowedOut;
 
-    public  UnityAction<Args> OnLooseIn;
+    public UnityAction<Args> OnCoinTimeIn;
+    public UnityAction<Args> OnCoinTimeOut;
+
+    public UnityAction<Args> OnLooseIn;
     public  UnityAction<Args> OnLooseOut;
 
     public UnityAction<Args> OnPauseIn;

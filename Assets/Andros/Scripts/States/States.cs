@@ -121,6 +121,22 @@ namespace States
         }
     }
 
+    public class CoinTime : BaseState
+    {
+        public CoinTime()
+        {
+            ElementsCanMove = true;
+        }
+        public override void In()
+        {
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnCoinTimeIn));
+        }
+        public override void Out()
+        {
+            EventsManager.TriggerEvent(nameof(StatesEvents.OnCoinTimeOut));
+        }
+    }
+
     public class Pause : BaseState
     {
         public Pause()
