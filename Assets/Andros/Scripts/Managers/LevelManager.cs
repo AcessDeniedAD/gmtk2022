@@ -25,6 +25,7 @@ public class LevelManager : BaseManager
     private bool _randomHexaMove = false;
     private Vector3 _orignal_size;
     private System.Random _rnd;
+    private GameObject _locked_hexa_mid_out;
     public float Speed = 10.0f;
     public float DownPosition = -10.0f;
     public int pPatformMoveProba = 25;
@@ -49,6 +50,7 @@ public class LevelManager : BaseManager
            {"yellow", _prefabsLoaderManager.LevelLoader.hexaPrefabYellow},
            {"orange", _prefabsLoaderManager.LevelLoader.hexaPrefabOrange},
            {"purple", _prefabsLoaderManager.LevelLoader.hexaPrefabPurple},
+            {"out", _prefabsLoaderManager.LevelLoader.hexaPrefabOut},
         };
         InitLevel();
     }
@@ -67,6 +69,17 @@ public class LevelManager : BaseManager
 
     public void DropHexa(string colorName, int difficultyLevel)
     {
+        if (colorName == "red")
+        {
+            if (_hexaLockedId == _hexaIdByColor["out"])
+            {
+                colorName = "out";
+            }
+            else if (!_hexas[_hexaIdByColor["red"]].activeSelf)
+            {
+                colorName = "out";
+            }
+        }
 
         _hexaLockedId = _hexaIdByColor[colorName];
         _hexaLocked = _hexas[_hexaLockedId];
@@ -76,6 +89,10 @@ public class LevelManager : BaseManager
     public void AddNewHexa(string color, Vector3 position, Quaternion rotation)
     {
         GameObject hexa = _gameManager.InstantiateInGameManager(_hexaPrefabs[color], position, rotation);
+        if(color == "out")
+        {
+            hexa.SetActive(false);
+        }
         hexa.transform.parent = _parentLevel.transform;
         _orignal_size = hexa.transform.localScale;
         _hexaIdByColor.Add(color, _id);
@@ -100,20 +117,50 @@ public class LevelManager : BaseManager
             = (shuffledOrder[old_hexa_locked_index], shuffledOrder[new_hexa_locked_index]);
         int i = 0;
         float hexa_change_proba = difficultyLevel * 4.2f; // 4.2 enuser the proba never exceed 60%
+        float hexa_mid_proba = 50.0f;
         foreach (int order in shuffledOrder) {
             if (_rnd.Next(1, 100) < hexa_change_proba)
             {
                 if(i != old_hexa_locked_index)
                 {
                     Vector3 hexa_size = _hexas[order].transform.localScale;
-                    float scale_pourcentage = 0.6f;
+                    float scale_pourcentage = 0.80f;
                     ChangeHexaSize(order, new Vector3(hexa_size.x * scale_pourcentage, hexa_size.y * scale_pourcentage, hexa_size.z * scale_pourcentage));
                 }
             }
-            var oldPosition = _hexas[order].transform.position;
+                var oldPosition = _hexas[order].transform.position;
             _hexas[order].transform.position = new Vector3(_position[i].x, oldPosition.y, _position[i].z);
             _position[i] = _hexas[order].transform.position;
             i += 1;
+        }
+        if (_rnd.Next(1, 100) < hexa_mid_proba )
+        {
+            if (_hexaLockedId != _hexaIdByColor["out"])
+            {
+               _locked_hexa_mid_out = _hexas[_hexaIdByColor["out"]];
+               _hexas[_hexaIdByColor["out"]].SetActive(false);
+               _hexas[_hexaIdByColor["red"]].SetActive(true);
+            }
+            else
+            {
+                _locked_hexa_mid_out = _hexas[_hexaIdByColor["red"]];
+                _hexas[_hexaIdByColor["out"]].SetActive(true);
+                _hexas[_hexaIdByColor["red"]].SetActive(false);
+            }
+        }
+        else
+        {
+            if(_hexaLockedId != _hexaIdByColor["red"])
+            {
+                _locked_hexa_mid_out = _hexas[_hexaIdByColor["red"]];
+                _hexas[_hexaIdByColor["out"]].SetActive(true);
+                _hexas[_hexaIdByColor["red"]].SetActive(false);
+            } else
+            {
+                _locked_hexa_mid_out = _hexas[_hexaIdByColor["out"]];
+                _hexas[_hexaIdByColor["out"]].SetActive(false);
+                _hexas[_hexaIdByColor["red"]].SetActive(true);
+            }
         }
         _order = shuffledOrder;
     }
@@ -233,7 +280,10 @@ public class LevelManager : BaseManager
         float speedDown = 15;
         foreach (GameObject hexa in _hexas.Values)
         {
-            hexa.SetActive(true);
+            if (!System.Object.ReferenceEquals(hexa, _locked_hexa_mid_out))
+            {
+                hexa.SetActive(true);
+            }
         }
         _startTime = Time.time;
         _journeyLength = Vector3.Distance(new Vector3(0, 0, 0), new Vector3(0, _upYPosition, 0));
