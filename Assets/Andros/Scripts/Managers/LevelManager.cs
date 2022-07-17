@@ -103,7 +103,7 @@ public class LevelManager : BaseManager
 
     public void ChangeHexaSize(int id, Vector3 size)
     {
-        Hexas[id].transform.localScale = size;
+        Hexas[id].transform.localScale = new Vector3(size.x, Hexas[id].transform.localScale.y, size.z) ;
     }
 
     public void ColorSwitch(int difficultyLevel)
