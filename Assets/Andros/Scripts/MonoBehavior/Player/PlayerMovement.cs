@@ -65,8 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckIsDead()
     {
-
-        if(transform.position.y < -1.0f)
+        if (transform.position.y < -1.0f && !_statesManager.IsCurrentState(new States.Loose()))
         {
             _statesManager.ChangeCurrentState(new States.Loose());
         }

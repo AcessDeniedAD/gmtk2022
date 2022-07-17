@@ -22,8 +22,8 @@ public class StatesManager
         }
     }
 
-    public bool CheckState(BaseState state){
-        if(currentState == state)
+    public bool IsCurrentState(BaseState state){
+        if(currentState.GetType().Name == state.GetType().Name)
         {
             return true;
         }
