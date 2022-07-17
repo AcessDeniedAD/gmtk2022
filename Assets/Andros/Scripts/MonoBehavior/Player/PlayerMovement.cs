@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class PlayerMovement : MonoBehaviour
 {
     public Vector2 PlayerDirection;
 
+    public StatesManager _statesManager;
     [SerializeField]
     private float _playerSpeed = 0.5f;
 
@@ -39,6 +41,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool _hasJumped = false;
 
+    private void Awake()
+    {
+        EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
+    }
+
     private void FixedUpdate()
     {
         verticalVelocity += _gravity * Time.fixedDeltaTime;
@@ -50,9 +57,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 movement = Vector3.right * PlayerDirection.x + Vector3.forward * PlayerDirection.y;
+        Debug.Log("Camera rot = " + Camera.main.transform.rotation.y);
+        float CameraAngle = Vector3.Angle(Vector3.right, Camera.main.transform.right) * Mathf.Deg2Rad;
+        Vector3 movement = (Vector3.right * Mathf.Cos(CameraAngle) + Vector3.forward * Mathf.Sin(CameraAngle)) * PlayerDirection.y +
+            (Vector3.right *  Mathf.Sin(CameraAngle) + Vector3.forward * - Mathf.Cos(CameraAngle))* PlayerDirection.x;
+        
         MoveAlongDirection(movement);
         AdjustOrientation(movement);
+        CheckIsDead();
+    }
+
+    private void CheckIsDead()
+    {
+        if (transform.position.y < -1.0f && !_statesManager.IsCurrentState(new States.Loose()))
+        {
+            _statesManager.ChangeCurrentState(new States.Loose());
+        }
+
+
+    }
+
+    private void Loose(Args args)
+    {
+        Debug.Log("C'est loose enculé :D");
     }
 
     private void ChackIfGrounded()

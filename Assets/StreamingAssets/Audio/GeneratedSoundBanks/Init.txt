@@ -1,0 +1,32 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3957039406	Dice_State			\Music\Dice_State	
+
+State	ID	Name	State Group			Notes
+	730829630	Trouble	Dice_State			
+	748895195	None	Dice_State			
+	1206605712	Angry	Dice_State			
+	3753286132	Calm	Dice_State			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	32323416	World_FX			\Default Work Unit\Master Audio Bus\SFX\World_FX	
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	2363688687	Evil_Dice			\Default Work Unit\Master Audio Bus\SFX\Evil_Dice	
+	2981377429	Ambiance			\Default Work Unit\Master Audio Bus\Ambiance	
+	3094055254	Main_Character			\Default Work Unit\Master Audio Bus\SFX\Main_Character	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	670697577	MusicVerb			\Default Work Unit\Master Audio Bus\Reverb\MusicVerb	
+	3006101373	MainVerb			\Default Work Unit\Master Audio Bus\Reverb\MainVerb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	602546716	Room_Large	Wwise RoomVerb			
+	1203617187	Machine_Gun_Hangar	Wwise RoomVerb			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

@@ -17,7 +17,7 @@ public class DiceManager : BaseManager
     {
         _gameManager = gameManager;
         _diceLoader = prefabsLoaderManager.DiceLoader;
-        _rollingDiceGameObject = _gameManager.InstantiateInGameManager(_diceLoader.RollingDice, Vector3.zero, Quaternion.identity);
+        _rollingDiceGameObject = _gameManager.InstantiateInGameManager(_diceLoader.RollingDice, new Vector3(3.5f,0.4f,-1.5f), Quaternion.identity);
 
         BuildFacesList();
     }
