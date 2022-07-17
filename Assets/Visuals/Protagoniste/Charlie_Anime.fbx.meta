@@ -21,7 +21,22 @@ ModelImporter:
   - first:
       74: 6775731472714912740
     second: rig|Run2.001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: de05bb1895b73814d8db05ee2b4e675d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: de05bb1895b73814d8db05ee2b4e675d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: uv_checker_material_uv_grid_1024x1024
+    second: {fileID: 2100000, guid: de05bb1895b73814d8db05ee2b4e675d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
