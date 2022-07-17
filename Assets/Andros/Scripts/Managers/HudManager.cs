@@ -15,10 +15,10 @@ public class HudManager
 
     public HudManager(PrefabsLoaderManager prefabsLoaderManager, GameManager gameManager)
     {
-        _gamerManager = gameManager;
-        _prefabsLoaderManager = prefabsLoaderManager;
-        GenerateTitleScreen();
-        StartGame();
+        //_gamerManager = gameManager;
+        //_prefabsLoaderManager = prefabsLoaderManager;
+        //GenerateTitleScreen();
+        //StartGame();
     }   
 
     private void GenerateTitleScreen()
