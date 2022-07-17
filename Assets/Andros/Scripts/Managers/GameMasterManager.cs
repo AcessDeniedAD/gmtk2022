@@ -41,19 +41,19 @@ public class GameMasterManager : BaseManager
     public void BuildDifficultiesLists()
     {
         _rangesToRollingDiceTime.Add(new List<float>() { 4, 5 });//1
-        _rangesToRollingDiceTime.Add(new List<float>() { 3.5f, 5 });//2
-        _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 7 });//3
-        _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 6 });//4
+        _rangesToRollingDiceTime.Add(new List<float>() { 3.5f, 3.6f });//2
+        _rangesToRollingDiceTime.Add(new List<float>() { 2f, 3 });//3
+        _rangesToRollingDiceTime.Add(new List<float>() { 2, 2.5f });//4
         _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 5 });//5
         _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 4 });//6
-        _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 3 });//7
-        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 3 });//8
-        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 2.5f });//9
-        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 2f });//10
-        _rangesToRollingDiceTime.Add(new List<float>() { 1f, 1.5f });//11
-        _rangesToRollingDiceTime.Add(new List<float>() { 0.5f, 1f });//12
-        _rangesToRollingDiceTime.Add(new List<float>() { 0.3f, 1f });//13
-        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.5f });//14
+        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 3 });//7
+        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 2 });//8
+        _rangesToRollingDiceTime.Add(new List<float>() { 1f, 2f });//9
+        _rangesToRollingDiceTime.Add(new List<float>() { 1f, 1.5f });//10
+        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.6f });//11
+        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.6f });//12
+        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.2f });//13
+        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.2f });//14
 
         _rangesToCoinTime.Add(new List<float>() { 4, 5 });//1
         _rangesToCoinTime.Add(new List<float>() { 3, 5 });//2
@@ -85,20 +85,20 @@ public class GameMasterManager : BaseManager
         _timesToChangeLevels.Add(110);//13
         _timesToChangeLevels.Add(120);//14
 
-        _timesToWaitBeforePlatformsFall.Add(5);//1
-        _timesToWaitBeforePlatformsFall.Add(4.5f);//2
-        _timesToWaitBeforePlatformsFall.Add(3);//3
-        _timesToWaitBeforePlatformsFall.Add(3);//4
-        _timesToWaitBeforePlatformsFall.Add(3);//5
-        _timesToWaitBeforePlatformsFall.Add(2.5f);//6
-        _timesToWaitBeforePlatformsFall.Add(2.5f);//7
-        _timesToWaitBeforePlatformsFall.Add(2.5f);//8
+        _timesToWaitBeforePlatformsFall.Add(2);//1
+        _timesToWaitBeforePlatformsFall.Add(2);//2
+        _timesToWaitBeforePlatformsFall.Add(2);//3
+        _timesToWaitBeforePlatformsFall.Add(2);//4
+        _timesToWaitBeforePlatformsFall.Add(2);//5
+        _timesToWaitBeforePlatformsFall.Add(2);//6
+        _timesToWaitBeforePlatformsFall.Add(2);//7
+        _timesToWaitBeforePlatformsFall.Add(2);//8
         _timesToWaitBeforePlatformsFall.Add(2);//9
         _timesToWaitBeforePlatformsFall.Add(1.5f);//10
-        _timesToWaitBeforePlatformsFall.Add(1);//11
-        _timesToWaitBeforePlatformsFall.Add(1);//12
-        _timesToWaitBeforePlatformsFall.Add(0.5f);//13
-        _timesToWaitBeforePlatformsFall.Add(0.4f);//14
+        _timesToWaitBeforePlatformsFall.Add(0.5);//11
+        _timesToWaitBeforePlatformsFall.Add(0.5f);//12
+        _timesToWaitBeforePlatformsFall.Add(0.2f);//13
+        _timesToWaitBeforePlatformsFall.Add(0.1f);//14
     }
     public void Loose(Args args)
     {
