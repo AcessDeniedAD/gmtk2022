@@ -18,7 +18,6 @@ public class GameMasterManager : BaseManager
 
     private List<float> _timesToChangeLevels = new List<float> ();
     private List<float> _timesToWaitBeforePlatformsFall = new List<float>();
-    private bool isLoose =false;
     public GameMasterManager(StatesManager statesManager, GameManager gameManager, DiceManager diceManager, LevelManager levelManager)
     {
         BuildDifficultiesLists();
@@ -28,32 +27,33 @@ public class GameMasterManager : BaseManager
         _diceManager = diceManager;
         _levelManager = levelManager;
 
-        GameManager.GameUpdateHandler += DifficultyChanger;
-        _levelManager = levelManager;
         EventsManager.StartListening(nameof(StatesEvents.OnCountDownIn), StartCountdown);
         EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), StartRollDice);
         EventsManager.StartListening(nameof(StatesEvents.OnCoinTimeIn), StartCoinTime);
         EventsManager.StartListening(nameof(StatesEvents.OnDiceIsShowedIn), StartShowedDiceTime);
-        EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
 
         _statesManager.ChangeCurrentState(new States.CountDown());
+
+        GameManager.GameUpdateHandler += DifficultyChanger;
+        _levelManager = levelManager;
     }
+
     public void BuildDifficultiesLists()
     {
         _rangesToRollingDiceTime.Add(new List<float>() { 4, 5 });//1
-        _rangesToRollingDiceTime.Add(new List<float>() { 3.5f, 3.6f });//2
-        _rangesToRollingDiceTime.Add(new List<float>() { 2f, 3 });//3
-        _rangesToRollingDiceTime.Add(new List<float>() { 2, 2.5f });//4
+        _rangesToRollingDiceTime.Add(new List<float>() { 3.5f, 5 });//2
+        _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 7 });//3
+        _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 6 });//4
         _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 5 });//5
         _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 4 });//6
-        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 3 });//7
-        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 2 });//8
-        _rangesToRollingDiceTime.Add(new List<float>() { 1f, 2f });//9
-        _rangesToRollingDiceTime.Add(new List<float>() { 1f, 1.5f });//10
-        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.6f });//11
-        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.6f });//12
-        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.2f });//13
-        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.2f });//14
+        _rangesToRollingDiceTime.Add(new List<float>() { 2.5f, 3 });//7
+        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 3 });//8
+        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 2.5f });//9
+        _rangesToRollingDiceTime.Add(new List<float>() { 1.5f, 2f });//10
+        _rangesToRollingDiceTime.Add(new List<float>() { 1f, 1.5f });//11
+        _rangesToRollingDiceTime.Add(new List<float>() { 0.5f, 1f });//12
+        _rangesToRollingDiceTime.Add(new List<float>() { 0.3f, 1f });//13
+        _rangesToRollingDiceTime.Add(new List<float>() { 0.1f, 0.5f });//14
 
         _rangesToCoinTime.Add(new List<float>() { 4, 5 });//1
         _rangesToCoinTime.Add(new List<float>() { 3, 5 });//2
@@ -85,24 +85,20 @@ public class GameMasterManager : BaseManager
         _timesToChangeLevels.Add(110);//13
         _timesToChangeLevels.Add(120);//14
 
-        _timesToWaitBeforePlatformsFall.Add(2);//1
-        _timesToWaitBeforePlatformsFall.Add(2);//2
-        _timesToWaitBeforePlatformsFall.Add(2);//3
-        _timesToWaitBeforePlatformsFall.Add(2);//4
-        _timesToWaitBeforePlatformsFall.Add(2);//5
-        _timesToWaitBeforePlatformsFall.Add(2);//6
-        _timesToWaitBeforePlatformsFall.Add(2);//7
-        _timesToWaitBeforePlatformsFall.Add(2);//8
+        _timesToWaitBeforePlatformsFall.Add(5);//1
+        _timesToWaitBeforePlatformsFall.Add(4.5f);//2
+        _timesToWaitBeforePlatformsFall.Add(3);//3
+        _timesToWaitBeforePlatformsFall.Add(3);//4
+        _timesToWaitBeforePlatformsFall.Add(3);//5
+        _timesToWaitBeforePlatformsFall.Add(2.5f);//6
+        _timesToWaitBeforePlatformsFall.Add(2.5f);//7
+        _timesToWaitBeforePlatformsFall.Add(2.5f);//8
         _timesToWaitBeforePlatformsFall.Add(2);//9
         _timesToWaitBeforePlatformsFall.Add(1.5f);//10
-        _timesToWaitBeforePlatformsFall.Add(0.5f);//11
-        _timesToWaitBeforePlatformsFall.Add(0.5f);//12
-        _timesToWaitBeforePlatformsFall.Add(0.2f);//13
-        _timesToWaitBeforePlatformsFall.Add(0.1f);//14
-    }
-    public void Loose(Args args)
-    {
-        isLoose = true;
+        _timesToWaitBeforePlatformsFall.Add(1);//11
+        _timesToWaitBeforePlatformsFall.Add(1);//12
+        _timesToWaitBeforePlatformsFall.Add(0.5f);//13
+        _timesToWaitBeforePlatformsFall.Add(0.4f);//14
     }
     public void DifficultyChanger()
     {
@@ -124,7 +120,6 @@ public class GameMasterManager : BaseManager
     {
         _difficultyTimer = 0;
         _gameManager.StartCoroutine(CountDownCoroutine());
-        isLoose = false;
     }
     public void StartShowedDiceTime(Args args)
     {
@@ -165,15 +160,8 @@ public class GameMasterManager : BaseManager
             Debug.Log(".");
             yield return 0;
         }
-        if (isLoose)
-        {
-            _statesManager.ChangeCurrentState(new States.CountDown());
-        }
-        else
-        {
-            _statesManager.ChangeCurrentState(new States.DiceIsShowed());
-        }
-        
+
+        _statesManager.ChangeCurrentState(new States.DiceIsShowed());
     }
 
     IEnumerator StartShowedDiceTimeCoroutine()
@@ -188,18 +176,14 @@ public class GameMasterManager : BaseManager
             yield return 0;
         }
 
+        _diceManager.RandomFaceActivation();
+        _diceManager.SwapDice();
+
         _levelManager.DropHexa(_diceManager.GetDiceFace(), DifficultyLevel);
 
         _diceManager.DisableRollingDiceInScene();
         yield return new WaitForSeconds(1);
-        if (isLoose)
-        {
-            _statesManager.ChangeCurrentState(new States.CountDown());
-        }
-        else
-        {
-            _statesManager.ChangeCurrentState(new States.CoinTime());
-        }
+        _statesManager.ChangeCurrentState(new States.CoinTime());
     }
     private void StartCoinTime(Args args)
     {
@@ -212,15 +196,7 @@ public class GameMasterManager : BaseManager
         var timeToGetCoin = Random.Range(_rangesToRollingDiceTime[DifficultyLevel][0], _rangesToRollingDiceTime[DifficultyLevel][1]);
         yield return new WaitForSeconds(timeToGetCoin);
         Debug.Log("STOP TIME TO GET COIN");
-
-        if (isLoose)
-        {
-            _statesManager.ChangeCurrentState(new States.CountDown());
-        }
-        else
-        {
-            _statesManager.ChangeCurrentState(new States.RollDice());
-        }
+        _statesManager.ChangeCurrentState(new States.RollDice());
     }
 
 }

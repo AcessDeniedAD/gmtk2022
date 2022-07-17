@@ -8,9 +8,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public Vector2 PlayerDirection;
 
-    public StatesManager _statesManager;
-    public PlayerManager _playerManager;
     Animator _playerAnimatorController;
+
+
+    public StatesManager _statesManager;
     [SerializeField]
     private float _playerSpeed = 0.5f;
 
@@ -43,14 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool _hasJumped = false;
 
-    private float _floorHeight = 0f;
-
-    RaycastHit Hit;
-
-
     private void Awake()
     {
-    EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
         EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
         if (_playerAnimatorController == null)
         {
@@ -85,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y < -1.0f && !_statesManager.IsCurrentState(new States.Loose()))
         {
             _statesManager.ChangeCurrentState(new States.Loose());
-            
         }
 
 
@@ -93,10 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Loose(Args args)
     {
-        if (!_playerManager.IsDead)
-        {
-            _playerManager.SetIsDead();
-        }
+        Debug.Log("C'est loose enculé :D");
     }
 
     private void ChackIfGrounded()
@@ -105,7 +96,6 @@ public class PlayerMovement : MonoBehaviour
         {
             verticalVelocity = 0;
             _isGrounded = true;
-            //transform.position = new Vector3 (transform.position.x, groundDistanceCheck, transform.position.z);
             _playerAnimatorController.SetBool("isJumping", false);
         }
         else
@@ -116,7 +106,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CheckCollision(Vector3 direction)
     {
-        return Physics.BoxCast(transform.position + Vector3.up * (groundDistanceCheck), Vector3.one * 0.05f, -Vector3.up, out Hit, Quaternion.identity, groundDistanceCheck);
+        RaycastHit Hit;
+        return Physics.BoxCast(transform.position + Vector3.up * (groundDistanceCheck+0.1f), Vector3.one * 0.1f, -Vector3.up, out Hit, Quaternion.identity, groundDistanceCheck);
             
     }
 
@@ -128,10 +119,7 @@ public class PlayerMovement : MonoBehaviour
     public void ApplyGravity(float currentVelocity)
     {
         //Debug.Log(currentVelocity);
-        if(!_isGrounded)
-        {
-            transform.Translate(new Vector3(0, currentVelocity, 0) * Time.fixedDeltaTime);
-        }
+        transform.Translate(new Vector3(0, currentVelocity, 0) * Time.fixedDeltaTime);
     }
 
     public void MoveAlongDirection(Vector3 playerDirection)
