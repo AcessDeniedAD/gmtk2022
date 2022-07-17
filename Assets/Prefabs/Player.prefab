@@ -156,10 +156,10 @@ MonoBehaviour:
   _dashSpeed: 2
   _dashTime: 0.2
   _dashCoolDown: 2
-  _gravity: -9.81
+  _gravity: -12.81
   _jumpForce: 5
   verticalVelocity: 0
-  groundDistanceCheck: 0.06
+  groundDistanceCheck: 0.1
   _isGrounded: 0
   _hasJumped: 0
 --- !u!1001 &1439061291538492995
@@ -179,7 +179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad17e644c4e3e2644888b9e56e182fb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.061
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad17e644c4e3e2644888b9e56e182fb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -229,8 +229,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad17e644c4e3e2644888b9e56e182fb6, type: 3}
   m_PrefabInstance: {fileID: 1439061291538492995}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &6422889926351987461
-CapsuleCollider:
+--- !u!65 &4068459588095969905
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -239,7 +239,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  m_Radius: 0.19648485
-  m_Height: 0.69972485
-  m_Direction: 1
-  m_Center: {x: 0.0000016838312, y: 0.3455564, z: -0.13461782}
+  serializedVersion: 2
+  m_Size: {x: 0.33483666, y: 0.69972485, z: 0.2103875}
+  m_Center: {x: 0.0000016838312, y: 0.3455564, z: -0.04332672}

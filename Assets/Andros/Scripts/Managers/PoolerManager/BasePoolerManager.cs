@@ -10,6 +10,10 @@ public class BasePoolerManager
     protected GameObject child;
     public void InstantiatePooledObjectsIntoParent(GameObject child, GameObject parent, int number)
     {
+        if (pooledObjects == null)
+        {
+            pooledObjects = new List<GameObject>();
+        }
         this.parent = parent.transform;
         this.child = child;
         for (int i = 0; i < number; i++)

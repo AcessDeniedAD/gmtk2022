@@ -18,4 +18,5 @@ MonoBehaviour:
   hexaPrefabYellow: {fileID: 7793621092522850487, guid: 1f7c5ef120183904791cdc3132e5c3a9, type: 3}
   hexaPrefabOrange: {fileID: 6112271594279613192, guid: 4a5b5c74a1181744bb310cd2c5e5a0a4, type: 3}
   hexaPrefabPurple: {fileID: 838769881433369805, guid: 470750e1915014e4d969ff2fe4859e23, type: 3}
+  coinPrefab: {fileID: 3974185441590730003, guid: 169ae321fe56c6b43b37bc337fde32d5, type: 3}
   hexaPrefabOut: {fileID: 8090829840278808849, guid: f85b12e438329724cadb424dd0db0295, type: 3}

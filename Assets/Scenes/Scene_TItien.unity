@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 407592839}
-  m_IndirectSpecularColor: {r: 0.09013619, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.05263085, g: 0.09943765, b: 0.12390528, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
+  m_fontSize: 229.65
   m_fontSizeBase: 97.53
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2486,7 +2486,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e9c19d03bc58c4d489717cecfac12bf0, type: 2}
+    WwiseObjectReference: {fileID: 0}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
@@ -9000,7 +9000,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
+  m_fontSize: 272.65
   m_fontSizeBase: 97.53
   m_fontWeight: 400
   m_enableAutoSizing: 1
