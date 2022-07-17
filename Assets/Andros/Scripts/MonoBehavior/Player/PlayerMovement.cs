@@ -57,7 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 movement = Vector3.right * PlayerDirection.x + Vector3.forward * PlayerDirection.y;
+        Debug.Log("Camera rot = " + Camera.main.transform.rotation.y);
+        float CameraAngle = Vector3.Angle(Vector3.right, Camera.main.transform.right) * Mathf.Deg2Rad;
+        Vector3 movement = (Vector3.right * Mathf.Cos(CameraAngle) + Vector3.forward * Mathf.Sin(CameraAngle)) * PlayerDirection.y +
+            (Vector3.right *  Mathf.Sin(CameraAngle) + Vector3.forward * - Mathf.Cos(CameraAngle))* PlayerDirection.x;
+        
         MoveAlongDirection(movement);
         AdjustOrientation(movement);
         CheckIsDead();
