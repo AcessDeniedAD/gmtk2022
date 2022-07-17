@@ -18,6 +18,7 @@ public class GameMasterManager : BaseManager
 
     private List<float> _timesToChangeLevels = new List<float> ();
     private List<float> _timesToWaitBeforePlatformsFall = new List<float>();
+
     public GameMasterManager(StatesManager statesManager, GameManager gameManager, DiceManager diceManager, LevelManager levelManager)
     {
         BuildDifficultiesLists();
@@ -27,17 +28,24 @@ public class GameMasterManager : BaseManager
         _diceManager = diceManager;
         _levelManager = levelManager;
 
+        gameManager.StartCoroutine(WaitGameIsStart());
+        GameManager.GameUpdateHandler += DifficultyChanger;
+        _levelManager = levelManager;
+    }
+       
+    IEnumerator WaitGameIsStart()
+    {
+        while (! _gameManager.GameIsStart)
+        {
+            yield return 0;
+        }
         EventsManager.StartListening(nameof(StatesEvents.OnCountDownIn), StartCountdown);
         EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), StartRollDice);
         EventsManager.StartListening(nameof(StatesEvents.OnCoinTimeIn), StartCoinTime);
         EventsManager.StartListening(nameof(StatesEvents.OnDiceIsShowedIn), StartShowedDiceTime);
 
         _statesManager.ChangeCurrentState(new States.CountDown());
-
-        GameManager.GameUpdateHandler += DifficultyChanger;
-        _levelManager = levelManager;
     }
-
     public void BuildDifficultiesLists()
     {
         _rangesToRollingDiceTime.Add(new List<float>() { 4, 5 });//1

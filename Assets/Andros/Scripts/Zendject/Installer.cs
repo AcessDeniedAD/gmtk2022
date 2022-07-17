@@ -11,7 +11,7 @@ public class Installer : MonoInstaller
         Container.Bind<CoinManager>().AsSingle().NonLazy();
         Container.Bind<GameMasterManager>().AsSingle().NonLazy();
         Container.Bind<StatesManager>().AsSingle();
-        Container.Bind<GameManager>().FromNewComponentOnNewGameObject().AsSingle();
+        Container.Bind<GameManager>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
         Container.Bind<PrefabsLoaderManager>().FromIFactory(x => x.To<PrefabsLoaderManagerFactory>().FromScriptableObject(PrefabsLoaderManagerFactory).AsSingle()).AsSingle();
         Container.Bind<HudManager>().AsSingle().NonLazy();
         Container.Bind<PlayerManager>().AsSingle();
