@@ -240,6 +240,7 @@ public class LevelManager : BaseManager
     IEnumerator DropHexaCoroutine(int difficultyLevel)
     {
         _startTime = Time.time;
+        EventsManager.TriggerEvent("PlatformFalling");
         _journeyLength = Vector3.Distance(new Vector3(0, 0, 0), new Vector3(0, DownPosition, 0));
         while (_yPos > DownPosition)
         {

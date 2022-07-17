@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b2049da30ceab4fb33a2b5095fee4f, type: 3}
+  m_Name: SoundLoader
+  m_EditorClassIdentifier: 
+  clip1: {fileID: 0}
+  _diceStopping: {fileID: 8300000, guid: fb1ed3f73fc342744b87265f392266da, type: 3}
+  _ambiance: {fileID: 8300000, guid: fbf8a02c8a2b1514ea6b1bea6bd47189, type: 3}
+  _platformFall: {fileID: 8300000, guid: 955c9b343247cc6498663f75ec5b50ec, type: 3}
+  _catchCoin: {fileID: 8300000, guid: b698a9ec6af06844787d466bba34fce5, type: 3}
+  _music: {fileID: 8300000, guid: 88624ea439e97964c9021f5914d02104, type: 3}
+  _playerFell: {fileID: 8300000, guid: d7c35c19841c4054ca1c76b15e5c3238, type: 3}
+  _playerStep1: {fileID: 8300000, guid: b1d671a18229b7045be75984ef1dba1b, type: 3}
+  _playerStep2: {fileID: 8300000, guid: 4f91161b7dbdf3848a40560d00dd4d90, type: 3}
+  _playerStep3: {fileID: 8300000, guid: b61b0a930c25fa3428e406f04b9c50b9, type: 3}
+  _playerStep4: {fileID: 8300000, guid: 4e11ef229b0e56e409d12873a7caeb07, type: 3}
+  _playerJump: {fileID: 8300000, guid: 38b7ec4ecbcf63c4a92aa5d994b65796, type: 3}
+  _playerLand: {fileID: 8300000, guid: 8ac412779f6d6b24589c81f5303843e9, type: 3}
+  _crowdCheer: {fileID: 8300000, guid: d2122e8470dde5e4189877bb9014c2e5, type: 3}
+  _coinFalling: {fileID: 8300000, guid: c49e735394e0013429edf025535669ff, type: 3}
+  _jackPot: {fileID: 8300000, guid: 0c2eca20205701a418a30ef3f58b4c0d, type: 3}
