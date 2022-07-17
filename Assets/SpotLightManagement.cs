@@ -35,7 +35,6 @@ public class SpotLightManagement : MonoBehaviour
         _playerTr = _playerManager.Player.transform;
         EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), RotateAround);
         EventsManager.StartListening(nameof(StatesEvents.OnDiceIsShowedIn), LookAtPlayer);
-
     }
 
     // Update is called once per frame
@@ -70,7 +69,7 @@ public class SpotLightManagement : MonoBehaviour
 
         while (Vector3.Angle(transform.forward, _playerTr.position - transform.position)>5)
         {
-            Debug.Log("lerping");
+            //Debug.Log("lerping");
             transform.rotation = Quaternion.Slerp(initialRotation, qto*initialRotation, interpolator * _interpSpeed);
             interpolator += Time.deltaTime;
             yield return new WaitForEndOfFrame();
@@ -93,7 +92,7 @@ public class SpotLightManagement : MonoBehaviour
 
         while (Vector3.Angle(transform.forward, _TargetTr.position - transform.position) > 5)
         {
-            Debug.Log("lerping");
+            //Debug.Log("lerping");
             transform.rotation = Quaternion.Slerp(initialRotation, qto * initialRotation, interpolator * _interpSpeed);
             interpolator += Time.deltaTime;
             yield return new WaitForEndOfFrame();
@@ -101,7 +100,7 @@ public class SpotLightManagement : MonoBehaviour
         //transform.LookAt(_TargetTr);
         while (true)
         {
-            Debug.Log("Rotating");
+            //Debug.Log("Rotating");
             transform.RotateAround(transform.position, _centerTr.position - transform.position , rotationDirection * Time.deltaTime * 300f); ;
             yield return new WaitForEndOfFrame();
         }
