@@ -95,7 +95,7 @@ public class GameMasterManager : BaseManager
         _timesToWaitBeforePlatformsFall.Add(2);//8
         _timesToWaitBeforePlatformsFall.Add(2);//9
         _timesToWaitBeforePlatformsFall.Add(1.5f);//10
-        _timesToWaitBeforePlatformsFall.Add(0.5);//11
+        _timesToWaitBeforePlatformsFall.Add(0.5f);//11
         _timesToWaitBeforePlatformsFall.Add(0.5f);//12
         _timesToWaitBeforePlatformsFall.Add(0.2f);//13
         _timesToWaitBeforePlatformsFall.Add(0.1f);//14
