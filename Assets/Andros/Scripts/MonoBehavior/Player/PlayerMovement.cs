@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         
         MoveAlongDirection(movement);
         AdjustOrientation(movement);
+        checkIfCanGetCoin();
         CheckIsDead();
     }
 
@@ -158,6 +159,21 @@ public class PlayerMovement : MonoBehaviour
         if( _isGrounded)
         {
             verticalVelocity = _jumpForce;
+        }
+    }
+
+    public void checkIfCanGetCoin()
+    {
+
+        Vector3 p1 = transform.position ;
+        RaycastHit[] hits = Physics.SphereCastAll(p1, 0.2f, transform.forward, 0.2f);
+         foreach(RaycastHit hit in hits)
+        {
+            if (hit.transform.tag == "Coin")
+            {
+                Score.Coins++;
+                hit.transform.gameObject.SetActive(false);
+            }
         }
     }
 }
