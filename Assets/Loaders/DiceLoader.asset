@@ -19,4 +19,4 @@ MonoBehaviour:
   YellowFace: {fileID: 2100000, guid: ddc9f5bdb72085a42ac8f6c12b7b8028, type: 2}
   GreenFace: {fileID: 2100000, guid: 9f0b093e54f5d124a99647a5d15f670f, type: 2}
   RedFace: {fileID: 2100000, guid: 7cf182e3c6c1d9c4899628a8bac29b3b, type: 2}
-  RollingDice: {fileID: 919132149155446097, guid: d59a9177769e5094b81e8e663c920d60, type: 3}
+  RollingDice: {fileID: 919132149155446097, guid: 17d41def4a7ab744d8be9409908f8109, type: 3}

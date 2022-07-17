@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     public StatesManager _statesManager;
     public PlayerManager _playerManager;
+    Animator _playerAnimatorController;
     [SerializeField]
     private float _playerSpeed = 0.5f;
 
@@ -42,9 +43,19 @@ public class PlayerMovement : MonoBehaviour
 
     public bool _hasJumped = false;
 
+    private float _floorHeight = 0f;
+
+    RaycastHit Hit;
+
+
     private void Awake()
     {
+    EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
         EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
+        if (_playerAnimatorController == null)
+        {
+            _playerAnimatorController = gameObject.GetComponentInChildren<Animator>();
+        }
     }
 
     private void FixedUpdate()
@@ -58,9 +69,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 movement = Vector3.right * PlayerDirection.x + Vector3.forward * PlayerDirection.y;
+        Debug.Log("Camera rot = " + Camera.main.transform.rotation.y);
+        float CameraAngle = Vector3.Angle(Vector3.right, Camera.main.transform.right) * Mathf.Deg2Rad;
+        Vector3 movement = (Vector3.right * Mathf.Cos(CameraAngle) + Vector3.forward * Mathf.Sin(CameraAngle)) * PlayerDirection.y +
+            (Vector3.right *  Mathf.Sin(CameraAngle) + Vector3.forward * - Mathf.Cos(CameraAngle))* PlayerDirection.x;
+        _playerAnimatorController.SetFloat("speed", movement.magnitude);
         MoveAlongDirection(movement);
         AdjustOrientation(movement);
+        checkIfCanGetCoin();
         CheckIsDead();
     }
 
@@ -89,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
         {
             verticalVelocity = 0;
             _isGrounded = true;
+            //transform.position = new Vector3 (transform.position.x, groundDistanceCheck, transform.position.z);
+            _playerAnimatorController.SetBool("isJumping", false);
         }
         else
         {
@@ -98,8 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CheckCollision(Vector3 direction)
     {
-        RaycastHit Hit;
-        return Physics.BoxCast(transform.position + Vector3.up * (groundDistanceCheck+0.1f), Vector3.one * 0.1f, -Vector3.up, out Hit, Quaternion.identity, groundDistanceCheck);
+        return Physics.BoxCast(transform.position + Vector3.up * (groundDistanceCheck), Vector3.one * 0.05f, -Vector3.up, out Hit, Quaternion.identity, groundDistanceCheck);
             
     }
 
@@ -111,7 +128,10 @@ public class PlayerMovement : MonoBehaviour
     public void ApplyGravity(float currentVelocity)
     {
         //Debug.Log(currentVelocity);
-        transform.Translate(new Vector3(0, currentVelocity, 0) * Time.fixedDeltaTime);
+        if(!_isGrounded)
+        {
+            transform.Translate(new Vector3(0, currentVelocity, 0) * Time.fixedDeltaTime);
+        }
     }
 
     public void MoveAlongDirection(Vector3 playerDirection)
@@ -158,7 +178,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if( _isGrounded)
         {
+            _playerAnimatorController.SetBool("isJumping", true);
             verticalVelocity = _jumpForce;
+        }
+    }
+
+    public void checkIfCanGetCoin()
+    {
+
+        Vector3 p1 = transform.position ;
+        RaycastHit[] hits = Physics.SphereCastAll(p1, 0.2f, transform.forward, 0.2f);
+         foreach(RaycastHit hit in hits)
+        {
+            if (hit.transform.tag == "Coin")
+            {
+                Score.Coins++;
+                hit.transform.gameObject.SetActive(false);
+            }
         }
     }
 }

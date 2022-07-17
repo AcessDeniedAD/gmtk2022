@@ -12,6 +12,7 @@ public class PlayerController : BaseLivingObject
 
     private MainPlayerInput _mainPlayerInput;
 
+    Animator _playerAnimatorController;
 
     private void Awake()
     {
@@ -20,6 +21,11 @@ public class PlayerController : BaseLivingObject
         if(_playerMovement == null)
         {
             _playerMovement = gameObject.GetComponent<PlayerMovement>();
+        }
+
+        if(_playerAnimatorController == null)
+        {
+            _playerAnimatorController = gameObject.GetComponentInChildren<Animator>();
         }
 
         _mainPlayerInput.Player.Move.performed += OnMove;

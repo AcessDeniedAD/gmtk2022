@@ -102,7 +102,7 @@ public class LevelManager : BaseManager
 
     public void ChangeHexaSize(int id, Vector3 size)
     {
-        Hexas[id].transform.localScale = size;
+        Hexas[id].transform.localScale = new Vector3(size.x, Hexas[id].transform.localScale.y, size.z) ;
     }
 
     public void ColorSwitch(int difficultyLevel)
@@ -122,7 +122,7 @@ public class LevelManager : BaseManager
                 if(i != old_hexa_locked_index)
                 {
                     Vector3 hexa_size = Hexas[order].transform.localScale;
-                    float scale_pourcentage = 0.80f;
+                    float scale_pourcentage = 0.70f;
                     ChangeHexaSize(order, new Vector3(hexa_size.x * scale_pourcentage, hexa_size.y * scale_pourcentage, hexa_size.z * scale_pourcentage));
                 }
             }
