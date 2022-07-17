@@ -9,7 +9,7 @@ public class LevelManager : BaseManager
     private readonly PrefabsLoaderManager _prefabsLoaderManager;
     private readonly GameManager _gameManager;
     private readonly Dictionary<string, GameObject> _hexaPrefabs;
-    private Dictionary<int, GameObject> _hexas ;
+    public Dictionary<int, GameObject> Hexas;
     private Dictionary<string, int> _hexaIdByColor;
     private int _id = 0;
     private List<Vector3> _position ;
@@ -38,7 +38,7 @@ public class LevelManager : BaseManager
         _gameManager = gameManager;
         _position = new List<Vector3>();
         _hexaIdByColor = new Dictionary<string, int>();
-        _hexas = new Dictionary<int, GameObject>();
+        Hexas = new Dictionary<int, GameObject>();
         _order = new List<int>();
         _parentLevel = _gameManager.InstantiateInGameManager(new GameObject("Level"), new Vector3(0, 0, 0), Quaternion.Euler(0, 30, 0));
         
@@ -74,14 +74,14 @@ public class LevelManager : BaseManager
             {
                 colorName = "out";
             }
-            else if (!_hexas[_hexaIdByColor["red"]].activeSelf)
+            else if (!Hexas[_hexaIdByColor["red"]].activeSelf)
             {
                 colorName = "out";
             }
         }
 
         _hexaLockedId = _hexaIdByColor[colorName];
-        _hexaLocked = _hexas[_hexaLockedId];
+        _hexaLocked = Hexas[_hexaLockedId];
         _gameManager.StartCoroutine(DropHexaCoroutine(difficultyLevel));
     }
 
@@ -95,7 +95,7 @@ public class LevelManager : BaseManager
         hexa.transform.parent = _parentLevel.transform;
         _orignal_size = hexa.transform.localScale;
         _hexaIdByColor.Add(color, _id);
-         _hexas.Add(_id, hexa);
+         Hexas.Add(_id, hexa);
         _position.Add(hexa.transform.position);
         _order.Add(_id);
         _id += 1;
@@ -103,7 +103,7 @@ public class LevelManager : BaseManager
 
     public void ChangeHexaSize(int id, Vector3 size)
     {
-        _hexas[id].transform.localScale = size;
+        Hexas[id].transform.localScale = size;
     }
 
     public void ColorSwitch(int difficultyLevel)
@@ -122,43 +122,43 @@ public class LevelManager : BaseManager
             {
                 if(i != old_hexa_locked_index)
                 {
-                    Vector3 hexa_size = _hexas[order].transform.localScale;
+                    Vector3 hexa_size = Hexas[order].transform.localScale;
                     float scale_pourcentage = 0.80f;
                     ChangeHexaSize(order, new Vector3(hexa_size.x * scale_pourcentage, hexa_size.y * scale_pourcentage, hexa_size.z * scale_pourcentage));
                 }
             }
-                var oldPosition = _hexas[order].transform.position;
-            _hexas[order].transform.position = new Vector3(_position[i].x, oldPosition.y, _position[i].z);
-            _position[i] = _hexas[order].transform.position;
+                var oldPosition = Hexas[order].transform.position;
+            Hexas[order].transform.position = new Vector3(_position[i].x, oldPosition.y, _position[i].z);
+            _position[i] = Hexas[order].transform.position;
             i += 1;
         }
         if (_rnd.Next(1, 100) < hexa_mid_proba )
         {
             if (_hexaLockedId != _hexaIdByColor["out"])
             {
-               _locked_hexa_mid_out = _hexas[_hexaIdByColor["out"]];
-               _hexas[_hexaIdByColor["out"]].SetActive(false);
-               _hexas[_hexaIdByColor["red"]].SetActive(true);
+               _locked_hexa_mid_out = Hexas[_hexaIdByColor["out"]];
+               Hexas[_hexaIdByColor["out"]].SetActive(false);
+               Hexas[_hexaIdByColor["red"]].SetActive(true);
             }
             else
             {
-                _locked_hexa_mid_out = _hexas[_hexaIdByColor["red"]];
-                _hexas[_hexaIdByColor["out"]].SetActive(true);
-                _hexas[_hexaIdByColor["red"]].SetActive(false);
+                _locked_hexa_mid_out = Hexas[_hexaIdByColor["red"]];
+                Hexas[_hexaIdByColor["out"]].SetActive(true);
+                Hexas[_hexaIdByColor["red"]].SetActive(false);
             }
         }
         else
         {
             if(_hexaLockedId != _hexaIdByColor["red"])
             {
-                _locked_hexa_mid_out = _hexas[_hexaIdByColor["red"]];
-                _hexas[_hexaIdByColor["out"]].SetActive(true);
-                _hexas[_hexaIdByColor["red"]].SetActive(false);
+                _locked_hexa_mid_out = Hexas[_hexaIdByColor["red"]];
+                Hexas[_hexaIdByColor["out"]].SetActive(true);
+                Hexas[_hexaIdByColor["red"]].SetActive(false);
             } else
             {
-                _locked_hexa_mid_out = _hexas[_hexaIdByColor["out"]];
-                _hexas[_hexaIdByColor["out"]].SetActive(false);
-                _hexas[_hexaIdByColor["red"]].SetActive(true);
+                _locked_hexa_mid_out = Hexas[_hexaIdByColor["out"]];
+                Hexas[_hexaIdByColor["out"]].SetActive(false);
+                Hexas[_hexaIdByColor["red"]].SetActive(true);
             }
         }
         _order = shuffledOrder;
@@ -183,7 +183,7 @@ public class LevelManager : BaseManager
  
             if (_rnd.Next(0, 100) < pPatformMoveProba){
                 _randomHexaMove = false;
-                GameObject current_hexa = _hexas[_rnd.Next(0, _hexas.Count)];
+                GameObject current_hexa = Hexas[_rnd.Next(0, Hexas.Count)];
                 _gameManager.StartCoroutine(HexaMoveTopCoro(current_hexa));
                 yield return new WaitForSecondsRealtime(3);
                 _gameManager.StartCoroutine(HexaMoveDownCoro(current_hexa));
@@ -246,7 +246,7 @@ public class LevelManager : BaseManager
             float distCovered = (Time.time - _startTime) * Speed * Time.timeScale;
             float fractionOfJourney = distCovered / _journeyLength;
 
-            foreach (GameObject hexa in _hexas.Values)
+            foreach (GameObject hexa in Hexas.Values)
             {
                 if (!System.Object.ReferenceEquals(hexa, _hexaLocked))
                 {
@@ -261,7 +261,7 @@ public class LevelManager : BaseManager
             }
             yield return 0;
         }
-        foreach (GameObject hexa in _hexas.Values)
+        foreach (GameObject hexa in Hexas.Values)
         {
             if (!System.Object.ReferenceEquals(hexa, _hexaLocked))
             {
@@ -281,7 +281,7 @@ public class LevelManager : BaseManager
     IEnumerator HexaComeBackCoroutine()
     {
         float speedDown = 15;
-        foreach (GameObject hexa in _hexas.Values)
+        foreach (GameObject hexa in Hexas.Values)
         {
             if (!System.Object.ReferenceEquals(hexa, _locked_hexa_mid_out))
             {
@@ -295,7 +295,7 @@ public class LevelManager : BaseManager
         {
             float distCovered = (Time.time - _startTime) * speedDown * Time.timeScale;
             float fractionOfJourney = distCovered / _journeyLength;
-            foreach (GameObject hexa in _hexas.Values)
+            foreach (GameObject hexa in Hexas.Values)
             {
                 if (!System.Object.ReferenceEquals(hexa,_hexaLocked))
                 {
