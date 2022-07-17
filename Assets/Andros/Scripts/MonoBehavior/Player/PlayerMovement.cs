@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public Vector2 PlayerDirection;
 
+    Animator _playerAnimatorController;
+
+
     public StatesManager _statesManager;
     [SerializeField]
     private float _playerSpeed = 0.5f;
@@ -44,6 +47,10 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         EventsManager.StartListening(nameof(StatesEvents.OnLooseIn), Loose);
+        if (_playerAnimatorController == null)
+        {
+            _playerAnimatorController = gameObject.GetComponentInChildren<Animator>();
+        }
     }
 
     private void FixedUpdate()
@@ -61,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         float CameraAngle = Vector3.Angle(Vector3.right, Camera.main.transform.right) * Mathf.Deg2Rad;
         Vector3 movement = (Vector3.right * Mathf.Cos(CameraAngle) + Vector3.forward * Mathf.Sin(CameraAngle)) * PlayerDirection.y +
             (Vector3.right *  Mathf.Sin(CameraAngle) + Vector3.forward * - Mathf.Cos(CameraAngle))* PlayerDirection.x;
-        
+        _playerAnimatorController.SetFloat("speed", movement.magnitude);
         MoveAlongDirection(movement);
         AdjustOrientation(movement);
         CheckIsDead();
@@ -88,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         {
             verticalVelocity = 0;
             _isGrounded = true;
+            _playerAnimatorController.SetBool("isJumping", false);
         }
         else
         {
@@ -157,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if( _isGrounded)
         {
+            _playerAnimatorController.SetBool("isJumping", true);
             verticalVelocity = _jumpForce;
         }
     }
