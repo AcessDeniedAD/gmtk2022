@@ -8,6 +8,7 @@ public class Installer : MonoInstaller
     {
         Container.Bind<LivingObjectEvents>().AsSingle().NonLazy();
         Container.Bind<DiceManager>().AsSingle();
+        Container.Bind<CoinManager>().AsSingle().NonLazy();
         Container.Bind<GameMasterManager>().AsSingle().NonLazy();
         Container.Bind<StatesManager>().AsSingle();
         Container.Bind<GameManager>().FromNewComponentOnNewGameObject().AsSingle();
@@ -17,7 +18,6 @@ public class Installer : MonoInstaller
         Container.Bind<StartGameInCurrentSceneManager>().AsSingle().NonLazy();
         Container.Bind<LevelManager>().AsSingle().NonLazy();
 
-        Container.Bind<DisplayDamagePooler>().AsSingle();
-        Container.Bind<BulletsPoolerManager>().AsSingle();
+        Container.Bind<CoinPoolerManager>().AsSingle();
     }
 }

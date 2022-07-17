@@ -12,5 +12,6 @@ public class LevelLoader : ScriptableObject
     public GameObject hexaPrefabYellow;
     public GameObject hexaPrefabOrange;
     public GameObject hexaPrefabPurple;
+    public GameObject hexaPrefabOut;
 
 }

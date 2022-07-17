@@ -120,7 +120,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 38.937145, g: 9.416279, b: 3.2617497, a: 1}
+    - _Color: {r: 43.647064, g: 21.792944, b: 17.088236, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Minxmaxpower: {r: 0, g: 0.5, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
