@@ -1061,6 +1061,7 @@ GameObject:
   - component: {fileID: 340246765}
   - component: {fileID: 340246767}
   - component: {fileID: 340246766}
+  - component: {fileID: 340246768}
   m_Layer: 5
   m_Name: NB coin
   m_TagString: Untagged
@@ -1185,6 +1186,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340246764}
   m_CullTransparentMesh: 1
+--- !u!114 &340246768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340246764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9831f3d9a292f643aac0d3aaf6ac586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshProUGUI: {fileID: 340246766}
 --- !u!1 &378446992
 GameObject:
   m_ObjectHideFlags: 0
