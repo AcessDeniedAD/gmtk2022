@@ -10,6 +10,7 @@ public class GameMasterManager : BaseManager
     private readonly GameManager _gameManager;
     private readonly DiceManager _diceManager;
     private readonly LevelManager _levelManager;
+    private readonly PlayerManager _playerManager;
     private float _difficultyTimer =0 ;
     private bool _isDifficultyTimerEnabled = true;
     private List<List<float>> _rangesToRollingDiceTime = new List<List<float>>();
@@ -18,7 +19,7 @@ public class GameMasterManager : BaseManager
 
     private List<float> _timesToChangeLevels = new List<float> ();
     private List<float> _timesToWaitBeforePlatformsFall = new List<float>();
-    public GameMasterManager(StatesManager statesManager, GameManager gameManager, DiceManager diceManager, LevelManager levelManager)
+    public GameMasterManager(StatesManager statesManager, GameManager gameManager, DiceManager diceManager, LevelManager levelManager, PlayerManager playerManager)
     {
         BuildDifficultiesLists();
 
@@ -26,6 +27,7 @@ public class GameMasterManager : BaseManager
         _gameManager = gameManager;
         _diceManager = diceManager;
         _levelManager = levelManager;
+        _playerManager = playerManager;
 
         EventsManager.StartListening(nameof(StatesEvents.OnCountDownIn), StartCountdown);
         EventsManager.StartListening(nameof(StatesEvents.OnRollDiceIn), StartRollDice);
@@ -140,6 +142,7 @@ public class GameMasterManager : BaseManager
         yield return new WaitForSeconds(1);
         Debug.Log("3");
         yield return new WaitForSeconds(1);
+        _playerManager.Player.GetComponent<PlayerMovement>().enabled = true;
         GameObject.Find("TitleScreen").SetActive(false);
         _statesManager.ChangeCurrentState(new States.RollDice());
     }
